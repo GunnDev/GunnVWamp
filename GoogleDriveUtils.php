@@ -12,7 +12,7 @@ class GoogleDriveUtils {
     function __construct() {
         $this->client = new Google_Client();
         $this->client->setApplicationName('Google Drive API PHP Quickstart');
-        $this->client->setScopes(Google_Service_Drive::DRIVE_METADATA_READONLY);
+        $this->client->setScopes(Google_Service_Drive::DRIVE);
         $this->client->setAuthConfig('credentials.json');
         $this->client->setAccessType('offline');
         $this->client->setPrompt('select_account consent');
@@ -58,6 +58,23 @@ class GoogleDriveUtils {
         }
     }
 
+    function uploadFiles() {
+        $file = new Google_Service_Drive_DriveFile();
+        $file->setName(uniqid().'.jpg');
+        $file->setDescription('A test document');
+        $file->setMimeType('image/jpeg');
+
+        $data = file_get_contents('test.jpg');
+
+        $createdFile = $this->service->files->create($file, array(
+            'data' => $data,
+            'mimeType' => 'image/jpeg',
+            'uploadType' => 'multipart'
+        ));
+
+        print_r($createdFile);
+    }
+
     function getFilesInDrive() {
         // Print the names and IDs for up to 10 files.
         $optParams = array(
@@ -65,7 +82,7 @@ class GoogleDriveUtils {
             'fields' => 'nextPageToken, files(id, name)'
         );
         $results = $this->service->files->listFiles($optParams);
-        
+
         if (count($results->getFiles()) == 0) {
             print "No files found.\n";
         } else {
