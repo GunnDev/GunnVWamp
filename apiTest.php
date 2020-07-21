@@ -11,4 +11,5 @@ $util->getFilesInDrive();
 
 echo "Testing File Upload...";
 $util->uploadFiles("test.jpg");
+echo "\nUploaded File.";
 ?>

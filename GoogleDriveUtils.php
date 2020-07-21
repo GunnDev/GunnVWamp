@@ -71,8 +71,6 @@ class GoogleDriveUtils {
             'mimeType' => 'image/jpeg',
             'uploadType' => 'multipart'
         ));
-
-        print_r($createdFile);
     }
 
     function getFilesInDrive() {
