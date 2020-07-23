@@ -10,6 +10,6 @@ $util = new GoogleDriveUtils();
 $util->getFilesInDrive();
 
 echo "Testing File Upload...";
-$util->uploadFiles("test.jpg");
+$util->uploadFiles("testDocs/jpg_test.jpg");
 echo "\nUploaded File.";
 ?>
