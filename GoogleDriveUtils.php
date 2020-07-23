@@ -58,13 +58,13 @@ class GoogleDriveUtils {
         }
     }
 
-    function uploadFiles($fileName) {
+    function uploadFiles($filePath) {
         $file = new Google_Service_Drive_DriveFile();
         $file->setName(uniqid().'.jpg');
-        $file->setDescription('A test document');
+        $file->setDescription('Volunteer Hours File');
         $file->setMimeType('image/jpeg');
 
-        $data = file_get_contents($fileName);
+        $data = file_get_contents($filePath);
 
         $createdFile = $this->service->files->create($file, array(
             'data' => $data,
