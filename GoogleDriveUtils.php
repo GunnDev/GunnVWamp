@@ -71,21 +71,6 @@ class GoogleDriveUtils {
         ));
     }
 
-    function uploadFiles2($filePath) {
-        $file = new Google_Service_Drive_DriveFile();
-        $file->setName(uniqid().'.jpg');
-        $file->setDescription('Volunteer Hours File');
-        $file->setMimeType('image/jpeg');
-
-        $data = file_get_contents($filePath);
-
-        $createdFile = $this->service->files->create($file, array(
-            'data' => $data,
-            'mimeType' => 'image/jpeg',
-            'uploadType' => 'multipart'
-        ));
-    }
-
     function getFilesInDrive() {
         // Print the names and IDs for up to 10 files.
         $optParams = array(
