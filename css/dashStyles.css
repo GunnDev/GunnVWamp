@@ -338,7 +338,7 @@ i.ahp-close {
 }
 
 i.ahp-close:hover, i.ahp-close:focus {
-    color: #1a73e8;
+    color: gray;
     text-decoration: none;
     cursor: pointer;
 }
