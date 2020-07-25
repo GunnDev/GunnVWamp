@@ -3,7 +3,7 @@ showfiles = function() {
     var output = document.getElementById('show_file_list');
     var children = "";
     for (var i = 0; i < input.files.length; ++i) {
-        children += '<li>' + input.files.item(i).name + '</li>';
+        children += '' + input.files.item(i).name + ', <br>';
     }
-    output.innerHTML = '<ul>'+children+'</ul>';
+    output.innerHTML = '<p style="margin-top: 5px; padding: 0; font-size: 14px;">' + children + '</p>';
 }

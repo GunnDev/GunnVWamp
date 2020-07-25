@@ -113,6 +113,7 @@
                                 
                                 <article>
                                     <section class="leftFileSelectSection">
+
                                         <article>
                                             <div id="iconDiv">
                                                 <i class="fas fa-file-upload fa-6x" style="color: #1a73e8;"></i>
@@ -139,8 +140,9 @@
 
                                 <article>
                                     <section class="rightFileSelectSection">
+
                                         <article class="showSelectedFiles">
-                                            <p>
+                                            <p style="margin: 0; padding: 0; font-weight: 500;">
                                                 Selected Files:
                                             </p>
                                             <div id="show_file_list"></div>
@@ -151,6 +153,7 @@
                                                 Upload
                                             </button>
                                         </article>
+                                        
                                     </section>
                                 </article>
 
