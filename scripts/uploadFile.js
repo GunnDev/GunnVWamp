@@ -1,12 +1,9 @@
-$(document).ready(function(){
-    $("#fileInput").on("change", function(e){
-        var files = $(this)[0].files;
-
-        if(files.length >= 2){
-            $("#label_span").text(files.length + " Files Selected");
-        } else {
-            var filename = e.target.value.split('\\').pop();
-            $("#label_span").text(filename);
-        }
-    });
-});
+showfiles = function() {
+    var input = document.getElementById('fileInput');
+    var output = document.getElementById('show_file_list');
+    var children = "";
+    for (var i = 0; i < input.files.length; ++i) {
+        children += '<li>' + input.files.item(i).name + '</li>';
+    }
+    output.innerHTML = '<ul>'+children+'</ul>';
+}

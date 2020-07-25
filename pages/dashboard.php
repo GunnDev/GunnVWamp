@@ -127,9 +127,9 @@
                                             <div class="fileUpload">
                                                 <form action="#">
                                                     <label for="fileInput" class="selectFilesLabel">
-                                                        <span id="label_span" class="fileSelectSpan">Browse</span>
+                                                        <span class="fileSelectSpan">Browse</span>
                                                     </label>
-                                                    <input id="fileInput" type="file" accept="application/pdf, image/jpeg, image/png" multiple="true">
+                                                    <input id="fileInput" type="file" onchange="javascript:showfiles()" accept="application/pdf, image/jpeg, image/png, .docx" multiple="true">
                                                 </form>
                                             </div>
                                         </article>
@@ -140,7 +140,10 @@
                                 <article>
                                     <section class="rightFileSelectSection">
                                         <article class="showSelectedFiles">
-
+                                            <p>
+                                                Selected Files:
+                                            </p>
+                                            <div id="show_file_list"></div>
                                         </article>
 
                                         <article class="uploadBtnContainer">
