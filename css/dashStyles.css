@@ -416,24 +416,31 @@ section.rightFileSelectSection {
     grid-gap: 4px;
 }
 
+article.showSelectedFiles {
+    /* OCD */
+    height: 187px;
+    max-height: 187px;
+}
+
 article.uploadBtnContainer {
     justify-content: center;
     display: flex;
 }
 
 article.uploadBtnContainer button {
-    cursor: pointer;
-    border: 1px solid #1a73e8;
-    background-color: white;
-    padding: 10px 30px;
-    border-radius: 5px;
+    margin: 6px;
     outline: none;
-    color: #1a73e8;
-    background-color: white;
+    border: none;
+    background-color:#1a73e8;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 65px;
+    cursor: pointer;
     transition: 0.3s;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 article.uploadBtnContainer button:hover {
-    background-color: #1a73e8;
-    color: white;
+    background-color: #0c5ec9;
 }

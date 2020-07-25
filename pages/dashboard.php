@@ -139,7 +139,9 @@
 
                                 <article>
                                     <section class="rightFileSelectSection">
-                                        <article></article>
+                                        <article class="showSelectedFiles">
+
+                                        </article>
 
                                         <article class="uploadBtnContainer">
                                             <button>
