@@ -110,6 +110,7 @@
                             </span>
                             
                             <section class="fileSelectContent">
+                                
                                 <article>
                                     <section class="leftFileSelectSection">
                                         <article>
@@ -147,8 +148,8 @@
                                         </article>
                                     </section>
                                 </article>
+
                             </section>
-                            
                         </div>
                     </div>
                 </div>
