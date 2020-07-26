@@ -1,0 +1,5 @@
+Client ID:
+891936736852-qamba2g3e0l1tq6bvh2i87o52dcainbj.apps.googleusercontent.com
+
+Client Secret:
+8yXz8jx1Nohz5pQcP3D5zDq7

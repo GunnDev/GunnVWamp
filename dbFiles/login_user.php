@@ -2,6 +2,7 @@
     session_start();
 
     include "db_connect.php";
+    include "GoogleDriveUtils.php";
 
     // Login using prepare to prevent injection attacks
     $stud_id = $_POST['student_id'];
@@ -25,6 +26,8 @@
             $_SESSION['student_fname'] = $fname;
             $_SESSION['student_lname'] = $lname;
             $_SESSION['student_gyear'] = $gyear;
+
+            $_SESSION['driveAPI'] = new GoogleDriveUtils();
             
             header("Location: ../pages/dashboard.php");
             
