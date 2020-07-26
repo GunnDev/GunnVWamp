@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
 <html>
+    <?php
+        session_start();
+    ?>
+
     <head>
         <title>Gunn Volunteering</title>
 
@@ -26,7 +30,13 @@
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Developers</a></li>
                     <li class="navbarDivider">|</li>
-                    <li><a href="pages/login.php">Login</a></li>
+                    <?php
+                        if(isSet($_SESSION['student_id'])){
+                            echo '<li><a href="pages/login.php">Dashboard</a></li>';
+                        } else {
+                            echo '<li><a href="pages/login.php">Login</a></li>';
+                        }
+                    ?>
                 </ul>
             </nav>
         </header>
