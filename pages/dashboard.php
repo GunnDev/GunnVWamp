@@ -114,7 +114,7 @@
                                     <section class="leftFileSelectSection">
 
                                         <article>
-                                            <div id="iconDiv">
+                                            <div class="iconDiv">
                                                 <i class="fas fa-file-upload fa-6x" style="color: #1a73e8;"></i>
                                             </div>
                                         </article>

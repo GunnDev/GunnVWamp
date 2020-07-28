@@ -395,7 +395,7 @@ section.leftFileSelectSection article {
     justify-content: center;
 }
 
-#iconDiv {
+div.iconDiv {
     margin: auto;
     padding-top: 20px;
     padding-bottom: 0px;
