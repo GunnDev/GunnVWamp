@@ -111,18 +111,24 @@
                             
                             <section class="fileSelectContent">
                                 <article>
-                                    <section class="leftFileSelectSection">
-
-                                        <article>
+                                    <section class="topBottomFileSelectSection">
+                                        <article style="display: flex; justify-content: center;">
                                             <div class="iconDiv">
                                                 <i class="fas fa-file-upload fa-6x" style="color: #1a73e8;"></i>
                                             </div>
                                         </article>
-                                        
-                                        <article>
-                                            <h3 class="dragAndDropTxt">Choose Files To Upload</h3>
-                                        </article>
 
+                                        <article>
+                                            <p style="margin: 0; padding: 0; font-weight: 500;">
+                                                Selected Files:
+                                            </p>
+                                            <div id="show_file_list"></div>
+                                        </article>
+                                    </section>
+                                </article>
+
+                                <article>
+                                    <section class="topBottomFileSelectSection">
                                         <article>
                                             <div class="fileUpload">
                                                 <form action="#">
@@ -134,25 +140,11 @@
                                             </div>
                                         </article>
 
-                                    </section>
-                                </article>
-
-                                <article>
-                                    <section class="rightFileSelectSection">
-
-                                        <article class="showSelectedFiles">
-                                            <p style="margin: 0; padding: 0; font-weight: 500;">
-                                                Selected Files:
-                                            </p>
-                                            <div id="show_file_list"></div>
-                                        </article>
-
                                         <article class="uploadBtnContainer">
-                                            <button>
+                                            <button class="uploadFilesBtn">
                                                 Upload
                                             </button>
                                         </article>
-                                        
                                     </section>
                                 </article>
                             </section>
@@ -171,3 +163,18 @@
     </body>
 
 </html>
+
+<!--
+
+<article>
+    <div class="fileUpload">
+        <form action="#">
+            <label for="fileInput" class="selectFilesLabel">
+                <span class="fileSelectSpan">Browse</span>
+            </label>
+            <input id="fileInput" type="file" onchange="javascript:showfiles()" accept="application/pdf, image/jpeg, image/png, .docx" multiple="true">
+        </form>
+    </div>
+</article>
+
+-->
