@@ -105,6 +105,10 @@
 
                     <div id="add_h" class="ahp">
                         <div class="ahp-content">
+                            <p class="uploadFilesTitle">
+                                Upload Your Hours
+                            </p>
+
                             <span>
                                 <i class="fas fa-times ahp-close"></i>
                             </span>
@@ -119,7 +123,7 @@
                                         </article>
 
                                         <article>
-                                            <p style="margin: 0; padding: 0; font-weight: 500;">
+                                            <p style="margin: 0; padding: 0; font-weight: 400; color: gray;">
                                                 Selected Files:
                                             </p>
                                             <div id="show_file_list"></div>
