@@ -327,8 +327,20 @@ div.ahp-content {
     margin: 12% auto;
     padding: 20px;
     border: none;
-    width: 800px;
+    width: 700px;
     border-radius: 10px;
+}
+
+p.uploadFilesTitle {
+    margin: 0; 
+    padding-bottom: 40px; 
+    padding-left: 40px;
+    padding-top: 5px;
+    width: 250px; 
+    float: left;
+    font-size: 20px;
+    font-weight: 500;
+    color: gray;
 }
 
 i.ahp-close {
