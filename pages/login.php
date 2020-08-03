@@ -58,7 +58,7 @@
                     </div>
 
                     <div class="loginFields">
-                        <form action="../dbFiles/login_user.php" name="loginForm" method="post">
+                        <form action="../backend/login_user.php" name="loginForm" method="post">
                             <fieldset style="border: 0; padding-top: 0px;">
                                 <div class="inputWithIcon">
                                     <input name="student_id" type="text" placeholder="Student ID" required>

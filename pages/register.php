@@ -102,7 +102,7 @@
                     </div>
 
                     <div class="registerFields">
-                        <form action="../dbFiles/add_user.php" name="registerForm" method="post">  
+                        <form action="../backend/add_user.php" name="registerForm" method="post">  
                             <div class="leftAndRightRegisterFieldset">
                                 <div class="inputWithIcon">
                                     <input name="fname" type="text" placeholder="First Name" required>
