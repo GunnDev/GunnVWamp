@@ -139,7 +139,7 @@
                                                     <label for="fileInput" class="selectFilesLabel">
                                                         <span class="fileSelectSpan">Browse</span>
                                                     </label>
-                                                    <input name="sFiles" id="fileInput" type="file" onchange="javascript:showfiles()" accept="application/pdf, image/jpeg, image/png, .docx" multiple="true">
+                                                    <input name="sFiles" id="fileInput" type="file" onchange="javascript:showfiles()" accept="application/pdf, image/jpeg, image/jpg, image/png, .docx">
                                                 </div>
 
                                                 <button name="uFiles" type="submit" class="uploadFilesBtn">
