@@ -134,16 +134,18 @@
                                 <article>
                                     <section class="bottomFileSelectSection">
                                         <article>
-                                            <div class="fileUpload">
-                                                <label for="fileInput" class="selectFilesLabel">
-                                                    <span class="fileSelectSpan">Browse</span>
-                                                </label>
-                                                <input id="fileInput" type="file" onchange="javascript:showfiles()" accept="application/pdf, image/jpeg, image/png, .docx" multiple="true">
-                                            </div>
+                                            <form action="uploadChosenFiles.php" method="POST" enctype="multipart/form-data">
+                                                <div class="fileUpload">
+                                                    <label for="fileInput" class="selectFilesLabel">
+                                                        <span class="fileSelectSpan">Browse</span>
+                                                    </label>
+                                                    <input name="sFiles" id="fileInput" type="file" onchange="javascript:showfiles()" accept="application/pdf, image/jpeg, image/png, .docx" multiple="true">
+                                                </div>
 
-                                            <button class="uploadFilesBtn">
-                                                Upload
-                                            </button>
+                                                <button name="uFiles" type="submit" class="uploadFilesBtn">
+                                                    Upload
+                                                </button>
+                                            </form>
                                         </article>
                                     </section>
                                 </article>
