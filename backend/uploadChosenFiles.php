@@ -6,6 +6,7 @@ Author: Mihir Rao
 -->
 
 <?php
+    include 'GoogleDriveUtils.php';
     session_start();
 
     # If not logged in
@@ -48,6 +49,11 @@ Author: Mihir Rao
                     # Move the file temporarily to uploads folder
                     $fileDestination = 'uploads/' . $fileNameNew;
                     move_uploaded_file($fileTmpName, $fileDestination);
+
+                    # Upload to Google Drive using API and delete from uploads folder
+                    $googlDriveUtils = $_SESSION['driveAPI'];
+                    $googlDriveUtils->uploadFiles($fileDestination);
+                    unlink($fileDestination);
 
                     # Send the user back to dashboard with success message
                     header("Location: ../pages/dashboard.php?upload=success");
