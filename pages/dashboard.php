@@ -135,12 +135,10 @@
                                     <section class="bottomFileSelectSection">
                                         <article>
                                             <div class="fileUpload">
-                                                <form action="#">
-                                                    <label for="fileInput" class="selectFilesLabel">
-                                                        <span class="fileSelectSpan">Browse</span>
-                                                    </label>
-                                                    <input id="fileInput" type="file" onchange="javascript:showfiles()" accept="application/pdf, image/jpeg, image/png, .docx" multiple="true">
-                                                </form>
+                                                <label for="fileInput" class="selectFilesLabel">
+                                                    <span class="fileSelectSpan">Browse</span>
+                                                </label>
+                                                <input id="fileInput" type="file" onchange="javascript:showfiles()" accept="application/pdf, image/jpeg, image/png, .docx" multiple="true">
                                             </div>
 
                                             <button class="uploadFilesBtn">
