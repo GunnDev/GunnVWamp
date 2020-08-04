@@ -410,11 +410,6 @@ section.topBottomFileSelectSection {
     grid-gap: 4px;
 }
 
-section.topFileSelectSection article {
-    display: flex;
-    justify-content: center;
-}
-
 div.fileUpload {
     display: flex;
     justify-content: center;
