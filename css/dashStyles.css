@@ -332,8 +332,7 @@ div.ahp-content {
 }
 
 p.uploadFilesTitle {
-    margin: 0; 
-    padding-bottom: 40px; 
+    margin: 0;  
     padding-left: 40px;
     padding-top: 5px;
     width: 250px; 
@@ -395,6 +394,14 @@ section.fileSelectContent {
     grid-gap: 5px;
 }
 
+div.iconDiv {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 33px;
+    padding-bottom: 0;
+}
+
 section.topBottomFileSelectSection {
     width: 100%;
     display: grid;
@@ -411,7 +418,7 @@ section.topFileSelectSection article {
 div.fileUpload {
     display: flex;
     justify-content: center;
-    padding: 50px;
+    padding: 45px;
     margin: 0;
 }
 
