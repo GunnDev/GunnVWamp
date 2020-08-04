@@ -134,7 +134,7 @@
                                 <article>
                                     <section class="bottomFileSelectSection">
                                         <article>
-                                            <form action="uploadChosenFiles.php" method="POST" enctype="multipart/form-data">
+                                            <form action="../backend/uploadChosenFiles.php" method="POST" enctype="multipart/form-data">
                                                 <div class="fileUpload">
                                                     <label for="fileInput" class="selectFilesLabel">
                                                         <span class="fileSelectSpan">Browse</span>
