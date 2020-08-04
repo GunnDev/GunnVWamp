@@ -402,7 +402,7 @@ div.iconDiv {
     padding-bottom: 0;
 }
 
-section.topBottomFileSelectSection {
+section.topFileSelectSection {
     width: 100%;
     display: grid;
     grid-auto-rows: minmax(50px, auto);
@@ -410,11 +410,19 @@ section.topBottomFileSelectSection {
     grid-gap: 4px;
 }
 
+section.bottomFileSelectSection {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: 1fr;
+    grid-gap: 4px;
+}
+
 div.fileUpload {
-    display: flex;
-    justify-content: center;
     padding: 45px;
-    margin: 0;
+    margin: 0px;
+    width: 50%;
+    float: left;
 }
 
 article.uploadBtnContainer {
@@ -423,8 +431,12 @@ article.uploadBtnContainer {
 }
 
 button.uploadFilesBtn {
+    /* Go to the right of the browse button */
+    float: right;
+
     margin-top: 36px;
     margin-bottom: 41px;
+    margin-right: 80px;
     outline: none;
     border: none;
     background-color:#1a73e8;

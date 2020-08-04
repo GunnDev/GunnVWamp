@@ -115,7 +115,7 @@
                             
                             <section class="fileSelectContent">
                                 <article>
-                                    <section class="topBottomFileSelectSection">
+                                    <section class="topFileSelectSection">
                                         <article style="display: flex; justify-content: center;">
                                             <div class="iconDiv">
                                                 <i class="fas fa-file-upload fa-6x" style="color: #1a73e8;"></i>
@@ -132,7 +132,7 @@
                                 </article>
 
                                 <article>
-                                    <section class="topBottomFileSelectSection">
+                                    <section class="bottomFileSelectSection">
                                         <article>
                                             <div class="fileUpload">
                                                 <form action="#">
@@ -142,9 +142,7 @@
                                                     <input id="fileInput" type="file" onchange="javascript:showfiles()" accept="application/pdf, image/jpeg, image/png, .docx" multiple="true">
                                                 </form>
                                             </div>
-                                        </article>
 
-                                        <article class="uploadBtnContainer">
                                             <button class="uploadFilesBtn">
                                                 Upload
                                             </button>
