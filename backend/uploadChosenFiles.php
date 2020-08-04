@@ -58,13 +58,13 @@ Author: Mihir Rao
                     # Send the user back to dashboard with success message
                     header("Location: ../pages/dashboard.php?upload=success");
                 } else {
-                    echo 'Err: Our minions cannot carry files larger than 1000 kb 😞. ';
+                    header("Location: ../pages/dashboard.php?upload=toobig");
                 }
             } else {
-                echo 'Err: Could not upload 😞. ';
+                header("Location: ../pages/dashboard.php?upload=err");
             }
         } else {
-            echo 'Err: Invalid file type 😞.';
+            header("Location: ../pages/dashboard.php?upload=ftype");
         }
     }
 ?>
