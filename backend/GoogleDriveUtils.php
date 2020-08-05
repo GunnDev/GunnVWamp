@@ -58,9 +58,9 @@ class GoogleDriveUtils {
         }
     }
 
-    function uploadFiles($filePath) {
+    function uploadFiles($filePath, $fileName) {
         $file = new Google_Service_Drive_DriveFile();
-        $file->setName(uniqid());
+        $file->setName($fileName);
         $file->setDescription('A test document');
     
         $data = file_get_contents($filePath);

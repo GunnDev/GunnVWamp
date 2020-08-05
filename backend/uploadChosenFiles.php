@@ -28,8 +28,8 @@ Author: Mihir Rao
         $fileType = $_FILES['sFiles']['type'];
 
         # File extension
-        $fileExt = explode('.', $fileName);
-        $fileLoweredExt = strtolower(end($fileExt));
+        $fileAspects = explode('.', $fileName);
+        $fileLoweredExt = strtolower(end($fileAspects));
 
         # Allowed file types - this isn't actually necessary bc the input limits this
         $allowedExts = array('pdf', 'jpeg', 'jpg', 'png', 'docx');
@@ -52,7 +52,7 @@ Author: Mihir Rao
 
                     # Upload to Google Drive using API and delete from uploads folder
                     $googleDriveUtils = $_SESSION['driveAPI'];
-                    $googleDriveUtils->uploadFiles($fileDestination);
+                    $googleDriveUtils->uploadFiles($fileDestination, $fileName);
                     unlink($fileDestination);
 
                     # Send the user back to dashboard with success message
