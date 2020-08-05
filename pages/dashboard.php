@@ -103,6 +103,9 @@
                         <i class="fas fa-plus"></i>
                     </button>
 
+                    <!-- Keep the add hours modal open -->
+                    <script src="../scripts/keepHoursOpen.js"></script>
+
                     <div id="add_h" class="ahp">
                         <div class="ahp-content">
                             <p class="uploadFilesTitle">
@@ -149,6 +152,11 @@
                                         </article>
                                     </section>
                                 </article>
+
+                                <article>
+                                    <!-- Display results of file upload -->
+                                </article>
+                                
                             </section>
                         </div>
                     </div>
