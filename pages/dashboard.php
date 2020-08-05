@@ -126,8 +126,8 @@
                                         </article>
 
                                         <article>
-                                            <p style="margin: 0; padding: 0; font-weight: 400; color: gray;">
-                                                Selected Files:
+                                            <p id="selFTitle" style="margin: 0; padding: 0; font-weight: 400; color: gray;">
+                                                Selected Files: None
                                             </p>
                                             <div id="show_file_list"></div>
                                         </article>
@@ -156,7 +156,7 @@
                                 <article>
                                     <!-- Display results of file upload -->
                                 </article>
-                                
+
                             </section>
                         </div>
                     </div>
