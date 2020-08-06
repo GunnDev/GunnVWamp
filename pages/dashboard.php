@@ -155,6 +155,26 @@
 
                                 <article>
                                     <!-- Display results of file upload -->
+
+                                    <?php
+                                        $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                                        if (strpos($fullUrl, "upload=success") == true){
+                                            echo 'success';
+                                        }
+
+                                        if (strpos($fullUrl, "upload=toobig") == true){
+                                            echo 'Our minions can\'t handle files larger than 1000 Kb';
+                                        }
+
+                                        if (strpos($fullUrl, "upload=err") == true){
+                                            echo 'Error uploading file. Make sure file size is < 1000 Kb';
+                                        }
+
+                                        if (strpos($fullUrl, "upload=ftype") == true){
+                                            echo 'Invalid file type';
+                                        }
+                                    ?>
                                 </article>
 
                             </section>

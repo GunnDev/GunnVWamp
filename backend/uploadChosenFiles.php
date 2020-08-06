@@ -44,7 +44,7 @@ Author: Mihir Rao
                 if ($fileSize < 1000000) {
 
                     # Prevent file overriding by renaming using uniqid()
-                    $fileNameNew = uniqid('', true). '.'. $fileLoweredExt;
+                    $fileNameNew = uniqid('', true). '.' . $fileLoweredExt;
 
                     # Move the file temporarily to uploads folder
                     $fileDestination = 'uploads/' . $fileNameNew;
