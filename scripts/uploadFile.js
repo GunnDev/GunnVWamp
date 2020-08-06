@@ -5,9 +5,17 @@ showfiles = function() {
 
     var children = "";
     for (var i = 0; i < input.files.length; ++i) {
-        children += '' + input.files.item(i).name + ', <br>';
+        children += '' + fName(input.files.item(i).name) + ', <br>';
     }
 
     selectedFiles.innerHTML = 'Selected Files: ';
     output.innerHTML = '<p style="margin-top: 5px; padding: 0; font-size: 14px;">' + children + '</p>';
+}
+
+fName = function(fileName) {
+    if (fileName.length <= 25){
+        return fileName
+    } else {
+        return fileName.substring(0, 23) + '...';
+    }
 }
