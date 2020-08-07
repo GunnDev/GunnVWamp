@@ -1,4 +1,5 @@
-function addHour() {    
+function addHour() {
+
     // Get the modal
     var modal = document.getElementById("add_h");
 
@@ -17,5 +18,7 @@ function addHour() {
         if (event.target == modal) {
             modal.style.display = "none";
         }
+        // Remove upload var
+        history.pushState('dash', 'Gunn Volunteering | Dashboard', 'http://localhost/GunnVWamp/pages/dashboard.php');
     }
 }
