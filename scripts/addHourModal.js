@@ -1,5 +1,4 @@
 function addHour() {
-
     // Get the modal
     var modal = document.getElementById("add_h");
 
@@ -11,12 +10,20 @@ function addHour() {
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
+
+        // Clear upload message
+        var sMsg = document.getElementById("sMsg");
+        sMsg.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+
+            // Clear upload message
+            var sMsg = document.getElementById("sMsg");
+            sMsg.style.display = "none";
         }
         // Remove upload var
         history.pushState('dash', 'Gunn Volunteering | Dashboard', 'http://localhost/GunnVWamp/pages/dashboard.php');

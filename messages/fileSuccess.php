@@ -13,7 +13,7 @@
             }
 
             public function printMessage(){
-                  echo '<div class="successContainer">
+                  echo '<div id="sMsg" class="successContainer">
                             <div class="smessage">
                                 <p class="successTitle">
                                     <i class="fas fa-check fa-md fa-fw" aria-hidden="true" style="color:#2c990b;"></i>';
