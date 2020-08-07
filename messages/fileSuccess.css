@@ -1,0 +1,20 @@
+.successContainer {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.smessage {
+    width: 80%;
+    display: inline-block;
+}
+
+.successTitle {
+    color: #2c990b;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}

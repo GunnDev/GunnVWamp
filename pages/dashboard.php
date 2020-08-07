@@ -157,10 +157,13 @@
                                     <!-- Display results of file upload -->
 
                                     <?php
+                                        include '../messages/fileSuccess.php';
+
                                         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
                                         if (strpos($fullUrl, "upload=success") == true){
-                                            echo 'success';
+                                            $successM = new fileSuccess('Your file was uploaded!');
+                                            $successM->printMessage();
                                         }
 
                                         if (strpos($fullUrl, "upload=toobig") == true){
