@@ -13,10 +13,10 @@
             }
 
             public function printMessage(){
-                  echo '<div id="sMsg" class="successContainer">
+                  echo '<div id="filemsg" class="successContainer">
                             <div class="smessage">
                                 <p class="successTitle">
-                                    <i class="fas fa-check fa-md fa-fw" aria-hidden="true" style="color:#2c990b;"></i>';
+                                    <i class="fas fa-check fa-lg fa-fw" aria-hidden="true" style="color:#2c990b;"></i>';
                                     echo ' - ' . $this->message;
                           echo '</p>
                             </div>

@@ -16,7 +16,7 @@
                   echo '<div id="filemsg" class="fileErrorContainer">
                             <div class="fileErrorMessage">
                                 <p class="fileErrorTitle">
-                                    <i class="fas fa-check fa-md fa-fw" aria-hidden="true" style="color:#b31515;"></i>';
+                                    <i class="fas fa-times fa-lg fa-fw" aria-hidden="true" style="color:#d41515;"></i>';
                                     echo ' - ' . $this->message;
                           echo '</p>
                             </div>

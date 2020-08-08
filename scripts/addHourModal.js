@@ -12,8 +12,8 @@ function addHour() {
         modal.style.display = "none";
 
         // Clear upload message
-        var sMsg = document.getElementById("sMsg");
-        sMsg.style.display = "none";
+        var filemsg = document.getElementById("filemsg");
+        filemsg.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
@@ -22,8 +22,8 @@ function addHour() {
             modal.style.display = "none";
 
             // Clear upload message
-            var sMsg = document.getElementById("sMsg");
-            sMsg.style.display = "none";
+            var filemsg = document.getElementById("filemsg");
+            filemsg.style.display = "none";
         }
         // Remove upload var
         history.pushState('dash', 'Gunn Volunteering | Dashboard', 'http://localhost/GunnVWamp/pages/dashboard.php');

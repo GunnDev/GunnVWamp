@@ -158,6 +158,7 @@
 
                                     <?php
                                         include '../messages/fileSuccess.php';
+                                        include '../messages/fileError.php';
 
                                         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -173,15 +174,18 @@
                                         }
 
                                         if (strpos($fullUrl, "upload=toobig") == true){
-                                            echo 'Our minions can\'t handle files larger than 1000 Kb';
+                                            $fileErrorMessage = new fileError('Our minions can\'t handle files larger than 1000 Kb');
+                                            $fileErrorMessage->printMessage();
                                         }
 
                                         if (strpos($fullUrl, "upload=err") == true){
-                                            echo 'Error uploading file. Make sure file size is < 1000 Kb';
+                                            $fileErrorMessage = new fileError('Error uploading file. Check file');
+                                            $fileErrorMessage->printMessage();
                                         }
 
                                         if (strpos($fullUrl, "upload=ftype") == true){
-                                            echo 'Invalid file type';
+                                            $fileErrorMessage = new fileError('Invalid file type');
+                                            $fileErrorMessage->printMessage();
                                         }
                                     ?>
                                 </article>
