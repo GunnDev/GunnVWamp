@@ -164,7 +164,7 @@
                                         if (strpos($fullUrl, "upload=success") == true){
                                             if (isset($_GET['fName'])) {
                                                 $fileName = $_GET['fName'];
-                                                $successM = new fileSuccess($fileName . ' was uploaded!');
+                                                $successM = new fileSuccess('Uploaded: ' . $fileName);
                                                 $successM->printMessage();
                                             } else {
                                                 $successM = new fileSuccess('Your file was uploaded!');

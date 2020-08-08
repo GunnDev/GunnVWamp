@@ -29,6 +29,7 @@ Author: Mihir Rao
 
         # File extension
         $fileAspects = explode('.', $fileName);
+        $fileNameWithoutExtension = $fileAspects[0];
         $fileLoweredExt = strtolower(end($fileAspects));
 
         # Allowed file types - this isn't actually necessary bc the input limits this
@@ -44,10 +45,10 @@ Author: Mihir Rao
                 if ($fileSize < 1000000) {
 
                     # Prevent file overriding by renaming using uniqid()
-                    $fileNameNew = uniqid('', true). '.' . $fileLoweredExt;
+                    $randName = uniqid('', true). '.' . $fileLoweredExt;
 
                     # Move the file temporarily to uploads folder
-                    $fileDestination = 'uploads/' . $fileNameNew;
+                    $fileDestination = 'uploads/' . $randName;
                     move_uploaded_file($fileTmpName, $fileDestination);
 
                     # Upload to Google Drive using API and delete from uploads folder
@@ -56,8 +57,8 @@ Author: Mihir Rao
                     unlink($fileDestination);
 
                     # Reduce file name length if necessary
-                    if (strlen($fileName) > 10) {
-                        $fileName = substr($fileName, 0, 11) . '...';
+                    if (strlen($fileNameWithoutExtension) > 12) {
+                        $fileName = substr($fileName, 0, 13) . '...' . $fileLoweredExt;
                     }
 
                     # Send the user back to dashboard with success message
