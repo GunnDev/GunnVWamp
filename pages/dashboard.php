@@ -162,8 +162,14 @@
                                         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
                                         if (strpos($fullUrl, "upload=success") == true){
-                                            $successM = new fileSuccess('Your file was uploaded!');
-                                            $successM->printMessage();
+                                            if (isset($_GET['fName'])) {
+                                                $fileName = $_GET['fName'];
+                                                $successM = new fileSuccess($fileName . ' was uploaded!');
+                                                $successM->printMessage();
+                                            } else {
+                                                $successM = new fileSuccess('Your file was uploaded!');
+                                                $successM->printMessage();
+                                            }
                                         }
 
                                         if (strpos($fullUrl, "upload=toobig") == true){

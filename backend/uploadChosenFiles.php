@@ -55,8 +55,13 @@ Author: Mihir Rao
                     $googleDriveUtils->uploadFiles($fileDestination, $fileName);
                     unlink($fileDestination);
 
+                    # Reduce file name length if necessary
+                    if (strlen($fileName) > 10) {
+                        $fileName = substr($fileName, 0, 11) . '...';
+                    }
+
                     # Send the user back to dashboard with success message
-                    header("Location: ../pages/dashboard.php?upload=success");
+                    header("Location: ../pages/dashboard.php?upload=success&fName=" . $fileName);
                 } else {
                     header("Location: ../pages/dashboard.php?upload=toobig");
                 }
