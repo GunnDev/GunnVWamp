@@ -7,5 +7,6 @@ Gunn Volunteering
 require 'GoogleDriveUtils.php';
 
 $util = new GoogleDriveUtils();
-$util->getFilesInDrive();
+$filesList = $util->getFilesInDrive();
+print_r($filesList);
 ?>
