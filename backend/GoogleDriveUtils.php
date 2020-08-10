@@ -58,13 +58,28 @@ class GoogleDriveUtils {
         }
     }
 
-    function uploadFiles($filePath, $fileName) {
+    function uploadFiles($filePath, $fileName, $folderName) {
+        // 1. Search the existing folder using the folder name.
+        $res = $this->service->files->listFiles(array("q" => "name='{$folderName}' and trashed=false"));
+        $folderId = '';
+        if (count($res->getFiles()) == 0) {
+            // 2. When the folder of the folder name is NOT existing, the folder is created by the folder name and the folder ID of the created folder is returned.
+            $file = new Google_Service_Drive_DriveFile();
+            $file->setName($folderName);
+            $file->setMimeType('application/vnd.google-apps.folder');
+            $createdFolder = $this->service->files->create($file);
+            $folderId = $createdFolder->getId();
+        } else {
+            // 3. When the folder of the folder name is existing, the folder ID is returned.
+            $folderId = $res->getFiles()[0]->getId();
+        }
+
+        // 4. The file is uploaded to the folder using the folder ID.
         $file = new Google_Service_Drive_DriveFile();
         $file->setName($fileName);
-        $file->setDescription('A test document');
-    
+        $file->setDescription('Volunteer Hours');
+        $file->setParents(array($folderId));
         $data = file_get_contents($filePath);
-    
         $createdFile = $this->service->files->create($file, array(
             'data' => $data,
             'uploadType' => 'multipart'
