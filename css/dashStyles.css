@@ -298,7 +298,8 @@ button.addHoursBtn {
 }
 
 button.addHoursBtn:hover {
-    background-color: #dbd9d9;
+    background-color:#d6d6d6;
+    transition: 0.2s;
 }
 
 button.deleteAll {
@@ -318,7 +319,8 @@ button.deleteAll {
 }
 
 button.deleteAll:hover {
-    background-color: #dbd9d9;
+    background-color:#d6d6d6;
+    transition: 0.2s;
 }
 
 div.ahp {
