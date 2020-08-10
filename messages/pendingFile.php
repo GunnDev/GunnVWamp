@@ -17,6 +17,9 @@
                     <p class="pendingFileName">';
                         echo $this->fileName;
               echo '</p>
+                    <button title="Delete This File" class="deleteFile">
+                        <i class="fas fa-trash"></i>
+                    </button>
                 </div>';
             }
         }

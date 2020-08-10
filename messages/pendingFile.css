@@ -5,8 +5,6 @@ div.pendingFileContainer {
     background-color:#ebebeb;
     border-radius: 8px;
     margin-bottom: 5px;
-
-    line-height: 50px;
 }
 
 div.pendingFileContainer:hover {
@@ -18,7 +16,28 @@ p.pendingFileName {
     margin: 0;
     padding: 0;
     padding-left: 10px;
+    width: 60%;
+    float: left;
+    line-height: 48px;
     font-size: 14px;
     font-weight: 500;
     color:#1a73e8;
+}
+
+button.deleteFile {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    float: right;
+    text-align: center;
+    background-color: #ebebeb;
+    color: #cb0001;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+button.deleteFile:hover {
+    background-color: #dbd9d9;
 }
