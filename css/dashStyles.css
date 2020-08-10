@@ -277,20 +277,12 @@ div.addHoursContainer {
     width: 100%;
     height: 100%;
     min-height: 50px;
-    background-color: white;
+    background-color:#ebebeb;
     border-radius: 8px;
 }
 
-div.addHoursContainer:hover {
-    background-color: #ebebeb;
-}
-
-div.addHoursContainer:hover button.addHoursBtn {
-    display: block;
-}
-
 button.addHoursBtn {
-    display: none;
+    display: block;
     cursor: pointer;
     border-radius: 50%;
     width: 50px;
@@ -306,6 +298,26 @@ button.addHoursBtn {
 }
 
 button.addHoursBtn:hover {
+    background-color: #dbd9d9;
+}
+
+button.deleteAll {
+    display: block;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    float: right;
+    text-align: center;
+    line-height: 50%;
+    background-color: #ebebeb;
+    color: #cb0001;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+button.deleteAll:hover {
     background-color: #dbd9d9;
 }
 

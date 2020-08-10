@@ -100,8 +100,12 @@
                     Pending Hours
                 </h1>
                 <div class="addHoursContainer">
-                    <button onclick="addHour()" class="addHoursBtn">
+                    <button title="Submit Volunteer Hours" onclick="addHour()" class="addHoursBtn">
                         <i class="fas fa-plus"></i>
+                    </button>
+
+                    <button title="Delete All Submissions" class="deleteAll">
+                        <i class="fas fa-trash"></i>
                     </button>
 
                     <!-- Keep the add hours modal open -->
