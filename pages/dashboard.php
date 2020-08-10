@@ -2,6 +2,7 @@
 
 <html>
     <?php
+        include '../backend/GoogleDriveUtils.php';
         session_start();
         if(!isSet($_SESSION['student_id'])){
             header("Location: login.php");
@@ -194,6 +195,15 @@
                         </div>
                     </div>
                 </div>
+            </article>
+
+            <article>
+                <?php
+                    $googleDriveUtils = unserialize($_SESSION['driveAPI']);
+                    $listOfFiles = $googleDriveUtils->getFilesInDrive();
+
+                    print_r($listOfFiles);
+                ?>
             </article>
 
             <!-- Approved Submissions -->

@@ -72,20 +72,21 @@ class GoogleDriveUtils {
     }
 
     function getFilesInDrive() {
-        // Print the names and IDs for up to 10 files.
+        // Return list of file names that have been uploaded
         $optParams = array(
-            'pageSize' => 10,
+            'pageSize' => 20,
             'fields' => 'nextPageToken, files(id, name)'
         );
         $results = $this->service->files->listFiles($optParams);
 
         if (count($results->getFiles()) == 0) {
-            print "No files found.\n";
+            return [];
         } else {
-            print "Files:\n";
+            $filesList = [];
             foreach ($results->getFiles() as $file) {
-                printf("%s (%s)\n", $file->getName(), $file->getId());
+                array_push($filesList, $file->getName());
             }
+            return $filesList;
         }
     }
 }
