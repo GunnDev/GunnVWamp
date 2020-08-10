@@ -1,0 +1,24 @@
+div.pendingFileContainer {
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
+    background-color:#ebebeb;
+    border-radius: 8px;
+    margin-bottom: 5px;
+
+    line-height: 50px;
+}
+
+div.pendingFileContainer:hover {
+    background-color:#e2e0e0;
+    cursor: pointer;
+}
+
+p.pendingFileName {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color:#1a73e8;
+}

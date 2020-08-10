@@ -199,10 +199,15 @@
 
             <article>
                 <?php
+                    include '../messages/pendingFile.php';
+
                     $googleDriveUtils = unserialize($_SESSION['driveAPI']);
                     $listOfFiles = $googleDriveUtils->getFilesInDrive();
 
-                    print_r($listOfFiles);
+                    for ($i = 0; $i < count($listOfFiles); $i++) {
+                        $file = new pendingFile($listOfFiles[$i]);
+                        $file->showPendingFile();
+                    }
                 ?>
             </article>
 
