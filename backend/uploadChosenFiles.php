@@ -52,7 +52,7 @@ Author: Mihir Rao
                     move_uploaded_file($fileTmpName, $fileDestination);
 
                     # Upload to Google Drive using API and delete from uploads folder
-                    $googleDriveUtils = $_SESSION['driveAPI'];
+                    $googleDriveUtils = unserialize($_SESSION['driveAPI']);
                     $googleDriveUtils->uploadFiles($fileDestination, $fileName);
                     unlink($fileDestination);
 

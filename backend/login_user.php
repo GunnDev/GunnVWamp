@@ -27,7 +27,7 @@
             $_SESSION['student_lname'] = $lname;
             $_SESSION['student_gyear'] = $gyear;
 
-            $_SESSION['driveAPI'] = new GoogleDriveUtils();
+            $_SESSION['driveAPI'] = serialize(new GoogleDriveUtils());
             
             header("Location: ../pages/dashboard.php");
             
