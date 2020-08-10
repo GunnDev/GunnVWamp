@@ -24,7 +24,12 @@ p.pendingFileName {
     color:#1a73e8;
 }
 
+div.pendingFileContainer:hover button.deleteFile {
+    display: block;
+}
+
 button.deleteFile {
+    display: none;
     cursor: pointer;
     border-radius: 50%;
     width: 50px;
