@@ -116,7 +116,15 @@ Gunn Volunteering
 
                     <div id="dtfm" class="deleteThisFileModal">
                         <div class="deleteThisFileContent">
-                            <p>hi</p>
+                            <section class="confirmFileDelete">
+                                <article></article>
+                                <article>
+                                    <section class="cancelConfirm">
+                                        <article></article>
+                                        <article></article>
+                                    </section>
+                                </article>
+                            </section>
                         </div>
                     </div>
 

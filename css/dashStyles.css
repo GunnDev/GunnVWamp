@@ -338,11 +338,27 @@ div.deleteThisFileModal {
 
 div.deleteThisFileContent {
     background-color: #fefefe;
-    margin: 12% auto;
+    margin: 18% auto;
     padding: 20px;
     border: none;
     width: 400px;
     border-radius: 10px;
+}
+
+section.confirmFileDelete {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: minmax(20px, auto);
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+}
+
+section.cancelConfirm {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: minmax(20px, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
 }
 
 div.ahp {
