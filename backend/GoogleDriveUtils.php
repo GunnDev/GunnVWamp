@@ -86,23 +86,32 @@ class GoogleDriveUtils {
         ));
     }
 
-    function getFilesForUser() {
-        // Return list of file names that have been uploaded
-        $optParams = array(
-            'q' => 'trashed=false',
-            'pageSize' => 20,
-            'fields' => 'nextPageToken, files(id, name)'
-        );
-        $results = $this->service->files->listFiles($optParams);
+    function getFilesForUser($folderName) {
+        $res = $this->service->files->listFiles(array("q" => "name='{$folderName}' and trashed=false"));
+        $folderId = '';
+        
+        if (count($res->getFiles()) != 0) {
+            $folderId = $res->getFiles()[0]->getId();
+            
+            // Return list of file names that have been uploaded
+            $optParams = array(
+                'q' => "'{$folderId}' in parents and trashed=false",
+                'pageSize' => 20,
+                'fields' => 'nextPageToken, files(id, name)'
+            );
+            $results = $this->service->files->listFiles($optParams);
 
-        if (count($results->getFiles()) == 0) {
-            return [];
-        } else {
-            $filesList = [];
-            foreach ($results->getFiles() as $file) {
-                array_push($filesList, $file->getName());
+            if (count($results->getFiles()) == 0) {
+                return [];
+            } else {
+                $filesList = [];
+                foreach ($results->getFiles() as $file) {
+                    array_push($filesList, $file->getName());
+                }
+                return $filesList;
             }
-            return $filesList;
+        } else {
+            return [];
         }
     }
 }
