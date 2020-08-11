@@ -117,11 +117,24 @@ Gunn Volunteering
                     <div id="dtfm" class="deleteThisFileModal">
                         <div class="deleteThisFileContent">
                             <section class="confirmFileDelete">
-                                <article></article>
+                                <article>
+                                    <div class="inputWithIcon">
+                                        <input name="enterPassToDelete" type="password" placeholder="Password" required>
+                                        <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                                    </div>
+                                </article>
                                 <article>
                                     <section class="cancelConfirm">
-                                        <article></article>
-                                        <article></article>
+                                        <article>
+                                            <button id="cancelFileDelete" class="fileDeleteBtns">
+                                                Cancel
+                                            </button>
+                                        </article>
+                                        <article>
+                                            <button id="deleteFile" class="fileDeleteBtns">
+                                                Delete
+                                            </button>
+                                        </article>
                                     </section>
                                 </article>
                             </section>
