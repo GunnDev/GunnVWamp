@@ -53,7 +53,9 @@ Author: Mihir Rao
 
                     # Upload to Google Drive using API and delete from uploads folder
                     $googleDriveUtils = unserialize($_SESSION['driveAPI']);
-                    $googleDriveUtils->uploadFiles($fileDestination, $fileName, $_SESSION['student_id']);
+                    # Folder that the student's file should go into
+                    $folderName = $_SESSION['student_fname'] . $_SESSION['student_lname'] . '_' . $_SESSION['student_id'];
+                    $googleDriveUtils->uploadFiles($fileDestination, $fileName, $folderName);
                     unlink($fileDestination);
 
                     # Reduce file name length if necessary

@@ -89,6 +89,7 @@ class GoogleDriveUtils {
     function getFilesInDrive() {
         // Return list of file names that have been uploaded
         $optParams = array(
+            'q' => 'trashed=false',
             'pageSize' => 20,
             'fields' => 'nextPageToken, files(id, name)'
         );
