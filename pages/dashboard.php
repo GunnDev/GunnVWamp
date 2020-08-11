@@ -206,7 +206,7 @@
                     include '../messages/pendingFile.php';
 
                     $googleDriveUtils = unserialize($_SESSION['driveAPI']);
-                    $listOfFiles = $googleDriveUtils->getFilesInDrive();
+                    $listOfFiles = $googleDriveUtils->getFilesForUser();
 
                     for ($i = 0; $i < count($listOfFiles); $i++) {
                         $file = new pendingFile($listOfFiles[$i]);

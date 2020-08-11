@@ -86,7 +86,7 @@ class GoogleDriveUtils {
         ));
     }
 
-    function getFilesInDrive() {
+    function getFilesForUser() {
         // Return list of file names that have been uploaded
         $optParams = array(
             'q' => 'trashed=false',
