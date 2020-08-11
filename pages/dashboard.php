@@ -114,6 +114,12 @@ Gunn Volunteering
                         <i class="fas fa-trash"></i>
                     </button>
 
+                    <div id="dtfm" class="deleteThisFileModal">
+                        <div class="deleteThisFileContent">
+                            <p>hi</p>
+                        </div>
+                    </div>
+
                     <!-- Keep the add hours modal open -->
                     <script src="../scripts/keepHoursOpen.js"></script>
 
