@@ -3,6 +3,7 @@
 <html>
     <link rel="stylesheet" href="../messages/pendingFile.css">
     <script src="https://kit.fontawesome.com/81f93d9156.js" crossorigin="anonymous"></script>
+    <script src="../scripts/deleteHourModal.js"></script>
 
     <?php
         class pendingFile {
@@ -16,11 +17,11 @@
           echo '<div class="pendingFileContainer">
                     <p class="pendingFileName">';
                         echo $this->fileName;
-              echo '</p>
-                    <button title="Delete This File" class="deleteFile">
-                        <i class="fas fa-trash"></i>
+              echo "</p>
+                    <button title='Delete " . $this->fileName . " ' onclick='deleteHour()' class='deleteFile'>
+                        <i class='fas fa-trash'></i>
                     </button>
-                </div>';
+                </div>";
             }
         }
     ?>
