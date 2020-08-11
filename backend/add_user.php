@@ -41,6 +41,16 @@
         - beginning before @ has two letters and 5 numbers
     If these fail, its not a valid pausd email
     */
+
+    // Check to see if user exists already - through student id
+    $sql2 = "SELECT * FROM users WHERE studentid = '$studentid'";
+    $result2 = $mysqli->query($sql2) or die (mysqli_error($mysqli));
+
+    if ($result2->num_rows > 0){
+        header("Location: ../pages/register.php?register=invalidemail");
+        exit();
+    }
+
     preg_match("/^([a-z0-9]){7}@pausd.us$/", $studentemail, $matches);
     preg_match("/^([a-z]){2}\d{5}$/", substr($studentemail, 0, 7), $frontmatches);
     if (sizeof($matches) == 0 || sizeof($frontmatches) == 0){
@@ -59,7 +69,7 @@
     if ($password != $password_confirm){
         header("Location: ../pages/register.php?register=matchfailure");
     } else {
-         // Check to see if user exists already
+        // Check to see if user exists already - through email
         $sql = "SELECT * FROM users WHERE studentemail = '$studentemail'";
         $result = $mysqli->query($sql) or die (mysqli_error($mysqli));
         
