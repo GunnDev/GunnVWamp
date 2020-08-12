@@ -117,26 +117,28 @@ Gunn Volunteering
                     <div id="dtfm" class="deleteThisFileModal">
                         <div class="deleteThisFileContent">
                             <section class="confirmFileDelete">
-                                <article>
-                                    <div class="inputWithIcon">
-                                        <input name="enterPassToDelete" type="password" placeholder="Password" required>
-                                        <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
-                                    </div>
-                                </article>
-                                <article>
-                                    <section class="cancelConfirm">
-                                        <article>
-                                            <button id="cancelFileDelete" class="fileDeleteBtns">
-                                                Cancel
-                                            </button>
-                                        </article>
-                                        <article>
-                                            <button id="deleteFile" class="fileDeleteBtns">
-                                                Delete
-                                            </button>
-                                        </article>
-                                    </section>
-                                </article>
+                                <form action="../backend/deleteChosenFile.php" method="post">
+                                    <article>
+                                        <div class="inputWithIcon">
+                                            <input name="enterPassToDelete" type="password" placeholder="Password" required>
+                                            <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <section class="cancelConfirm">
+                                            <article>
+                                                <button id="cancelFileDelete" class="fileDeleteBtns">
+                                                    Cancel
+                                                </button>
+                                            </article>
+                                            <article>
+                                                <button id="deleteFile" type="submit" class="fileDeleteBtns">
+                                                    Delete
+                                                </button>
+                                            </article>
+                                        </section>
+                                    </article>
+                                </form>
                             </section>
                         </div>
                     </div>

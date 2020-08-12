@@ -5,6 +5,7 @@ function deleteHour() {
     // Get the <span> element that closes the modal
     var cancelBtn = document.getElementById("cancelFileDelete");
 
+    // Show the modal
     modal.style.display = "block";
 
     // When the user clicks on cancel, close the modal
