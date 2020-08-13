@@ -1,9 +1,15 @@
 function deleteHour(ele) {
     // Show the filename the user is deleting
     var btnID = ele.id;
+
+    var fileName = btnID;
+    if (fileName.length > 15){
+        fileName = fileName.substring(0, 23) + '...';
+    }
+
     var fileNameDisplay = document.getElementById("deleteFileHeading");
     var title = "Delete ";
-    fileNameDisplay.innerHTML = title.concat(btnID, "?");
+    fileNameDisplay.innerHTML = title.concat(fileName, "?");
 
     // Submit the file we want to delete through the form
     var f = document.getElementById("deletingFile");
