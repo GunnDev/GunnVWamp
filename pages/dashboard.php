@@ -119,6 +119,11 @@ Gunn Volunteering
                             <section class="confirmFileDelete">
                                 <form action="../backend/deleteChosenFile.php" method="post">
                                     <article>
+                                        <p id="deleteFileHeading" class="deleteFileTitle">
+                                            Delete some file
+                                        </p>
+                                    </article>
+                                    <article>
                                         <div class="inputWithIcon">
                                             <input name="enterPassToDelete" type="password" placeholder="Password" required>
                                             <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
@@ -138,6 +143,7 @@ Gunn Volunteering
                                             </article>
                                         </section>
                                     </article>
+                                    <input id="deletingFile" type="hidden" name="file" value="">
                                 </form>
                             </section>
                         </div>

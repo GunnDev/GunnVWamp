@@ -5,4 +5,6 @@
     $pass = $_POST['enterPassToDelete'];
     echo $pass;
 
+    $file = $_POST['file'];
+    echo $file;
 ?>
