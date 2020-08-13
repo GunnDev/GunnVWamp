@@ -55,7 +55,7 @@ Author: Mihir Rao
                     $googleDriveUtils = unserialize($_SESSION['driveAPI']);
                     # Folder that the student's file should go into
                     $folderName = $_SESSION['student_fname'] . $_SESSION['student_lname'] . '_' . $_SESSION['student_id'];
-                    $googleDriveUtils->uploadFiles($_SESSION['student_fname'] . $_SESSION['student_lname'], $fileDestination, $fileName, $folderName);
+                    $createdFileID = $googleDriveUtils->uploadFiles($_SESSION['student_fname'] . $_SESSION['student_lname'], $fileDestination, $fileName, $folderName);
                     unlink($fileDestination);
 
                     # Reduce file name length if necessary

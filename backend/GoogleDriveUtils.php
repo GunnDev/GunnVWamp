@@ -87,6 +87,10 @@ class GoogleDriveUtils {
             'data' => $data,
             'uploadType' => 'multipart'
         ));
+
+        // Return the file ID
+        $createdFileID = $createdFile->getID();
+        return $createdFileID;
     }
 
     // Returns list of files the user has submitted
@@ -119,13 +123,18 @@ class GoogleDriveUtils {
         }
     }
 
-    // Checks if a given file exists in a user's folder
-    function checkFileExistence($folderName, $fileName){
-
-    }
-
     // Deletes a specific file from a user's folder
     function deleteFile($folderName, $fileName) {
+        $res1 = $this->service->files->listFiles(array("q" => "name='{$folderName}' and trashed=false"));
+        $folderId = $res1->getFiles()[0]->getId();
 
+        $res2 = $this->service->files->listFiles(array("q" => "name='{$fileName}' and '{$folderId}' in parents and trashed=false"));
+        if (count($res2->getFiles()) == 0) {
+            // When the filename of $fileName is not existing,
+            // do something
+        } else {
+            $fileId = $res2->getFiles()[0]->getId();
+            $this->service->files->delete($fileId);
+        }
     }
 }
