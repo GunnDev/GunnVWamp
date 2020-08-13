@@ -58,6 +58,7 @@ class GoogleDriveUtils {
         }
     }
 
+    // Uploads a file to a user's folder
     function uploadFiles($studentName, $filePath, $fileName, $folderName) {
         $fileName = $studentName . '-' . $fileName;
 
@@ -88,6 +89,7 @@ class GoogleDriveUtils {
         ));
     }
 
+    // Returns list of files the user has submitted
     function getFilesForUser($folderName) {
         $res = $this->service->files->listFiles(array("q" => "name='{$folderName}' and trashed=false"));
         $folderId = '';
@@ -115,5 +117,15 @@ class GoogleDriveUtils {
         } else {
             return [];
         }
+    }
+
+    // Checks if a given file exists in a user's folder
+    function checkFileExistence($folderName, $fileName){
+
+    }
+
+    // Deletes a specific file from a user's folder
+    function deleteFile($folderName, $fileName) {
+
     }
 }
