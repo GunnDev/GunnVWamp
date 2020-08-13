@@ -58,7 +58,9 @@ class GoogleDriveUtils {
         }
     }
 
-    function uploadFiles($filePath, $fileName, $folderName) {
+    function uploadFiles($studentName, $filePath, $fileName, $folderName) {
+        $fileName = $studentName . '-' . $fileName;
+
         // 1. Search the existing folder using the folder name.
         $res = $this->service->files->listFiles(array("q" => "name='{$folderName}' and trashed=false"));
         $folderId = '';

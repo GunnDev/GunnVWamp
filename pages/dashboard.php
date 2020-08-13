@@ -214,7 +214,7 @@ Gunn Volunteering
                                         }
 
                                         if (strpos($fullUrl, "upload=toobig") == true){
-                                            $fileErrorMessage = new fileError('Our minions can\'t handle files larger than 1000 Kb');
+                                            $fileErrorMessage = new fileError('This file is too large :(');
                                             $fileErrorMessage->printMessage();
                                         }
 
@@ -245,7 +245,12 @@ Gunn Volunteering
                     $listOfFiles = $googleDriveUtils->getFilesForUser($folderName);
 
                     for ($i = 0; $i < count($listOfFiles); $i++) {
-                        $file = new pendingFile($listOfFiles[$i]);
+                        // Remove the added student name at the beginning
+                        $fileNameParts = explode('-', $listOfFiles[$i]);
+                        $fileName = end($fileNameParts);
+
+                        // Create the object and show the file
+                        $file = new pendingFile($fileName);
                         $file->showPendingFile();
                     }
                 ?>
