@@ -130,11 +130,11 @@ class GoogleDriveUtils {
 
         $res2 = $this->service->files->listFiles(array("q" => "name='{$fileName}' and '{$folderId}' in parents and trashed=false"));
         if (count($res2->getFiles()) == 0) {
-            // When the filename of $fileName is not existing,
-            // do something
+            return false;
         } else {
             $fileId = $res2->getFiles()[0]->getId();
             $this->service->files->delete($fileId);
+            return true;
         }
     }
 }

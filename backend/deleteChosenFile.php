@@ -28,9 +28,13 @@
             // Delete the file
             $googleDriveUtils = unserialize($_SESSION['driveAPI']);
             $folderName = $_SESSION['student_fname'] . $_SESSION['student_lname'] . '_' . $_SESSION['student_id'];
-            $googleDriveUtils->deleteFile($folderName, $_SESSION['student_fname'] . $_SESSION['student_lname'] . "-" . $fileToDel);
+            $deletionResult = $googleDriveUtils->deleteFile($folderName, $_SESSION['student_fname'] . $_SESSION['student_lname'] . "-" . $fileToDel);
             
-            header("Location: ../pages/dashboard.php?delete=success");
+            if ($deletionResult == true){
+                header("Location: ../pages/dashboard.php?delete=success");
+            } else {
+                header("Location: ../pages/dashboard.php?delete=nonexistent");
+            }
             exit;
         } else {
             header("Location: ../pages/dashboard.php?delete=incorrectpass");
