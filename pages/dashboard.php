@@ -267,6 +267,13 @@ Gunn Volunteering
                     Approved Hours
                 </h1>
             </article>
+
+            <!-- Declined Submissions -->
+            <article>
+                <h1 class="hoursTitle">
+                    Declined Hours
+                </h1>
+            </article>
         </section>
     </body>
 
