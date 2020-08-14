@@ -10,7 +10,7 @@
 
     # Get entered password and file which we want to delete
     $pass = $_POST['enterPassToDelete'];
-    $fileToDel = $_POST['file'];
+    $fileToDelID = $_POST['file'];
 
     $stud_id = $_SESSION['student_id'];
     $stmt = $mysqli->prepare("SELECT userid, studentid, studentemail, firstname, lastname, gradyear, studentpass FROM users WHERE studentid = ?");
@@ -28,13 +28,11 @@
             // Delete the file
             $googleDriveUtils = unserialize($_SESSION['driveAPI']);
             $folderName = $_SESSION['student_fname'] . $_SESSION['student_lname'] . '_' . $_SESSION['student_id'];
-            $deletionResult = $googleDriveUtils->deleteFile($folderName, $fileToDel);
+            $googleDriveUtils->deleteFileUsingID($fileToDelID);
             
-            if ($deletionResult == true){
-                header("Location: ../pages/dashboard.php?delete=success");
-            } else {
-                header("Location: ../pages/dashboard.php?delete=nonexistent");
-            }
+            // Success message
+            header("Location: ../pages/dashboard.php?delete=success");
+            
             exit;
         } else {
             header("Location: ../pages/dashboard.php?delete=incorrectpass");

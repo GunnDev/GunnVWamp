@@ -8,10 +8,12 @@
     <?php
         class pendingFile {
             private $fileName;
+            private $fullFileName;
             private $fileID;
 
-            public function __construct($fName){
-                $this->fileID = $fName;
+            public function __construct($fName, $fileID){
+                $this->fullFileName = $fName;
+                $this->fileID = $fileID;
                         
                 $fileAspects = explode('.', $fName);
                 $fileNameWithoutExtension = $fileAspects[0];
@@ -30,7 +32,7 @@
                     <p class="pendingFileName">';
                         echo $this->fileName;
               echo "</p>
-                    <button id='" . $this->fileID . "' title='Delete " . $this->fileName . " ' onclick='deleteHour(this)' class='deleteFile'>
+                    <button data-ffname='" . $this->fullFileName . "' id='" . $this->fileID . "' title='Delete " . $this->fileName . " ' onclick='deleteHour(this)' class='deleteFile'>
                         <i class='fas fa-trash'></i>
                     </button>
                 </div>";

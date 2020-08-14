@@ -252,10 +252,10 @@ Gunn Volunteering
                     $googleDriveUtils = unserialize($_SESSION['driveAPI']);
                     $folderName = $_SESSION['student_fname'] . $_SESSION['student_lname'] . '_' . $_SESSION['student_id'];
                     $listOfFiles = $googleDriveUtils->getFilesForUser($folderName);
-
+                    
                     for ($i = 0; $i < count($listOfFiles); $i++) {
                         // Create the object and show the file
-                        $file = new pendingFile($listOfFiles[$i]);
+                        $file = new pendingFile(array_keys($listOfFiles)[$i], array_values($listOfFiles)[$i]);
                         $file->showPendingFile();
                     }
                 ?>
