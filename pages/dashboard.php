@@ -119,8 +119,11 @@ Gunn Volunteering
                             <section class="confirmFileDelete">
                                 <form action="../backend/deleteChosenFile.php" method="post">
                                     <article>
-                                        <p id="deleteFileHeading" class="deleteFileTitle">
-                                            Delete some file
+                                        <p class="deleteFileTitle">
+                                            Delete &nbsp;
+                                            <span id="deleteFileHeading" style="color: #706f6f;">
+                                                some file
+                                            </span>
                                         </p>
                                     </article>
                                     <article>

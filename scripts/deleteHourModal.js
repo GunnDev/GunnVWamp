@@ -8,7 +8,7 @@ function deleteHour(ele) {
     }
 
     var fileNameDisplay = document.getElementById("deleteFileHeading");
-    var title = "Delete ";
+    var title = "";
     fileNameDisplay.innerHTML = title.concat(fileName, "?");
 
     // Submit the file we want to delete through the form
