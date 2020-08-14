@@ -137,4 +137,8 @@ class GoogleDriveUtils {
             return true;
         }
     }
+
+    function deleteFileUsingID($fileID) {
+        $this->service->files->delete($fileID);
+    }
 }
