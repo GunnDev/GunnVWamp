@@ -251,12 +251,20 @@ Gunn Volunteering
                     $listOfFiles = $googleDriveUtils->getFilesForUser($folderName);
 
                     for ($i = 0; $i < count($listOfFiles); $i++) {
-                        // Remove the added student name at the beginning
-                        $fileNameParts = explode('-', $listOfFiles[$i]);
-                        $fileName = end($fileNameParts);
+                        // Limit file display
+                        $fileName = $listOfFiles[$i];
+                        
+                        $fileAspects = explode('.', $fileName);
+                        $fileNameWithoutExtension = $fileAspects[0];
+                        $fileExtension = $fileAspects[1];
+
+                        if (strlen($fileNameWithoutExtension) > 45) {
+                            $fileNameWithoutExtension = substr($fileNameWithoutExtension, 0, 43);
+                            $fileName = $fileNameWithoutExtension . '...' . $fileExtension;
+                        }
 
                         // Create the object and show the file
-                        $file = new pendingFile($fileName);
+                        $file = new pendingFile($fileName . '');
                         $file->showPendingFile();
                     }
                 ?>
