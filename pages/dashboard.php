@@ -148,6 +148,29 @@ Gunn Volunteering
                                     </article>
                                     <input id="deletingFile" type="hidden" name="file" value="">
                                 </form>
+                                <article>
+                                    <?php
+                                        include '../messages/delSuccess.php';
+                                        include '../messages/delError.php';
+
+                                        $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                                        if (strpos($fullUrl, "delete=success") == true){
+                                            $fileErrorMessage = new delSuccess('Deleted file.');
+                                            $fileErrorMessage->printMessage();
+                                        }
+
+                                        if (strpos($fullUrl, "delete=pass") == true){
+                                            $fileErrorMessage = new delError('Incorrect credentials.');
+                                            $fileErrorMessage->printMessage();
+                                        }
+
+                                        if (strpos($fullUrl, "delete=failure") == true){
+                                            $fileErrorMessage = new delError('An error occured.');
+                                            $fileErrorMessage->printMessage();
+                                        }
+                                    ?>
+                                </article>
                             </section>
                         </div>
                     </div>

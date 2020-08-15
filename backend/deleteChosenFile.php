@@ -35,10 +35,9 @@
             
             exit;
         } else {
-            header("Location: ../pages/dashboard.php?delete=incorrectpass");
+            header("Location: ../pages/dashboard.php?delete=pass");
         }
     } else {
         header("Location: ../pages/dashboard.php?delete=failure");
     }
-    header("Location: ../pages/dashboard.php?delete=failure");
 ?>
