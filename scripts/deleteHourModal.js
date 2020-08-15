@@ -28,12 +28,14 @@ function deleteHour(ele) {
     // When the user clicks on cancel, close the modal
     cancelBtn.onclick = function() {
         modal.style.display = "none";
+        document.getElementById("deleteForm").reset();
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            document.getElementById("deleteForm").reset();
         }
     }
 }
