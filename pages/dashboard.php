@@ -117,7 +117,7 @@ Gunn Volunteering
                     <div id="dtfm" class="deleteThisFileModal">
                         <div class="deleteThisFileContent">
                             <section class="confirmFileDelete">
-                                <form action="../backend/deleteChosenFile.php" method="post">
+                                <form id="deleteForm" action="../backend/deleteChosenFile.php" method="post">
                                     <article>
                                         <p class="deleteFileTitle">
                                             Delete &nbsp;
@@ -135,7 +135,7 @@ Gunn Volunteering
                                     <article>
                                         <section class="cancelConfirm">
                                             <article>
-                                                <button id="cancelFileDelete" class="fileDeleteBtns">
+                                                <button id="cancelFileDelete" type="button" class="fileDeleteBtns">
                                                     Cancel
                                                 </button>
                                             </article>
@@ -176,7 +176,7 @@ Gunn Volunteering
 
                                         <article>
                                             <p id="selFTitle" style="margin: 0; padding: 0; font-weight: 400; color: gray;">
-                                                Selected Files: None
+                                                Selected File: None
                                             </p>
                                             <div id="show_file_list"></div>
                                         </article>
@@ -186,7 +186,7 @@ Gunn Volunteering
                                 <article>
                                     <section class="bottomFileSelectSection">
                                         <article>
-                                            <form action="../backend/uploadChosenFiles.php" method="POST" enctype="multipart/form-data">
+                                            <form id="addForm" action="../backend/uploadChosenFiles.php" method="POST" enctype="multipart/form-data">
                                                 <div class="fileUpload">
                                                     <label for="fileInput" class="selectFilesLabel">
                                                         <span class="fileSelectSpan">Browse</span>
