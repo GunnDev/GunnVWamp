@@ -211,6 +211,11 @@ Gunn Volunteering
 
                                         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
+                                        if (strpos($fullUrl, "upload=max") == true){
+                                            $fileErrorMessage = new fileError('Max submissions: Wait fo approval.');
+                                            $fileErrorMessage->printMessage();
+                                        }
+
                                         if (strpos($fullUrl, "upload=success") == true){
                                             if (isset($_GET['fName'])) {
                                                 $fileName = $_GET['fName'];
@@ -228,12 +233,12 @@ Gunn Volunteering
                                         }
 
                                         if (strpos($fullUrl, "upload=err") == true){
-                                            $fileErrorMessage = new fileError('Error uploading file. Check file');
+                                            $fileErrorMessage = new fileError('Error uploading file: Check file size.');
                                             $fileErrorMessage->printMessage();
                                         }
 
                                         if (strpos($fullUrl, "upload=ftype") == true){
-                                            $fileErrorMessage = new fileError('Invalid file type');
+                                            $fileErrorMessage = new fileError('Invalid file type.');
                                             $fileErrorMessage->printMessage();
                                         }
                                     ?>

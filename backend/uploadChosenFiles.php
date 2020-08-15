@@ -14,6 +14,16 @@ Author: Mihir Rao
         header("Location: login.php");
     }
 
+    $googleDriveUtils = unserialize($_SESSION['driveAPI']);
+    $folderName = $_SESSION['student_fname'] . $_SESSION['student_lname'] . '_' . $_SESSION['student_id'];
+
+    # If the user has already submitted max number of files
+    $filesList = $googleDriveUtils->getFilesForUser($folderName);
+    if (count($filesList) == 4) {
+        header("Location: ../pages/dashboard.php?upload=max");
+        exit();
+    }
+
     # If file is selected
     if(isSet($_POST['uFiles'])){
 
@@ -52,9 +62,6 @@ Author: Mihir Rao
                     move_uploaded_file($fileTmpName, $fileDestination);
 
                     # Upload to Google Drive using API and delete from uploads folder
-                    $googleDriveUtils = unserialize($_SESSION['driveAPI']);
-                    # Folder that the student's file should go into
-                    $folderName = $_SESSION['student_fname'] . $_SESSION['student_lname'] . '_' . $_SESSION['student_id'];
                     $createdFileID = $googleDriveUtils->uploadFiles($fileDestination, $fileName, $folderName);
                     unlink($fileDestination);
 
