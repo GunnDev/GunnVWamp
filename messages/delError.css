@@ -1,0 +1,20 @@
+.delErrorContainer {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.delErrorMessage {
+    width: 80%;
+    display: inline-block;
+}
+
+.delErrorTitle {
+    color:#d41515;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
