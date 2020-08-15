@@ -8,7 +8,7 @@ showfiles = function() {
         children += '' + fName(input.files.item(i).name) + ', <br>';
     }
 
-    selectedFiles.innerHTML = 'Selected Files: ';
+    selectedFiles.innerHTML = 'Selected File: ';
     output.innerHTML = '<p style="margin-top: 5px; padding: 0; font-size: 14px;">' + children + '</p>';
 }
 
