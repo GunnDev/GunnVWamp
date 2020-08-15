@@ -348,7 +348,7 @@ div.deleteThisFileContent {
 section.confirmFileDelete {
     width: 100%;
     display: grid;
-    grid-auto-rows: minmax(20px, auto);
+    grid-auto-rows: minmax(2px, auto);
     grid-template-columns: 1fr;
     grid-gap: 5px;
 }
