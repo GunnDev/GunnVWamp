@@ -25,6 +25,8 @@ function deleteHour(btnID) {
     // When the user clicks on cancel, close the modal
     cancelBtn.onclick = function() {
         modal.style.display = "none";
+
+        // Reset the form
         document.getElementById("deleteForm").reset();
 
         // Clear upload message
@@ -38,14 +40,17 @@ function deleteHour(btnID) {
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+
+            // Reset the form
             document.getElementById("deleteForm").reset();
+
+            // Clear upload message
+            var filemsg = document.getElementById("delfilemsg");
+            if (filemsg) {
+                filemsg.style.display = "none";
+            }
         }
 
-        // Clear upload message
-        var filemsg = document.getElementById("delfilemsg");
-        if (filemsg) {
-            filemsg.style.display = "none";
-        }
         // Remove upload var
         history.pushState('dash', 'Gunn Volunteering | Dashboard', 'http://localhost/GunnVWamp/pages/dashboard.php');
     }
