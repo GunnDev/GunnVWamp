@@ -26,6 +26,12 @@ function deleteHour(btnID) {
     cancelBtn.onclick = function() {
         modal.style.display = "none";
         document.getElementById("deleteForm").reset();
+
+        // Clear upload message
+        var filemsg = document.getElementById("delfilemsg");
+        if (filemsg) {
+            filemsg.style.display = "none";
+        }
     }
 
     // When the user clicks anywhere outside of the modal, close it
@@ -34,5 +40,13 @@ function deleteHour(btnID) {
             modal.style.display = "none";
             document.getElementById("deleteForm").reset();
         }
+
+        // Clear upload message
+        var filemsg = document.getElementById("delfilemsg");
+        if (filemsg) {
+            filemsg.style.display = "none";
+        }
+        // Remove upload var
+        history.pushState('dash', 'Gunn Volunteering | Dashboard', 'http://localhost/GunnVWamp/pages/dashboard.php');
     }
 }

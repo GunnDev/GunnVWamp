@@ -13,7 +13,7 @@
             }
 
             public function printMessage(){
-                  echo '<div class="delErrorContainer">
+                  echo '<div id="delfilemsg" class="delErrorContainer">
                             <div class="delErrorMessage">
                                 <p class="delErrorTitle">
                                     <i class="fas fa-times fa-lg fa-fw" aria-hidden="true" style="color:#d41515;"></i>';

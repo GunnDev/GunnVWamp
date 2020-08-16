@@ -13,7 +13,7 @@
             }
 
             public function printMessage(){
-                  echo '<div class="delSuccessContainer">
+                  echo '<div id="delfilemsg" class="delSuccessContainer">
                             <div class="delSuccessmessage">
                                 <p class="delSuccessTitle">
                                     <i class="fas fa-check fa-lg fa-fw" aria-hidden="true" style="color:#2c990b;;"></i>';
