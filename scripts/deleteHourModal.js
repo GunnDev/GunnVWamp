@@ -1,7 +1,4 @@
-function deleteHour(ele) {
-    // Show the filename the user is deleting
-    var btnID = ele.id;
-    
+function deleteHour(btnID) {
     var file = document.getElementById(btnID);
     var fileName = file.getAttribute("data-ffname");
     if (fileName.length > 15){

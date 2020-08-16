@@ -31,13 +31,13 @@
             $googleDriveUtils->deleteFileUsingID($fileToDelID);
             
             // Success message
-            header("Location: ../pages/dashboard.php?delete=success");
+            header("Location: ../pages/dashboard.php");
             
             exit;
         } else {
-            header("Location: ../pages/dashboard.php?delete=pass");
+            header("Location: ../pages/dashboard.php?delete=pass&req=" . $fileToDelID);
         }
     } else {
-        header("Location: ../pages/dashboard.php?delete=failure");
+        header("Location: ../pages/dashboard.php?delete=failure&req=" . $fileToDelID);
     }
 ?>

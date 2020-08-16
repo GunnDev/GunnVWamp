@@ -155,11 +155,6 @@ Gunn Volunteering
 
                                         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-                                        if (strpos($fullUrl, "delete=success") == true){
-                                            $fileErrorMessage = new delSuccess('Deleted file.');
-                                            $fileErrorMessage->printMessage();
-                                        }
-
                                         if (strpos($fullUrl, "delete=pass") == true){
                                             $fileErrorMessage = new delError('Incorrect credentials.');
                                             $fileErrorMessage->printMessage();

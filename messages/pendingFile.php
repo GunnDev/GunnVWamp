@@ -32,7 +32,7 @@
                     <p class="pendingFileName">';
                         echo $this->fileName;
               echo "</p>
-                    <button data-ffname='" . $this->fullFileName . "' id='" . $this->fileID . "' title='Delete " . $this->fileName . " ' onclick='deleteHour(this)' class='deleteFile'>
+                    <button data-ffname='" . $this->fullFileName . "' id='" . $this->fileID . "' title='Delete " . $this->fileName . " ' onclick='deleteHour(this.id)' class='deleteFile'>
                         <i class='fas fa-trash'></i>
                     </button>
                 </div>";
