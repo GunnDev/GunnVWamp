@@ -110,9 +110,45 @@ Gunn Volunteering
                         <i class="fas fa-plus"></i>
                     </button>
 
-                    <button title="Delete All Submissions" class="deleteAll">
+                    <button title="Delete All Submissions" onclick="deleteAllFiles()" class="deleteAll">
                         <i class="fas fa-trash"></i>
                     </button>
+
+                    <div id="dafm" class="deleteAllFilesModal">
+                        <div class="deleteAllFilesContent">
+                            <section class="confirmDeleteAll">
+                                <article>
+                                    <p class="deleteFileTitle">
+                                        Delete All Files?
+                                    </p>
+                                </article>
+                                <article>
+                                    <div class="inputWithIcon">
+                                        <input name="enterPassToDelete" type="password" placeholder="Password" required>
+                                        <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                                    </div>
+                                </article>
+                                <article>
+                                    <input type="checkbox" id="ccb" name="confirmCheckbox" value="1">
+                                    <label for="confirmCheckbox"> All submissions will be deleted. Proceed?</label><br>
+                                </article>
+                                <article>
+                                    <section class="cancelConfirm">
+                                            <article>
+                                                <button id="cancelAllDelete" type="button" class="fileDeleteBtns">
+                                                    Cancel
+                                                </button>
+                                            </article>
+                                            <article>
+                                                <button id="confirmAllDelete" type="submit" class="fileDeleteBtns">
+                                                    Delete
+                                                </button>
+                                            </article>
+                                        </section>
+                                    </article>
+                            </section>
+                        </div>
+                    </div>
 
                     <div id="dtfm" class="deleteThisFileModal">
                         <div class="deleteThisFileContent">

@@ -336,6 +336,19 @@ div.deleteThisFileModal {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+div.deleteAllFilesModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height - KEEP */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
 div.deleteThisFileContent {
     background-color: #fefefe;
     margin: 18% auto;
@@ -345,7 +358,24 @@ div.deleteThisFileContent {
     border-radius: 10px;
 }
 
+div.deleteAllFilesContent {
+    background-color: #fefefe;
+    margin: 18% auto;
+    padding: 20px;
+    border: none;
+    width: 400px;
+    border-radius: 10px;
+}
+
 section.confirmFileDelete {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: minmax(2px, auto);
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+}
+
+section.confirmDeleteAll {
     width: 100%;
     display: grid;
     grid-auto-rows: minmax(2px, auto);
