@@ -147,7 +147,28 @@ class GoogleDriveUtils {
         }
     }
 
-    // Deletes a specific file from a user's folder using file's name
+    // Delete's a specific file from a user's folder using the file's ID
+    function deleteFileUsingID($fileID) {
+        $this->service->files->delete($fileID);
+    }
+
+    function deleteAllFiles($folderName){
+        $res1 = $this->service->files->listFiles(array("q" => "name='{$folderName}' and trashed=false"));
+        $folderId = $res1->getFiles()[0]->getId();
+
+        $res2 = $this->service->files->listFiles(array("q" => "'{$folderId}' in parents and trashed=false"));
+        if (count($res2->getFiles()) == 0) {
+            return false;
+        } else {
+            for ($i = 0; $i < count($res2->getFiles()); $i++) {
+                $fileId = $res2->getFiles()[$i]->getId();
+                $this->service->files->delete($fileId);
+            }
+            return true;
+        }
+    }
+
+    // Deletes a specific file from a user's folder using file's name - outdated
     function deleteFile($folderName, $fileName) {
         $res1 = $this->service->files->listFiles(array("q" => "name='{$folderName}' and trashed=false"));
         $folderId = $res1->getFiles()[0]->getId();
@@ -160,10 +181,5 @@ class GoogleDriveUtils {
             $this->service->files->delete($fileId);
             return true;
         }
-    }
-
-    // Delete's a specific file from a user's folder using the file's ID
-    function deleteFileUsingID($fileID) {
-        $this->service->files->delete($fileID);
     }
 }
