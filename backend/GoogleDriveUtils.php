@@ -149,7 +149,18 @@ class GoogleDriveUtils {
 
     // Delete's a specific file from a user's folder using the file's ID
     function deleteFileUsingID($fileID) {
+        $folderIds = $this->service->files->get($fileID, array("fields" => "parents"))->getParents();
+
         $this->service->files->delete($fileID);
+
+        // Delete the folder if no file exists within it.
+        if (count($folderIds) > 0) {
+            $folderId = $folderIds[0];
+            $fileList = $this->service->files->listFiles(array("q" => "'{$folderId}' in parents"));
+            if (count($fileList->getFiles()) == 0) {
+                $this->service->files->delete($folderId);
+            }
+        }
     }
 
     function deleteAllFiles($folderName){
@@ -164,6 +175,8 @@ class GoogleDriveUtils {
                 $fileId = $res2->getFiles()[$i]->getId();
                 $this->service->files->delete($fileId);
             }
+            // Delete the folder if no file exists within it.
+            $this->service->files->delete($folderId);
             return true;
         }
     }
