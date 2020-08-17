@@ -119,33 +119,31 @@ Gunn Volunteering
                             <section class="confirmDeleteAll">
                                 <article>
                                     <p class="deleteFileTitle">
-                                        Delete All Files?
+                                        Delete All Submissions?
                                     </p>
                                 </article>
-                                <article>
-                                    <div class="inputWithIcon">
-                                        <input name="enterPassToDelete" type="password" placeholder="Password" required>
-                                        <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
-                                    </div>
-                                </article>
-                                <article>
-                                    <input type="checkbox" id="ccb" name="confirmCheckbox" value="1">
-                                    <label for="confirmCheckbox"> All submissions will be deleted. Proceed?</label><br>
-                                </article>
-                                <article>
-                                    <section class="cancelConfirm">
-                                            <article>
-                                                <button id="cancelAllDelete" type="button" class="fileDeleteBtns">
-                                                    Cancel
-                                                </button>
-                                            </article>
-                                            <article>
-                                                <button id="confirmAllDelete" type="submit" class="fileDeleteBtns">
-                                                    Delete
-                                                </button>
-                                            </article>
+                                <form action="../backend/deleteAllFiles.php" method="post">
+                                    <article>
+                                        <div class="inputWithIcon">
+                                            <input name="passToDeleteAll" type="password" placeholder="Password" required>
+                                            <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <section class="cancelConfirm">
+                                                <article>
+                                                    <button id="cancelAllDelete" type="button" class="fileDeleteBtns">
+                                                        Cancel
+                                                    </button>
+                                                </article>
+                                                <article>
+                                                    <button id="confirmAllDelete" type="submit" class="fileDeleteBtns">
+                                                        Delete
+                                                    </button>
+                                                </article>
                                         </section>
                                     </article>
+                                </form>
                             </section>
                         </div>
                     </div>
