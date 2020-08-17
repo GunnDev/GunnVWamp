@@ -54,7 +54,7 @@ function deleteHour(btnID) {
             }
         }
 
-        // Remove upload var
+        // Remove delete var
         history.pushState('dash', 'Gunn Volunteering | Dashboard', 'http://localhost/GunnVWamp/pages/dashboard.php');
     }
 }
@@ -72,12 +72,33 @@ function deleteAllFiles() {
     // When the user clicks on cancel, close the modal
     cancelBtn.onclick = function() {
         modal.style.display = "none";
+
+        // Reset the form
+        document.getElementById("deleteAllForm").reset();
+
+        // Clear upload message
+        var filemsg = document.getElementById("delfilemsg");
+        if (filemsg) {
+            filemsg.style.display = "none";
+        }
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+
+            // Reset the form
+            document.getElementById("deleteForm").reset();
+
+            // Clear upload message
+            var filemsg = document.getElementById("delfilemsg");
+            if (filemsg) {
+                filemsg.style.display = "none";
+            }
         }
+
+        // Remove delete var
+        history.pushState('dash', 'Gunn Volunteering | Dashboard', 'http://localhost/GunnVWamp/pages/dashboard.php');
     }
 }

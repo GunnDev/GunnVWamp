@@ -117,12 +117,12 @@ Gunn Volunteering
                     <div id="dafm" class="deleteAllFilesModal">
                         <div class="deleteAllFilesContent">
                             <section class="confirmDeleteAll">
-                                <article>
-                                    <p class="deleteFileTitle">
-                                        Delete All Submissions?
-                                    </p>
-                                </article>
-                                <form action="../backend/deleteAllFiles.php" method="post">
+                                <form id="deleteAllForm" action="../backend/deleteAllFiles.php" method="post">
+                                    <article>
+                                        <p class="deleteFileTitle">
+                                            Delete All Submissions?
+                                        </p>
+                                    </article>
                                     <article>
                                         <div class="inputWithIcon">
                                             <input name="passToDeleteAll" type="password" placeholder="Password" required>
@@ -144,6 +144,28 @@ Gunn Volunteering
                                         </section>
                                     </article>
                                 </form>
+                                <article>
+                                    <?php
+                                        include '../messages/delError.php';
+
+                                        $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                                        if (strpos($fullUrl, "deleteAll=err") == true){
+                                            $fileErrorMessage = new delError('No files to delete.');
+                                            $fileErrorMessage->printMessage();
+                                        }
+
+                                        if (strpos($fullUrl, "deleteAll=pass") == true){
+                                            $fileErrorMessage = new delError('Incorrect credentials.');
+                                            $fileErrorMessage->printMessage();
+                                        }
+
+                                        if (strpos($fullUrl, "deleteAll=failure") == true){
+                                            $fileErrorMessage = new delError('An error occured.');
+                                            $fileErrorMessage->printMessage();
+                                        }
+                                    ?>
+                                </article>
                             </section>
                         </div>
                     </div>
@@ -184,9 +206,6 @@ Gunn Volunteering
                                 </form>
                                 <article>
                                     <?php
-                                        include '../messages/delSuccess.php';
-                                        include '../messages/delError.php';
-
                                         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
                                         if (strpos($fullUrl, "delete=pass") == true){

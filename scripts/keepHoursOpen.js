@@ -4,6 +4,9 @@ jQuery(document).ready(function($) {
     if(window.location.href.indexOf("?upload=max") > -1) {
         addHour();
     }
+    if(window.location.href.indexOf("?upload=success") > -1) {
+        addHour();
+    }
     if(window.location.href.indexOf("?upload=err") > -1) {
         addHour();
     }
@@ -28,6 +31,18 @@ jQuery(document).ready(function($) {
     if(window.location.href.indexOf("?delete=failure") > -1) {
         var fileID = getQueryVariable('req');
         deleteHour(fileID);
+    }
+});
+
+jQuery(document).ready(function($) {
+    if(window.location.href.indexOf("?deleteAll=err") > -1) {
+        deleteAllFiles();
+    }
+    if(window.location.href.indexOf("?deleteAll=pass") > -1) {
+        deleteAllFiles();
+    }
+    if(window.location.href.indexOf("?deleteAll=failure") > -1) {
+        deleteAllFiles();
     }
 });
 
