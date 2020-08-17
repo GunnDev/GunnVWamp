@@ -1,13 +1,16 @@
 function deleteHour(btnID) {
     var file = document.getElementById(btnID);
-    var fileName = file.getAttribute("data-ffname");
-    if (fileName.length > 15){
-        fileName = fileName.substring(0, 23) + '...';
-    }
 
-    var fileNameDisplay = document.getElementById("deleteFileHeading");
-    var title = "";
-    fileNameDisplay.innerHTML = title.concat(fileName, "?");
+    if(file) {
+        var fileName = file.getAttribute("data-ffname");
+        if (fileName.length > 15){
+            fileName = fileName.substring(0, 23) + '...';
+        }
+
+        var fileNameDisplay = document.getElementById("deleteFileHeading");
+        var title = "";
+        fileNameDisplay.innerHTML = title.concat(fileName, "?");
+    }
 
     // Submit the file we want to delete through the form
     var f = document.getElementById("deletingFile");
