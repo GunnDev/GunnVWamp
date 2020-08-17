@@ -61,7 +61,7 @@ function deleteAllFiles() {
     var modal = document.getElementById("dafm");
 
     // Get the <span> element that closes the modal
-    var cancelBtn = document.getElementById("cancelFileDelete");
+    var cancelBtn = document.getElementById("cancelAllDelete");
 
     // Show the modal
     modal.style.display = "block";
