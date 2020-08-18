@@ -282,6 +282,11 @@ Gunn Volunteering
 
                                         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
+                                        if (strpos($fullUrl, "upload=filename") == true){
+                                            $fileErrorMessage = new fileError('Please make the file name shorter!');
+                                            $fileErrorMessage->printMessage();
+                                        }
+
                                         if (strpos($fullUrl, "upload=max") == true){
                                             $fileErrorMessage = new fileError('Max submissions: Wait fo approval.');
                                             $fileErrorMessage->printMessage();

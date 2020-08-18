@@ -37,6 +37,12 @@ Author: Mihir Rao
         $fileError = $_FILES['sFiles']['error'];
         $fileType = $_FILES['sFiles']['type'];
 
+        # If people have file names that are over 40 characters long...
+        if (strlen($fileName) > 40) {
+            header("Location: ../pages/dashboard.php?upload=filename");
+            exit();
+        }
+
         # File extension
         $fileAspects = explode('.', $fileName);
         $fileNameWithoutExtension = $fileAspects[0];

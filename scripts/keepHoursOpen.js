@@ -19,6 +19,9 @@ jQuery(document).ready(function($) {
     if(window.location.href.indexOf("?upload=err") > -1) {
         addHour();
     }
+    if(window.location.href.indexOf("?upload=filename") > -1) {
+        addHour();
+    }
 });
 
 // Keep the delete hours modal open
