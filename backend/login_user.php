@@ -8,13 +8,13 @@
     $stud_id = $_POST['student_id'];
     $stud_pass = $_POST['student_pass'];
 
-    $stmt = $mysqli->prepare("SELECT userid, studentid, studentemail, firstname, lastname, gradyear, studentpass FROM users WHERE studentid = ?");
+    $stmt = $mysqli->prepare("SELECT userid, studentid, studentemail, firstname, lastname, gradyear, num_hours, studentpass FROM users WHERE studentid = ?");
     $stmt->bind_param("i", $stud_id);
 
     $stmt->execute();
     $stmt->store_result();
 
-    $stmt->bind_result($uid, $studid, $studemail, $fname, $lname, $gyear, $upass);
+    $stmt->bind_result($uid, $studid, $studemail, $fname, $lname, $gyear, $numhours, $upass);
 
     // Check if a row exists. If it doesn't return failure and destroy session
     if ($stmt->num_rows == 1){
@@ -27,6 +27,7 @@
             $_SESSION['student_fname'] = $fname;
             $_SESSION['student_lname'] = $lname;
             $_SESSION['student_gyear'] = $gyear;
+            $_SESSION['student_numhours'] = $numhours;
 
             $utils = new GoogleDriveUtils();
             $_SESSION['driveAPI'] = serialize($utils);

@@ -14,7 +14,7 @@
 
     $stud_id = $_SESSION['student_id'];
     $user_id = $_SESSION['user_id'];
-    $stmt = $mysqli->prepare("SELECT userid, studentid, studentemail, firstname, lastname, gradyear, studentpass FROM users WHERE studentid = ?");
+    $stmt = $mysqli->prepare("SELECT userid, studentid, studentemail, firstname, lastname, gradyear, num_hours, studentpass FROM users WHERE studentid = ?");
     $stmt->bind_param("i", $stud_id);
     $stmt->execute();
     $stmt->store_result();

@@ -78,8 +78,10 @@
             header("Location: ../pages/register.php?register=emailexists");
         } else {
             // If not, we can add the user into the users database.
-            $stmt = $mysqli->prepare("INSERT INTO users (userid, studentid, studentemail, firstname, lastname, gradyear, studentpass) VALUES (null, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("isssis", $studentid, $studentemail, $first_name, $last_name, $grad_year, $hashed_pass);
+            $startingHours = 0;
+
+            $stmt = $mysqli->prepare("INSERT INTO users (userid, studentid, studentemail, firstname, lastname, gradyear, num_hours, studentpass) VALUES (null, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("isssiis", $studentid, $studentemail, $first_name, $last_name, $grad_year, $startingHours, $hashed_pass);
 
             $stmt->execute();
             $stmt->close();
