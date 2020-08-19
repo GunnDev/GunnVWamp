@@ -12,6 +12,10 @@ Gunn Volunteering
         session_start();
         if(!isSet($_SESSION['student_id'])){
             header("Location: login.php");
+        } else {
+            if ($_SESSION['student_id'] == 1){
+                header("Location: admindash.php");
+            }
         }
     ?>
 
