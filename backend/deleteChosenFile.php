@@ -31,7 +31,7 @@
             $folderName = $_SESSION['student_fname'] . $_SESSION['student_lname'] . '_' . $_SESSION['student_id'];
             $googleDriveUtils->deleteFileUsingID($fileToDelID);
 
-            // Delete form submissions table
+            // Delete selected file for that user from submissions table
             $stmt = $mysqli->prepare("DELETE FROM submissions WHERE id_of_file = ? AND users_id = ?");
             $stmt->bind_param("si", $fileToDelID, $user_id);
 

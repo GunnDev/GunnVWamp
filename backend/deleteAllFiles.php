@@ -12,6 +12,7 @@
     $pass = $_POST['passToDeleteAll'];
 
     $stud_id = $_SESSION['student_id'];
+    $user_id = $_SESSION['user_id'];
     $stmt = $mysqli->prepare("SELECT userid, studentid, studentemail, firstname, lastname, gradyear, studentpass FROM users WHERE studentid = ?");
     $stmt->bind_param("i", $stud_id);
     $stmt->execute();
@@ -28,6 +29,13 @@
             $googleDriveUtils = unserialize($_SESSION['driveAPI']);
             $folderName = $_SESSION['student_fname'] . $_SESSION['student_lname'] . '_' . $_SESSION['student_id'];
             $result = $googleDriveUtils->deleteAllFiles($folderName);
+
+            // Delete all files for that user from submissions table
+            $stmt = $mysqli->prepare("DELETE FROM submissions WHERE users_id = ?");
+            $stmt->bind_param("i", $user_id);
+
+            $stmt->execute();
+            $stmt->close();
 
             if($result == true) {
                 // Success message
