@@ -99,6 +99,7 @@ button.dropdownBtn {
     border: none;
     outline: none;
     font-size: 20px;
+    transition: 0.3s;
 }
 
 button.dropdownBtn:hover {
@@ -613,4 +614,26 @@ button.uploadFilesBtn {
 
 button.uploadFilesBtn:hover {
     background-color: #0c5ec9;
+}
+
+/** ADMIN DASHBOARD STYLES **/
+
+button.admin-dropdownBtn {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50%;
+    background-color: #A61616;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+button.admin-dropdownBtn:hover {
+    background-color: #8a1313;
+    color: white;
 }

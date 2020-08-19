@@ -27,13 +27,14 @@ Gunn Volunteering
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta charset="utf-8">
 
-        <script src="../scripts/sideNav.js"></script>
-        <script src="../scripts/addHourModal.js"></script>
-        <script src="../scripts/uploadFile.js"></script>
     </head>
 
     <body>
-        <header class="siteNavHeader">
+        <header class="siteNavHeader" style="background-color: #A61616;">
+            <button class="admin-dropdownBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
             <h1 class="navMainTitle" style="cursor: context-menu;">Gunn Volunteering</h1>
             <nav class="navbarItems">
                 <ul class="navbarLinks">
@@ -46,42 +47,7 @@ Gunn Volunteering
             </nav>
         </header>
 
-        <section class="mainDashSection">
-            <article>
-                <section class="userDashSection">
-                    <article class="userIconContainer">
-                        <div class="userIcon">
-                            <img src="../images/user.png">
-                        </div>
-                    </article>
-
-                    <article>
-                        <div class="nameAndGradYear">
-                            <h1 class="nameTitle">
-                                <?php
-                                    echo $_SESSION['student_fname'] . ' ' . $_SESSION['student_lname'];
-                                ?>
-                            </h1>
-                            <h1 class="gradYearDisplay">
-                                <?php
-                                    echo $_SESSION['student_gyear'];
-                                ?>
-                            </h1>
-                        </div>
-                    </article>
-
-                </section>
-            </article>
-
-            <article></article>
-                 
-            <!-- Notifications -->
-            <article>
-                <h1 class="hoursTitle">
-                    Notifications
-                </h1>
-            </article>
-        </section>
+        
     </body>
 
 </html>
