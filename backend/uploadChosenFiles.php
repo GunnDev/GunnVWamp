@@ -80,8 +80,8 @@ Author: Mihir Rao
                     $declined = '';
                     $user_id = $_SESSION['user_id'];
 
-                    $stmt = $mysqli->prepare("INSERT INTO submissions (submission_id, name_of_file, approved, declined, users_id) VALUES (null, ?, ?, ?, ?)");
-                    $stmt->bind_param("sisi", $fullFileName, $approved, $declined, $user_id);
+                    $stmt = $mysqli->prepare("INSERT INTO submissions (submission_id, name_of_file, id_of_file, approved, declined, users_id) VALUES (null, ?, ?, ?, ?, ?)");
+                    $stmt->bind_param("ssisi", $fullFileName, $createdFileID, $approved, $declined, $user_id);
 
                     $stmt->execute();
                     $stmt->close();
