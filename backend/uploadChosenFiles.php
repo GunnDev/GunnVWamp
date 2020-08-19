@@ -38,9 +38,6 @@ Author: Mihir Rao
         $fileError = $_FILES['sFiles']['error'];
         $fileType = $_FILES['sFiles']['type'];
 
-        # Make a copy of the full filename
-        $fullFileName = $fileName;
-
         # If people have file names that are over 40 characters long...
         if (strlen($fileName) > 40) {
             header("Location: ../pages/dashboard.php?upload=filename");
@@ -67,6 +64,29 @@ Author: Mihir Rao
                     $fileDestination = 'uploads/' . $randName;
                     move_uploaded_file($fileTmpName, $fileDestination);
 
+                    // Check if the file name exists already
+                    $listOfFiles = $googleDriveUtils->getFilesForUser($folderName);
+                    $fileNameOccurances = 0;
+
+                    $fileNames = array_keys($listOfFiles);
+                    $fileAspects = explode('.', $fileName);
+                    $fileNameWithoutExtension = $fileAspects[0];
+                    $fileExtension = $fileAspects[1];
+                    
+                    for($i = 0; $i < count($fileNames); $i++){
+                        // If there is a file that has the same name, increment occurances
+                        $currentFileInfo = explode('.', $fileNames[$i]);
+                        $currentFileExtension = end($currentFileInfo);
+                        if (strpos($fileNames[$i], $fileNameWithoutExtension) == 0 && $fileExtension == $currentFileExtension){
+                            $fileNameOccurances += 1;
+                        }
+                    }
+
+                    if($fileNameOccurances != 0){
+                        $fileNameWithoutExtension = $fileNameWithoutExtension . "(" . ($fileNameOccurances + 1) . ")";
+                        $fileName = $fileNameWithoutExtension . "." . $fileExtension;
+                    }
+
                     # Upload to Google Drive using API and delete from uploads folder
                     $createdFileID = $googleDriveUtils->uploadFiles($fileDestination, $fileName, $folderName);
                     unlink($fileDestination);
@@ -81,7 +101,7 @@ Author: Mihir Rao
                     $user_id = $_SESSION['user_id'];
 
                     $stmt = $mysqli->prepare("INSERT INTO submissions (submission_id, name_of_file, id_of_file, approved, declined, users_id) VALUES (null, ?, ?, ?, ?, ?)");
-                    $stmt->bind_param("ssisi", $fullFileName, $createdFileID, $approved, $declined, $user_id);
+                    $stmt->bind_param("ssisi", $fileName, $createdFileID, $approved, $declined, $user_id);
 
                     $stmt->execute();
                     $stmt->close();

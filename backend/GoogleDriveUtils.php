@@ -77,33 +77,7 @@ class GoogleDriveUtils {
 
         // 4. The file is uploaded to the folder using the folder ID.
         $file = new Google_Service_Drive_DriveFile();
-
-        // Check if the file name exists already
-        $listOfFiles = $this->getFilesForUser($folderName);
-        $fileNameOccurances = 0;
-
-        // All filenames in the user's folder
-        $fileNames = array_keys($listOfFiles);
-        $fileAspects = explode('.', $fileName);
-        $fileNameWithoutExtension = $fileAspects[0];
-        $fileExtension = $fileAspects[1];
-        
-        for($i = 0; $i < count($fileNames); $i++){
-            // If there is a file that has the same name, increment occurances
-            $currentFileInfo = explode('.', $fileNames[$i]);
-            $currentFileExtension = end($currentFileInfo);
-            if (strpos($fileNames[$i], $fileNameWithoutExtension) == 0 && $fileExtension == $currentFileExtension){
-                $fileNameOccurances += 1;
-            }
-        }
-
-        if($fileNameOccurances == 0){
-            $file->setName($fileName);
-        } else {
-            $fileNameWithoutExtension = $fileNameWithoutExtension . "(" . ($fileNameOccurances + 1) . ")";
-            $file->setName($fileNameWithoutExtension . "." . $fileExtension);
-        }
-        
+        $file->setName($fileName);
         $file->setDescription('Volunteer Hours');
         $file->setParents(array($folderId));
         $data = file_get_contents($filePath);
