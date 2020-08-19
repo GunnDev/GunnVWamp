@@ -35,7 +35,7 @@ Gunn Volunteering
                 <i class="fas fa-bars"></i>
             </button>
 
-            <h1 class="navMainTitle" style="cursor: context-menu;">Gunn Volunteering</h1>
+            <h1 class="navMainTitle" style="cursor: context-menu;">Welcome, Administrator</h1>
             <nav class="navbarItems">
                 <ul class="navbarLinks">
                     <li>
@@ -47,7 +47,27 @@ Gunn Volunteering
             </nav>
         </header>
 
-        
+        <section class="adminDashSection">
+            <article>
+                <h1 class="hoursTitle">
+                    Submissions:
+                </h1>
+            </article>
+
+            <article>
+                <h1 class="hoursTitle">
+                    Review:
+                </h1>
+            </article>
+
+            <article>
+                <!-- Notifications / student submissions -->
+            </article>
+
+            <article>
+                <!-- Approve/Deny/Comments -->
+            </article>
+        </section>
     </body>
 
 </html>

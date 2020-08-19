@@ -637,3 +637,17 @@ button.admin-dropdownBtn:hover {
     background-color: #8a1313;
     color: white;
 }
+
+section.adminDashSection {
+    margin: 60px auto;
+    padding: 0 8%;
+    width: 100%;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+section.adminDashSection article {
+    background-color: white;
+}
