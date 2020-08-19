@@ -87,6 +87,9 @@ Author: Mihir Rao
                         $fileName = $fileNameWithoutExtension . "." . $fileExtension;
                     }
 
+                    // Reset variable
+                    $fileNameOccurances = 0;
+
                     # Upload to Google Drive using API and delete from uploads folder
                     $createdFileID = $googleDriveUtils->uploadFiles($fileDestination, $fileName, $folderName);
                     unlink($fileDestination);
