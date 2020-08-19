@@ -7,6 +7,7 @@ Author: Mihir Rao
 
 <?php
     include 'GoogleDriveUtils.php';
+    include "db_connect.php";
     session_start();
 
     # If not logged in
@@ -37,6 +38,9 @@ Author: Mihir Rao
         $fileError = $_FILES['sFiles']['error'];
         $fileType = $_FILES['sFiles']['type'];
 
+        # Make a copy of the full filename
+        $fullFileName = $fileName;
+
         # If people have file names that are over 40 characters long...
         if (strlen($fileName) > 40) {
             header("Location: ../pages/dashboard.php?upload=filename");
@@ -59,11 +63,7 @@ Author: Mihir Rao
 
                 # File meets size req
                 if ($fileSize < 1000000) {
-
-                    # Prevent file overriding by renaming using uniqid()
                     $randName = uniqid('', true). '.' . $fileLoweredExt;
-
-                    # Move the file temporarily to uploads folder
                     $fileDestination = 'uploads/' . $randName;
                     move_uploaded_file($fileTmpName, $fileDestination);
 
@@ -71,10 +71,20 @@ Author: Mihir Rao
                     $createdFileID = $googleDriveUtils->uploadFiles($fileDestination, $fileName, $folderName);
                     unlink($fileDestination);
 
-                    # Reduce file name length if necessary
                     if (strlen($fileNameWithoutExtension) > 12) {
                         $fileName = substr($fileName, 0, 13) . '...' . $fileLoweredExt;
                     }
+
+                    # Add to submissions table
+                    $approved = -1;
+                    $declined = '';
+                    $user_id = $_SESSION['user_id'];
+
+                    $stmt = $mysqli->prepare("INSERT INTO submissions (submission_id, name_of_file, approved, declined, users_id) VALUES (null, ?, ?, ?, ?)");
+                    $stmt->bind_param("sisi", $fullFileName, $approved, $declined, $user_id);
+
+                    $stmt->execute();
+                    $stmt->close();
 
                     # Send the user back to dashboard with success message
                     header("Location: ../pages/dashboard.php?upload=success&fName=" . $fileName);

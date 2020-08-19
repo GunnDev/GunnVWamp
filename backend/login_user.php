@@ -21,6 +21,7 @@
         $stmt->fetch();
         // Verify the given password with the hashed password and add to session; else, failure
         if (password_verify($stud_pass, $upass)){
+            $_SESSION['user_id'] = $uid;
             $_SESSION['student_id'] = $studid;
             $_SESSION['student_email'] = $studemail;
             $_SESSION['student_fname'] = $fname;
