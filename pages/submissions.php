@@ -34,12 +34,12 @@ Gunn Volunteering
             <h1 class="sideNavAdminTitle">
                 Options
             </h1>
-            <a href="#" style="background-color: #dedede; color: #1a73e8;">
+            <a href="students.php">
                 <i class="fas fa-users fa-lg"></i>
                 &nbsp;
                 Students
             </a>
-            <a href="submissions.php">
+            <a href="submissions.php" style="background-color: #dedede; color: #1a73e8;">
                 <i class="fas fa-paper-plane fa-lg"></i>
                 &nbsp;
                 Submissions

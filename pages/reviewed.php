@@ -34,7 +34,7 @@ Gunn Volunteering
             <h1 class="sideNavAdminTitle">
                 Options
             </h1>
-            <a href="#" style="background-color: #dedede; color: #1a73e8;">
+            <a href="students.php">
                 <i class="fas fa-users fa-lg"></i>
                 &nbsp;
                 Students
@@ -44,7 +44,7 @@ Gunn Volunteering
                 &nbsp;
                 Submissions
             </a>
-            <a href="reviewed.php">
+            <a href="reviewed.php" style="background-color: #dedede; color: #1a73e8;">
                 <i class="far fa-eye fa-lg"></i>
                 &nbsp;
                 Reviewed
