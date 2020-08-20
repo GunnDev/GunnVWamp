@@ -60,6 +60,8 @@ function deleteHour(btnID) {
 }
 
 function deleteAllFiles() {
+    var deleteAllBtn = document.getElementById("confirmAllDelete");
+
     // Get the modal
     var modal = document.getElementById("dafm");
 
