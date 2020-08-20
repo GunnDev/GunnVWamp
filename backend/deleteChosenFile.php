@@ -19,7 +19,7 @@
     $stmt->execute();
     $stmt->store_result();
 
-    $stmt->bind_result($uid, $studid, $studemail, $fname, $lname, $gyear, $upass);
+    $stmt->bind_result($uid, $studid, $studemail, $fname, $lname, $gyear, $numhours, $upass);
 
     if ($stmt->num_rows == 1){
         $stmt->fetch();
