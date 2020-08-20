@@ -52,11 +52,7 @@ Gunn Volunteering
         </div>
 
         <div class="main">
-            <header class="siteNavHeader" style="background-color: #1a73e8;">
-                <button class="admin-dropdownBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-
+            <header class="siteNavHeader" style="background-color: #1a73e8; height: 62px;">
                 <h1 class="navMainTitle" style="cursor: context-menu;">Welcome, Administrator</h1>
                 <nav class="navbarItems">
                     <ul class="navbarLinks">
