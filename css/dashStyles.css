@@ -618,6 +618,49 @@ button.uploadFilesBtn:hover {
 
 /** ADMIN DASHBOARD STYLES **/
 
+div.sidenavadmin {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 12%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color:white; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 10px;
+    box-shadow: 0px 8px 159px -39px rgba(0,0,0,0.75);
+}
+
+h1.sideNavAdminTitle {
+    padding: 0;
+    padding-bottom: 25px;
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+}
+  
+div.sidenavadmin a {
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #818181;
+    display: block;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+div.sidenavadmin a:hover {
+    background-color: #dedede;
+    transition: 0.2s;
+}
+
+div.main {
+    margin-left: 12%;
+    padding: 0px;
+}
+
 button.admin-dropdownBtn {
     cursor: pointer;
     border-radius: 50%;
@@ -625,7 +668,7 @@ button.admin-dropdownBtn {
     height: 50px;
     text-align: center;
     line-height: 50%;
-    background-color: #A61616;
+    background-color: #1a73e8;
     color: white;
     border: none;
     outline: none;
@@ -634,7 +677,7 @@ button.admin-dropdownBtn {
 }
 
 button.admin-dropdownBtn:hover {
-    background-color: #8a1313;
+    background-color: #0d66db;
     color: white;
 }
 

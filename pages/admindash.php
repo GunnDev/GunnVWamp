@@ -30,44 +30,46 @@ Gunn Volunteering
     </head>
 
     <body>
-        <header class="siteNavHeader" style="background-color: #A61616;">
-            <button class="admin-dropdownBtn">
-                <i class="fas fa-bars"></i>
-            </button>
+        <div class="sidenavadmin">
+            <h1 class="sideNavAdminTitle">
+                Options
+            </h1>
+            <a href="#">
+                <i class="fas fa-users fa-lg"></i>
+                &nbsp;
+                Students
+            </a>
+            <a href="#">
+                <i class="fas fa-paper-plane fa-lg"></i>
+                &nbsp;
+                Submissions
+            </a>
+            <a href="#">
+                <i class="far fa-eye fa-lg"></i>
+                &nbsp;
+                Reviewed
+            </a>
+        </div>
 
-            <h1 class="navMainTitle" style="cursor: context-menu;">Welcome, Administrator</h1>
-            <nav class="navbarItems">
-                <ul class="navbarLinks">
-                    <li>
-                        <a href="logout.php">
-                            <i class="fas fa-sign-out-alt fa-2x"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <div class="main">
+            <header class="siteNavHeader" style="background-color: #1a73e8;">
+                <button class="admin-dropdownBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
 
-        <section class="adminDashSection">
-            <article>
-                <h1 class="hoursTitle">
-                    Submissions:
-                </h1>
-            </article>
+                <h1 class="navMainTitle" style="cursor: context-menu;">Welcome, Administrator</h1>
+                <nav class="navbarItems">
+                    <ul class="navbarLinks">
+                        <li>
+                            <a href="logout.php">
+                                <i class="fas fa-sign-out-alt fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
 
-            <article>
-                <h1 class="hoursTitle">
-                    Review:
-                </h1>
-            </article>
-
-            <article>
-                <!-- Notifications / student submissions -->
-            </article>
-
-            <article>
-                <!-- Approve/Deny/Comments -->
-            </article>
-        </section>
     </body>
 
 </html>
