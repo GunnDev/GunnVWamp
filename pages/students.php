@@ -67,11 +67,23 @@ Gunn Volunteering
 
             <section class="students-admin-dash-section">
                 <article>
-                    Search for students
+                    <div class="searchForStudentsDiv">
+                        <form action="#">
+                            <section class="searchForm">
+                                <article>
+                                    <input type='text' class="searchBox" placeholder='Search Students'>
+                                </article>
+
+                                <article>
+                                    
+                                </article>
+                            </section>
+                        </form>
+                    </div>
                 </article>
 
                 <article>
-                    Shows students
+                    
                 </article>
             </section>
         </div>

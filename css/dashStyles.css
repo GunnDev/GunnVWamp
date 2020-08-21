@@ -675,3 +675,28 @@ section.students-admin-dash-section {
 section.adminDashSection article {
     background-color: white;
 }
+
+div.searchForStudentsDiv {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+section.searchForm {
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 10px;
+}
+
+input.searchBox {
+    width: 97%;
+    padding: 10px;
+    padding-left: 15px;
+    margin: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+}
