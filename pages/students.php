@@ -52,7 +52,7 @@ Gunn Volunteering
         </div>
 
         <div class="main">
-            <header class="siteNavHeader" style="background-color: #1a73e8; height: 62px;">
+            <header class="siteNavHeader" style="background-color: #1a73e8; height: 62px; box-shadow:none;">
                 <h1 class="navMainTitle" style="cursor: context-menu;">Welcome, Administrator</h1>
                 <nav class="navbarItems">
                     <ul class="navbarLinks">
@@ -64,6 +64,16 @@ Gunn Volunteering
                     </ul>
                 </nav>
             </header>
+
+            <section class="students-admin-dash-section">
+                <article>
+                    Search for students
+                </article>
+
+                <article>
+                    Shows students
+                </article>
+            </section>
         </div>
 
     </body>
