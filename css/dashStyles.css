@@ -630,9 +630,15 @@ div.sidenavadmin {
     padding-top: 10px;
 }
 
+div.sidenav-separator {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
 h2.sideNavAdminTitle {
     padding: 0;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     margin: 0;
     text-align: center;
     color: #1a73e8;
