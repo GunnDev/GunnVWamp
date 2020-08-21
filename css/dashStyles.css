@@ -691,6 +691,11 @@ section.searchForm {
     grid-gap: 10px;
 }
 
+section.searchForm article {
+    display: flex;
+    justify-content: center;
+}
+
 input.searchBox {
     width: 97%;
     padding: 10px;
