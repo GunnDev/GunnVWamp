@@ -728,4 +728,11 @@ button.searchBtn {
 button.searchBtn:hover {
     cursor: pointer;
     background-color: #0c5ec9;
+    transition: 0.2s;
+}
+
+div.showStudentsFromSearch {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
 }

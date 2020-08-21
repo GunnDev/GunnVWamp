@@ -25,8 +25,21 @@ Gunn Volunteering
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/81f93d9156.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <meta charset="utf-8">
+        <script>
+            $(document).ready(function(){
+                $("#searchStudentsField").focus(function() {
+                    $(this).attr("origPlaceholder", $(this).attr("placeholder"));
+                    $(this).attr("placeholder", "Ex. FirstLast or 950 number.");
+                });
 
+                $("#searchStudentsField").blur(function() {
+                    if ($(this).attr("origPlaceholder")) {
+                    $(this).attr("placeholder", $(this).attr("origPlaceholder"));
+                    }
+                });
+            });
+        </script>
+        <meta charset="utf-8">
     </head>
 
     <body>
@@ -71,7 +84,7 @@ Gunn Volunteering
                         <form action="#">
                             <section class="searchForm">
                                 <article>
-                                    <input type='text' class="searchBox" placeholder='Search Students'>
+                                    <input id="searchStudentsField" type='text' class="searchBox" placeholder='Search Students'>
                                 </article>
 
                                 <article>
@@ -88,7 +101,13 @@ Gunn Volunteering
                 </article>
 
                 <article>
-                    
+                    <div class="showStudentsFromSearch">
+                        hi
+                        <?php
+                            // $googleDriveUtils = unserialize($_SESSION['driveAPI']);
+                            // $listOfFolders = $googleDriveUtils->
+                        ?>
+                    </div>
                 </article>
             </section>
         </div>
