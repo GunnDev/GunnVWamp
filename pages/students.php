@@ -75,7 +75,12 @@ Gunn Volunteering
                                 </article>
 
                                 <article>
-                                    
+                                    <button type="submit" class="searchBtn">
+                                        Search
+                                        <span>
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </span>
+                                    </button>
                                 </article>
                             </section>
                         </form>

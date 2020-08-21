@@ -682,6 +682,11 @@ div.searchForStudentsDiv {
     border-radius: 5px;
 }
 
+div.searchForStudentsDiv:hover {
+    box-shadow: 0px 0px 65px -24px rgba(0,0,0,0.75);
+    transition: 0.5s;
+}
+
 section.searchForm {
     margin: 0 auto;
     padding: 0;
@@ -697,11 +702,30 @@ section.searchForm article {
 }
 
 input.searchBox {
-    width: 97%;
+    width: 100%;
     padding: 10px;
     padding-left: 15px;
-    margin: 20px;
+    margin: 20px 5px 20px 20px;
     border: 1px solid gray;
     border-radius: 5px;
     outline: none;
+}
+
+button.searchBtn {
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    margin: 20px 20px 20px 5px;
+    border: none;
+    background-color: #1a73e8;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+button.searchBtn:hover {
+    cursor: pointer;
+    background-color: #0c5ec9;
 }
