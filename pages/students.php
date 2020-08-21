@@ -102,10 +102,14 @@ Gunn Volunteering
 
                 <article>
                     <div class="showStudentsFromSearch">
-                        hi
                         <?php
-                            // $googleDriveUtils = unserialize($_SESSION['driveAPI']);
-                            // $listOfFolders = $googleDriveUtils->
+                            include "../backend/db_connect.php";
+
+                            $getAllUsers = "SELECT studentid, firstname, lastname FROM users";
+                            $resultGetAll = $mysqli->query($getAllUsers) or die (mysqli_error($mysqli));
+                            $allUsers = $resultGetAll->fetch_all(MYSQLI_ASSOC);
+
+                            print_r($allUsers);
                         ?>
                     </div>
                 </article>
