@@ -620,7 +620,7 @@ button.uploadFilesBtn:hover {
 
 div.sidenavadmin {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 12%; /* Set the width of the sidebar */
+    width: 15%; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -631,12 +631,11 @@ div.sidenavadmin {
     box-shadow: 0px 8px 159px -39px rgba(0,0,0,0.75);
 }
 
-h1.sideNavAdminTitle {
+h2.sideNavAdminTitle {
     padding: 0;
     padding-bottom: 25px;
     margin: 0;
     text-align: center;
-    font-size: 30px;
 }
   
 div.sidenavadmin a {
@@ -657,7 +656,7 @@ div.sidenavadmin a:hover {
 }
 
 div.main {
-    margin-left: 12%;
+    margin-left: 15%;
     padding: 0px;
 }
 

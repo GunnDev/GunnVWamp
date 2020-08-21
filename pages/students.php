@@ -31,9 +31,9 @@ Gunn Volunteering
 
     <body>
         <div class="sidenavadmin">
-            <h1 class="sideNavAdminTitle">
+            <h2 class="sideNavAdminTitle">
                 Options
-            </h1>
+            </h2>
             <a href="#" style="background-color: #dedede; color: #1a73e8;">
                 <i class="fas fa-users fa-lg"></i>
                 &nbsp;
