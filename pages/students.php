@@ -105,7 +105,7 @@ Gunn Volunteering
                         <?php
                             include "../backend/db_connect.php";
 
-                            $getAllUsers = "SELECT studentid, firstname, lastname FROM users";
+                            $getAllUsers = "SELECT studentid, firstname, lastname FROM users WHERE studentid != 1";
                             $resultGetAll = $mysqli->query($getAllUsers) or die (mysqli_error($mysqli));
                             $allUsers = $resultGetAll->fetch_all(MYSQLI_ASSOC);
 
