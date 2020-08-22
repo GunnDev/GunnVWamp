@@ -48,7 +48,7 @@ Gunn Volunteering
                 Options
             </h2>
             <div class="sidenav-separator">
-                <div style="background-color: #f0f0f0; width: 90%; height: 1px;">
+                <div style="background-color: #e8e8e8; width: 90%; height: 1px;">
                     <!-- Blank -->
                 </div>
             </div>
