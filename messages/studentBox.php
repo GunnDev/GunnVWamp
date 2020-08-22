@@ -6,16 +6,20 @@
 
     <?php
         class studentBox {
-            private $message;
-
-            public function __construct($ttd){
-                $this->message = $ttd;
+            private $fname;
+            private $lname;
+            private $studentid;
+            
+            public function __construct($fname, $lname, $studentid){
+                $this->fname = $fname;
+                $this->lname = $lname;
+                $this->studentid = $studentid;
             }
 
             public function printMessage(){
           echo '<div class="studentBoxContainer">
                     <p class="showStudentName">';
-                        echo $this->message;
+                        echo $this->fname . ' ' . $this->lname . ' - ' .  $this->studentid;
               echo "</p>
                 </div>";
             }

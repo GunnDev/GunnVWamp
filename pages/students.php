@@ -115,7 +115,7 @@ Gunn Volunteering
                         $allUsers = $resultGetAll->fetch_all(MYSQLI_ASSOC);
 
                         for($i = 0; $i < count($allUsers); $i++){
-                            $newStudentBox = new studentBox($allUsers[$i]['firstname'] . ' ' .  $allUsers[$i]['lastname'] . ' - ' . $allUsers[$i]['studentid']);
+                            $newStudentBox = new studentBox($allUsers[$i]['firstname'], $allUsers[$i]['lastname'],  $allUsers[$i]['studentid']);
                             $newStudentBox->printMessage();
                         }
                     ?>
