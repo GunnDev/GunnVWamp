@@ -34,6 +34,11 @@ Gunn Volunteering
             <h2 class="sideNavAdminTitle">
                 Options
             </h2>
+            <div class="sidenav-separator">
+                <div style="background-color: #1a73e8; width: 90%; height: 1px;">
+                    <!-- Blank -->
+                </div>
+            </div>
             <a href="students.php">
                 <i class="fas fa-users fa-lg"></i>
                 &nbsp;
