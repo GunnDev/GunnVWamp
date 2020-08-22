@@ -106,17 +106,19 @@ Gunn Volunteering
                 </article>
 
                 <article>
-                    <div class="showStudentsFromSearch">
-                        <?php
-                            include "../backend/db_connect.php";
+                    <?php
+                        include "../backend/db_connect.php";
+                        include "../messages/studentBox.php";
 
-                            $getAllUsers = "SELECT studentid, firstname, lastname FROM users WHERE studentid != 1";
-                            $resultGetAll = $mysqli->query($getAllUsers) or die (mysqli_error($mysqli));
-                            $allUsers = $resultGetAll->fetch_all(MYSQLI_ASSOC);
+                        $getAllUsers = "SELECT studentid, firstname, lastname FROM users WHERE studentid != 1";
+                        $resultGetAll = $mysqli->query($getAllUsers) or die (mysqli_error($mysqli));
+                        $allUsers = $resultGetAll->fetch_all(MYSQLI_ASSOC);
 
-                            print_r($allUsers);
-                        ?>
-                    </div>
+                        for($i = 0; $i < count($allUsers); $i++){
+                            $newStudentBox = new studentBox($allUsers[$i]['firstname'] . ' ' .  $allUsers[$i]['lastname'] . ' - ' . $allUsers[$i]['studentid']);
+                            $newStudentBox->printMessage();
+                        }
+                    ?>
                 </article>
             </section>
         </div>
