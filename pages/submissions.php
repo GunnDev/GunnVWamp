@@ -26,7 +26,6 @@ Gunn Volunteering
         <script src="https://kit.fontawesome.com/81f93d9156.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta charset="utf-8">
-
     </head>
 
     <body>
@@ -44,7 +43,7 @@ Gunn Volunteering
                 &nbsp;
                 Students
             </a>
-            <a href="submissions.php" style="background-color: #dedede; color: #1a73e8;">
+            <a href="#" style="background-color: #dedede; color: #1a73e8;">
                 <i class="fas fa-paper-plane fa-lg"></i>
                 &nbsp;
                 Submissions
@@ -69,6 +68,28 @@ Gunn Volunteering
                     </ul>
                 </nav>
             </header>
+
+            <section class="submissions-admin-dash-section">
+                <article>
+                    <p class="submissionReviewTitle">
+                        Submissions:
+                    </p>
+                </article>
+                    
+                <article>
+                    <p class="submissionReviewTitle">
+                        Review:
+                    </p>
+                </article>
+
+                <article>
+                    hi
+                </article>
+
+                <article>
+                    hi
+                </article>
+            </section>
         </div>
 
     </body>

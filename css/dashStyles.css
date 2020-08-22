@@ -737,3 +737,18 @@ button.searchBtn:hover {
     background-color: #0c5ec9;
     transition: 0.2s;
 }
+
+section.submissions-admin-dash-section {
+    margin: 30px 30px;
+    padding: 0;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+p.submissionReviewTitle {
+    margin: 0;
+    padding: 0;
+    color: #818181;
+}

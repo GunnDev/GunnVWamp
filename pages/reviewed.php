@@ -26,7 +26,6 @@ Gunn Volunteering
         <script src="https://kit.fontawesome.com/81f93d9156.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta charset="utf-8">
-
     </head>
 
     <body>
@@ -49,7 +48,7 @@ Gunn Volunteering
                 &nbsp;
                 Submissions
             </a>
-            <a href="reviewed.php" style="background-color: #dedede; color: #1a73e8;">
+            <a href="#"  style="background-color: #dedede; color: #1a73e8;">
                 <i class="far fa-eye fa-lg"></i>
                 &nbsp;
                 Reviewed
