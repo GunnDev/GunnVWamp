@@ -18,12 +18,23 @@
 
             public function printMessage(){
           echo '<div class="submissionBoxContainer">
-                    <p class="showSubmissionInfo">
-                        <span style="color:#636363;">';
-                        echo $this->fname . ' ' . $this->lname;
-                  echo "</span>";
-                        echo ' - ' .  $this->fileName;
-              echo "</p>
+                    <section class="submissionBoxSection">
+                        <article>
+                            <p class="showSubmissionInfo">
+                                <span style="color:#636363;">';
+                                echo $this->fname . ' ' . $this->lname;
+                        echo "</span>";
+                                echo ' - ' .  $this->fileName;
+                      echo "</p>
+                        </article>
+                        <article>
+                            <div class='linkToDrive'>
+                                <a href='#' class='linkBtn' title='Open in Drive?'>
+                                    <i class='fas fa-link fa-lg centeredIcon'></i>
+                                </a>
+                            </div>
+                        </article>
+                    </section>
                 </div>";
             }
         }

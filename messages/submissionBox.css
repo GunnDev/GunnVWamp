@@ -6,22 +6,59 @@ div.submissionBoxContainer {
     border-radius: 8px;
     margin-bottom: 5px;
     transition: 0.3s;
-    border: 1px solid white;
+    border: none;
 }
 
 div.submissionBoxContainer:hover {
-    border-color: #d4d4d4;
     cursor: pointer;
+}
+
+section.submissionBoxSection {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: auto 50px;
+    grid-gap: 5px;
 }
 
 p.showSubmissionInfo {
     margin: 0;
     padding: 0;
     padding-left: 10px;
-    width: 60%;
+    width: 100%;
     float: left;
     line-height: 48px;
     font-size: 14px;
     font-weight: 500;
     color:gray;
+}
+
+div.linkToDrive {
+    display: none;
+    margin: none;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+div.linkToDrive:hover {
+    background-color: #e6e6e6;
+}
+
+div.submissionBoxContainer:hover div.linkToDrive {
+    display: block;
+}
+
+a.linkBtn {
+    color: #1a73e8;
+    padding:0;
+    margin:0;
+}
+
+i.centeredIcon {
+    padding:0;
+    padding-left: 15px;
+    padding-top: 16px;
 }

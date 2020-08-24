@@ -750,5 +750,8 @@ section.submissions-admin-dash-section {
 p.submissionReviewTitle {
     margin: 0;
     padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
     color: #818181;
 }
