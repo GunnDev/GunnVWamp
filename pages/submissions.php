@@ -83,7 +83,23 @@ Gunn Volunteering
                 </article>
 
                 <article>
-                    hi
+                    <?php
+                        include "../backend/db_connect.php";
+                        include "../messages/submissionBox.php";
+
+                        $getAllSubmissions = "SELECT * FROM submissions";
+                        $submissions = $mysqli->query($getAllSubmissions) or die (mysqli_error($mysqli));
+                        $allSubmissions = $submissions->fetch_all(MYSQLI_ASSOC);
+
+                        for($i = 0; $i < count($allSubmissions); $i++){
+                            $studentName = "SELECT firstname, lastname FROM users WHERE userid = " . $allSubmissions[$i]['users_id'];
+                            $studentNameArr = $mysqli->query($studentName) or die (mysqli_error($mysqli));
+                            $fullName = $studentNameArr->fetch_all(MYSQLI_ASSOC);
+
+                            $submissionBox = new submissionBox($fullName[0]['firstname'], $fullName[0]['lastname'],  $allSubmissions[$i]['name_of_file']);
+                            $submissionBox->printMessage();
+                        }
+                    ?>
                 </article>
 
                 <article>
