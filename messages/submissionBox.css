@@ -34,7 +34,7 @@ p.showSubmissionInfo {
     color:gray;
 }
 
-div.linkToDrive {
+div.submissionsBtnDiv {
     display: none;
     margin: none;
     border-radius: 50px;
@@ -43,11 +43,11 @@ div.linkToDrive {
     transition: 0.3s;
 }
 
-div.linkToDrive:hover {
+div.submissionsBtnDiv:hover {
     background-color: #e6e6e6;
 }
 
-div.submissionBoxContainer:hover div.linkToDrive {
+div.submissionBoxContainer:hover div.submissionsBtnDiv {
     display: block;
 }
 
