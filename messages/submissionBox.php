@@ -30,10 +30,15 @@
                       echo "</p>
                         </article>
                         <article>
-                            <div class='submissionsBtnDiv'>
+                            <div class='linkToDrive'>
                                 <a href='$this->fileLink' target='_blank' class='linkBtn' title='Open Submission?'>
                                     <i class='fas fa-link fa-lg centeredIcon'></i>
                                 </a>
+                            </div>
+                        </article>
+                        <article>
+                            <div class='submissionsBtnDiv'>
+                                
                             </div>
                         </article>
                     </section>
