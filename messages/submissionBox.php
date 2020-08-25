@@ -31,7 +31,7 @@
                         </article>
                         <article>
                             <div class='linkToDrive'>
-                                <a href='$this->fileLink' class='linkBtn' title='Open in Drive?'>
+                                <a href='$this->fileLink' target='_blank' class='linkBtn' title='Open in Drive?'>
                                     <i class='fas fa-link fa-lg centeredIcon'></i>
                                 </a>
                             </div>
