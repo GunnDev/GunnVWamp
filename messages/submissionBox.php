@@ -9,11 +9,13 @@
             private $fname;
             private $lname;
             private $fileName;
+            private $fileLink;
             
-            public function __construct($fname, $lname, $fileName){
+            public function __construct($fname, $lname, $fileName, $fileLink){
                 $this->fname = $fname;
                 $this->lname = $lname;
                 $this->fileName = $fileName;
+                $this->fileLink = $fileLink;
             }
 
             public function printMessage(){
@@ -29,7 +31,7 @@
                         </article>
                         <article>
                             <div class='linkToDrive'>
-                                <a href='#' class='linkBtn' title='Open in Drive?'>
+                                <a href='$this->fileLink' class='linkBtn' title='Open in Drive?'>
                                     <i class='fas fa-link fa-lg centeredIcon'></i>
                                 </a>
                             </div>
