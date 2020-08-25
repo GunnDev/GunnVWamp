@@ -18,7 +18,7 @@ section.submissionBoxSection {
     padding: 0;
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: auto 50px 30px;
+    grid-template-columns: auto 50px;
     grid-gap: 5px;
 }
 
