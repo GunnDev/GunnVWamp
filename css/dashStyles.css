@@ -755,3 +755,9 @@ p.submissionReviewTitle {
     padding-left: 10px;
     color: #818181;
 }
+
+div.reviewBackground {
+    background-color: white;
+    border-radius: 8px;
+    min-height: 50px;
+}

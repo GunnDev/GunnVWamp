@@ -82,7 +82,7 @@ Gunn Volunteering
                     </p>
                 </article>
 
-                <article>
+                <article style="max-height: 500px; overflow-y: scroll">
                     <?php
                         include "../backend/db_connect.php";
                         include "../messages/submissionBox.php";
@@ -104,7 +104,9 @@ Gunn Volunteering
                 </article>
 
                 <article>
-                    hi
+                    <div class="reviewBackground">
+                        hi
+                    </div>
                 </article>
             </section>
         </div>
