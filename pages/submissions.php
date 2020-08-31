@@ -108,7 +108,6 @@ Gunn Volunteering
                         <section class="reviewFormSection">
                             <article>
                                 <p id="submitReviewTitleName" class="submitReviewTitle">
-                                    <i class="fas fa-angle-left"></i>
                                     Select a submission on the left.
                                 </p>
                             </article>
