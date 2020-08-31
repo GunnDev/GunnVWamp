@@ -764,7 +764,7 @@ div.reviewBackground {
 
 section.reviewFormSection {
     margin:0;
-    padding: 0;
+    padding: 15px;
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
@@ -772,9 +772,8 @@ section.reviewFormSection {
 }
 
 p.submitReviewTitle {
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: none;
+    padding-left: 3px;
     margin: 0;
     font-weight: 500;
     color: gray;
