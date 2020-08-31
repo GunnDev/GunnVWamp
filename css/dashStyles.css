@@ -776,9 +776,5 @@ p.submitReviewTitle {
     padding-left: 3px;
     margin: 0;
     font-weight: 500;
-    color: gray;
-}
-
-span.srtn {
-    color: #1a73e8;
+    color:#1a73e8;
 }

@@ -107,11 +107,9 @@ Gunn Volunteering
                     <div class="reviewBackground">
                         <section class="reviewFormSection">
                             <article>
-                                <p class="submitReviewTitle">
-                                    Submit a review for
-                                    <span id="submitReviewTitleName" class="srtn">
-                                        
-                                    </span>
+                                <p id="submitReviewTitleName" class="submitReviewTitle">
+                                    <i class="fas fa-angle-left"></i>
+                                    Select a submission on the left.
                                 </p>
                             </article>
 
