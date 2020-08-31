@@ -107,6 +107,12 @@ Gunn Volunteering
                     <div class="reviewBackground">
                         <section class="reviewFormSection">
                             <article>
+                                <p class="submitReviewTitle">
+                                    Submit a review for
+                                </p>
+                            </article>
+
+                            <article>
                                 <input type="checkbox" name='declineHours' value="Declined">
                                 <label for="declineHours">Decline these hours.</label><br>
                             </article>

@@ -770,3 +770,12 @@ section.reviewFormSection {
     grid-template-columns: 1fr;
     grid-gap: 10px;
 }
+
+p.submitReviewTitle {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+    font-weight: 500;
+    color: gray;
+}
