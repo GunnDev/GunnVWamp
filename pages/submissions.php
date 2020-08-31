@@ -105,7 +105,17 @@ Gunn Volunteering
 
                 <article>
                     <div class="reviewBackground">
-                        hi
+                        <section class="reviewFormSection">
+                            <article>
+                                <input type="checkbox" name='declineHours' value="Declined">
+                                <label for="declineHours">Decline these hours.</label><br>
+                            </article>
+
+                            <article>
+                                <input type="checkbox" name='approveHours' value="Approved">
+                                <label for="approveHours">Approve these hours.</label><br>
+                            </article>
+                        </section>
                     </div>
                 </article>
             </section>
