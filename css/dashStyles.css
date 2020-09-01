@@ -40,7 +40,7 @@ div.sidenav {
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
-    box-shadow: 3px 0px 32px -10px rgba(0,0,0,0.75);
+    box-shadow: 3px 0px 32px -10px rgba(0, 0, 0, 0.75);
 }
 
 /* The navigation menu links */
@@ -278,7 +278,7 @@ div.addHoursContainer {
     width: 100%;
     height: 100%;
     min-height: 50px;
-    background-color:#ebebeb;
+    background-color: #ebebeb;
     border-radius: 8px;
 }
 
@@ -299,7 +299,7 @@ button.addHoursBtn {
 }
 
 button.addHoursBtn:hover {
-    background-color:#d6d6d6;
+    background-color: #d6d6d6;
     transition: 0.2s;
 }
 
@@ -320,34 +320,50 @@ button.deleteAll {
 }
 
 button.deleteAll:hover {
-    background-color:#d6d6d6;
+    background-color: #d6d6d6;
     transition: 0.2s;
 }
 
 div.deleteThisFileModal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height - KEEP */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height - KEEP */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
 
 div.deleteAllFilesModal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height - KEEP */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height - KEEP */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
 
 div.deleteThisFileContent {
@@ -394,7 +410,7 @@ p.deleteFileTitle {
     color: #949494;
 }
 
-input[type="text"] {
+input.dashTextInput {
     width: 100%;
     border: 2px solid #aaa;
     border-radius: 8px;
@@ -416,7 +432,7 @@ input[type="password"] {
     transition: 0.2s;
 }
 
-.inputWithIcon input[type="text"] {
+.inputWithIcon input.dashTextInput {
     padding-left: 35px;
 }
 
@@ -437,11 +453,11 @@ input[type="password"] {
     transition: 0.3s;
 }
 
-.inputWithIcon input[type="text"]:focus + i {
+.inputWithIcon input.dashTextInput:focus+i {
     color: #03a5fc;
 }
 
-.inputWithIcon input[type="password"]:focus + i {
+.inputWithIcon input[type="password"]:focus+i {
     color: #03a5fc;
 }
 
@@ -457,37 +473,45 @@ button.fileDeleteBtns {
     width: 100%;
     background-color: white;
     cursor: pointer;
-    display:inline-block;
-    padding:0.6em 1.4em;
+    display: inline-block;
+    padding: 0.6em 1.4em;
     outline: none;
     border: 2px solid #64b5e3;
-    margin:0.2em 0.3em 0.3em 0;
+    margin: 0.2em 0.3em 0.3em 0;
     border-radius: 8px;
     box-sizing: border-box;
-    text-decoration:none;
-    font-weight:500;
-    color:#64b5e3;
-    text-align:center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #64b5e3;
+    text-align: center;
     transition: all 0.2s;
 }
 
 button.fileDeleteBtns:hover {
-    color:#FFFFFF;
-    background-color:#03a5fc;
-    border-color:#03a5fc;
+    color: #FFFFFF;
+    background-color: #03a5fc;
+    border-color: #03a5fc;
 }
 
 div.ahp {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height - KEEP */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height - KEEP */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
 
 div.ahp-content {
@@ -500,10 +524,10 @@ div.ahp-content {
 }
 
 p.uploadFilesTitle {
-    margin: 0;  
+    margin: 0;
     padding-left: 40px;
     padding-top: 5px;
-    width: 250px; 
+    width: 250px;
     float: left;
     font-size: 20px;
     font-weight: 500;
@@ -528,7 +552,7 @@ i.ahp-close:hover, i.ahp-close:focus {
 }
 
 label.selectFilesLabel {
-    background-color:#1a73e8;
+    background-color: #1a73e8;
     color: white;
     border-radius: 8px;
     padding: 10px 65px;
@@ -596,13 +620,12 @@ article.uploadBtnContainer {
 button.uploadFilesBtn {
     /* Go to the right of the browse button */
     float: right;
-
     margin-top: 36px;
     margin-bottom: 41px;
     margin-right: 80px;
     outline: none;
     border: none;
-    background-color:#1a73e8;
+    background-color: #1a73e8;
     color: white;
     border-radius: 8px;
     padding: 10px 65px;
@@ -619,14 +642,20 @@ button.uploadFilesBtn:hover {
 /** ADMIN DASHBOARD STYLES **/
 
 div.sidenavadmin {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
+    height: 100%;
+    /* Full-height: remove this if you want "auto" height */
     width: 220px;
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    position: fixed;
+    /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
     left: 0;
-    background-color:white; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: white;
+    /* Black */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
     padding-top: 10px;
 }
 
@@ -644,7 +673,7 @@ h2.sideNavAdminTitle {
     color: #1a73e8;
     font-weight: 400;
 }
-  
+
 div.sidenavadmin a {
     text-align: left;
     text-decoration: none;
@@ -666,7 +695,7 @@ div.main {
     margin-left: 220px;
     padding: 0px;
     height: 100%;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
 }
 
 section.students-admin-dash-section {
@@ -690,7 +719,7 @@ div.searchForStudentsDiv {
 }
 
 div.searchForStudentsDiv:hover {
-    box-shadow: 0px 0px 65px -24px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 65px -24px rgba(0, 0, 0, 0.75);
     transition: 0.5s;
 }
 
@@ -763,7 +792,7 @@ div.reviewBackground {
 }
 
 section.reviewFormSection {
-    margin:0;
+    margin: 0;
     padding: 15px;
     display: grid;
     grid-auto-rows: auto;
@@ -778,7 +807,7 @@ p.chooseanoption {
     margin: 0;
     font-weight: 400;
     font-size: 18px;
-    color:black;
+    color: black;
 }
 
 input.aodInput {
@@ -789,5 +818,132 @@ input.aodInput {
 span.aodInputText {
     font-size: 13px;
     font-weight: 430;
-    color: #818181; 
+    color: #818181;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+input.gmdInput {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+input.gmdInput:focus {
+    outline: none;
+}
+
+/* LABEL ======================================= */
+
+label.gmdLabel {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+
+inputgmdInput:focus~label, input.gmdInput:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+
+.bar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+/* active state */
+
+input.gmdInput:focus~.bar:before, input.gmdInput:focus~.bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+
+input.gmdInput:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
 }

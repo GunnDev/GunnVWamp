@@ -124,7 +124,12 @@ Gunn Volunteering
                             </article>
 
                             <article>
-                                
+                                <div class="group">      
+                                    <input class="gmdInput" type="text" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="gmdLabel">Name</label>
+                                </div>
                             </article>
                         </section>
                     </div>
