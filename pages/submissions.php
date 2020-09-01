@@ -78,7 +78,10 @@ Gunn Volunteering
                     
                 <article>
                     <p class="submissionReviewTitle">
-                        Review:
+                        Review: 
+                        <span id="submitReviewTitleName" style="color:#1a73e8; font-weight:430;">
+                            Select a submission on the left.
+                        </span>
                     </p>
                 </article>
 
@@ -107,19 +110,21 @@ Gunn Volunteering
                     <div class="reviewBackground">
                         <section class="reviewFormSection">
                             <article>
-                                <p id="submitReviewTitleName" class="submitReviewTitle">
-                                    Select a submission on the left.
+                                <p class="chooseanoption">
+                                    Choose An Option
                                 </p>
+                                <input class="aodInput" type="radio" name="approveOrReject" value="Approve">
+                                    <span class="aodInputText">
+                                        Approve Hours
+                                    </span> <br>
+                                <input class="aodInput" type="radio" name="approveOrReject" value="Reject">
+                                    <span class="aodInputText">
+                                        Reject Hours
+                                    </span> <br>
                             </article>
 
                             <article>
-                                <input type="checkbox" name='declineHours' value="Declined">
-                                <label for="declineHours">Decline these hours.</label><br>
-                            </article>
-
-                            <article>
-                                <input type="checkbox" name='approveHours' value="Approved">
-                                <label for="approveHours">Approve these hours.</label><br>
+                                
                             </article>
                         </section>
                     </div>

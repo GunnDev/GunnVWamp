@@ -771,10 +771,23 @@ section.reviewFormSection {
     grid-gap: 10px;
 }
 
-p.submitReviewTitle {
+p.chooseanoption {
     padding: none;
     padding-left: 3px;
+    padding-bottom: 5px;
     margin: 0;
-    font-weight: 500;
-    color:#1a73e8;
+    font-weight: 400;
+    font-size: 18px;
+    color:black;
+}
+
+input.aodInput {
+    padding: none;
+    margin-top: 18px;
+}
+
+span.aodInputText {
+    font-size: 13px;
+    font-weight: 430;
+    color: #818181; 
 }
