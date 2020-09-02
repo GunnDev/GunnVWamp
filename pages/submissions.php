@@ -110,7 +110,7 @@ Gunn Volunteering
                     <div class="reviewBackground">
                         <section class="reviewFormSection">
                             <article>
-                                <p class="chooseanoption">
+                                <p class="reviewFormTitles" style="padding-top:5px;">
                                     Choose An Option
                                 </p>
                                 <input class="aodInput" type="radio" name="approveOrReject" value="Approve">
@@ -124,11 +124,14 @@ Gunn Volunteering
                             </article>
 
                             <article>
+                                <p class="reviewFormTitles">
+                                    Details
+                                </p>
                                 <div class="group">      
                                     <input class="gmdInput" type="text" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
-                                    <label class="gmdLabel">Name</label>
+                                    <label class="gmdLabel">Num Hours Completed</label>
                                 </div>
                             </article>
                         </section>

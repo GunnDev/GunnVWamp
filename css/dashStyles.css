@@ -800,10 +800,11 @@ section.reviewFormSection {
     grid-gap: 10px;
 }
 
-p.chooseanoption {
+p.reviewFormTitles {
     padding: none;
     padding-left: 3px;
     padding-bottom: 5px;
+    padding-top: 20px;
     margin: 0;
     font-weight: 400;
     font-size: 18px;
@@ -824,10 +825,11 @@ span.aodInputText {
 .group {
     position: relative;
     margin-bottom: 45px;
+    margin-top: 20px;
 }
 
 input.gmdInput {
-    font-size: 18px;
+    font-size: 15px;
     padding: 10px 10px 10px 5px;
     display: block;
     width: 300px;
@@ -843,7 +845,7 @@ input.gmdInput:focus {
 
 label.gmdLabel {
     color: #999;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: normal;
     position: absolute;
     pointer-events: none;
@@ -857,7 +859,7 @@ label.gmdLabel {
 /* active state */
 
 inputgmdInput:focus~label, input.gmdInput:valid~label {
-    top: -20px;
+    top: -10px;
     font-size: 14px;
     color: #5264AE;
 }
@@ -876,7 +878,7 @@ inputgmdInput:focus~label, input.gmdInput:valid~label {
     width: 0;
     bottom: 1px;
     position: absolute;
-    background: #5264AE;
+    background: #1a73e8;
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
