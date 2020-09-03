@@ -800,6 +800,15 @@ section.reviewFormSection {
     grid-gap: 10px;
 }
 
+section.ifApprovedDeclinedSection {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
+}
+
 p.reviewFormTitles {
     padding: none;
     padding-left: 3px;

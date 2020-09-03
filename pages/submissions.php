@@ -124,15 +124,26 @@ Gunn Volunteering
                             </article>
 
                             <article>
-                                <p class="reviewFormTitles">
-                                    Details
-                                </p>
-                                <div class="group">      
-                                    <input class="gmdInput" type="text" required>
-                                    <span class="highlight"></span>
-                                    <span class="bar"></span>
-                                    <label class="gmdLabel">Num Hours Completed</label>
-                                </div>
+                                <section clas="ifApprovedDeclinedSection">
+                                    <article>
+                                        <p class="reviewFormTitles">
+                                            If Approved:
+                                        </p>
+                                        <div class="group">      
+                                            <input class="gmdInput" type="text" required>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label class="gmdLabel">Num Hours Completed</label>
+                                        </div>
+                                    </article>
+                                    
+                                    <article>
+                                        <p class="reviewFormTitles">
+                                            If Approved:
+                                        </p>
+                                        
+                                    </article>
+                                </section>
                             </article>
                         </section>
                     </div>
