@@ -123,7 +123,7 @@ Gunn Volunteering
                                     </span> <br>
                             </article>
 
-                            <article>
+                            <article style="display: none;">
                                 <p class="reviewFormTitles">
                                     Approved:
                                 </p>
@@ -132,6 +132,18 @@ Gunn Volunteering
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label class="gmdLabel">Num Hours Completed</label>
+                                </div>
+                            </article>
+
+                            <article style="display: none;">
+                                <p class="reviewFormTitles">
+                                    Declined:
+                                </p>
+                                <div class="group">      
+                                    <input class="gmdInput" type="text" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="gmdLabel">Brief reason why</label>
                                 </div>
                             </article>
                         </section>
