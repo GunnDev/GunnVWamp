@@ -5,11 +5,11 @@ function reviewSubmission(e) {
     var submitReviewTitleName = document.getElementById("submitReviewTitleName");
     var reviewNameToDisplay = idOfElem.split("-");
     var section = document.getElementById("rfSection");
-    var fileForReviewInfo = document.getElementById("fileForReviewInfo");
+    var fileForReviewInfoApprove = document.getElementById("fileForReviewInfoApprove");
 
     reviewNameToDisplay = reviewNameToDisplay[0] + " " + reviewNameToDisplay[1] + "'s " + reviewNameToDisplay[2];
     submitReviewTitleName.innerHTML = reviewNameToDisplay;
     section.style.display = "block";
 
-    fileForReviewInfo.value = ffriInfo;
+    fileForReviewInfoApprove.value = ffriInfo;
 }

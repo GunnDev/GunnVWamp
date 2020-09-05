@@ -142,7 +142,7 @@ Gunn Volunteering
                                         <span class="bar"></span>
                                         <label class="gmdLabel">Enter your password</label>
                                     </div>
-                                    <input type="hidden" id="fileForReviewInfo" name="ffri" value="">
+                                    <input type="hidden" id="fileForReviewInfoApprove" name="ffri" value="">
                                     <button class="approveSubmissionBtn" type="submit">
                                         Approve
                                     </button>
