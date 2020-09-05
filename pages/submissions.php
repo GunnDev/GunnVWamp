@@ -129,20 +129,20 @@ Gunn Volunteering
                                 <p class="reviewFormTitles">
                                     Approved:
                                 </p>
-                                <form action="" method="post">
+                                <form action="../backend/approveSubmission.php" method="post">
                                     <div class="group">      
-                                        <input class="gmdInput" type="text" required>
+                                        <input name="numHoursApprove" class="gmdInput" type="text" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label class="gmdLabel">Number of Hours</label>
                                     </div>
                                     <div class="group">      
-                                        <input class="gmdInput" type="password" required>
+                                        <input name="passwordApprove" class="gmdInput" type="password" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label class="gmdLabel">Enter your password</label>
                                     </div>
-                                    <input type="hidden" id="fileForReviewInfoApprove" name="ffri" value="">
+                                    <input name="fileIDApprove" type="hidden" id="fileForReviewInfoApprove"  value="">
                                     <button class="approveSubmissionBtn" type="submit">
                                         Approve
                                     </button>
