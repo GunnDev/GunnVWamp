@@ -842,7 +842,7 @@ span.aodInputText {
 
 input.gmdInput {
     font-size: 15px;
-    padding: 10px 10px 10px 5px;
+    padding: 10px 10px 10px 0px;
     display: block;
     width: 300px;
     border: none;
@@ -861,7 +861,7 @@ label.gmdLabel {
     font-weight: normal;
     position: absolute;
     pointer-events: none;
-    left: 5px;
+    left: 0px;
     top: 10px;
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
@@ -871,7 +871,7 @@ label.gmdLabel {
 /* active state */
 
 inputgmdInput:focus~label, input.gmdInput:valid~label {
-    top: -10px;
+    top: -12px;
     font-size: 14px;
     color: #5264AE;
 }
@@ -928,4 +928,24 @@ input.gmdInput:focus~.highlight {
     -webkit-animation: inputHighlighter 0.3s ease;
     -moz-animation: inputHighlighter 0.3s ease;
     animation: inputHighlighter 0.3s ease;
+}
+
+button.approveSubmissionBtn {
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    margin: none;
+    border: none;
+    background-color: #1a73e8;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+button.approveSubmissionBtn:hover {
+    cursor: pointer;
+    background-color: #0c5ec9;
+    transition: 0.2s;
 }

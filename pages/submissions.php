@@ -133,8 +133,11 @@ Gunn Volunteering
                                     <input class="gmdInput" type="text" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
-                                    <label class="gmdLabel">Num Hours Completed</label>
+                                    <label class="gmdLabel">Number of Hours</label>
                                 </div>
+                                <button class="approveSubmissionBtn" type="submit">
+                                    Approve
+                                </button>
                             </article>
 
                             <article id="declinedArticle" style="display: none;">
