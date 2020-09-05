@@ -1,10 +1,12 @@
 function showAOrD() { 
-    var app_article = document.getElementsByName('approvedArticle');
-    var dec_article = document.getElementsByName('declinedArticle');
+    var app_article = document.getElementById('approvedArticle');
+    var dec_article = document.getElementById('declinedArticle');
     
     if(document.getElementById('approveSub').checked) {
-        console.log('a');
+        app_article.style.display = "block";
+        dec_article.style.display = "none";
     } else if(document.getElementById('declineSub').checked) {
-        console.log('d');
+        dec_article.style.display = "block"
+        app_article.style.display = "none";
     }
 }
