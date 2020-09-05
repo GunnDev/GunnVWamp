@@ -6,10 +6,12 @@ function reviewSubmission(e) {
     var reviewNameToDisplay = idOfElem.split("-");
     var section = document.getElementById("rfSection");
     var fileForReviewInfoApprove = document.getElementById("fileForReviewInfoApprove");
+    var fileForReviewInfoDecline = document.getElementById("fileForReviewInfoDecline");
 
     reviewNameToDisplay = reviewNameToDisplay[0] + " " + reviewNameToDisplay[1] + "'s " + reviewNameToDisplay[2];
     submitReviewTitleName.innerHTML = reviewNameToDisplay;
     section.style.display = "block";
 
     fileForReviewInfoApprove.value = ffriInfo;
+    fileForReviewInfoDecline.value = ffriInfo;
 }
