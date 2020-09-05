@@ -129,33 +129,46 @@ Gunn Volunteering
                                 <p class="reviewFormTitles">
                                     Approved:
                                 </p>
-                                <div class="group">      
-                                    <input class="gmdInput" type="text" required>
-                                    <span class="highlight"></span>
-                                    <span class="bar"></span>
-                                    <label class="gmdLabel">Number of Hours</label>
-                                </div>
-                                <div class="group">      
-                                    <input class="gmdInput" type="password" required>
-                                    <span class="highlight"></span>
-                                    <span class="bar"></span>
-                                    <label class="gmdLabel">Enter your password</label>
-                                </div>
-                                <button class="approveSubmissionBtn" type="submit">
-                                    Approve
-                                </button>
+                                <form action="" method="post">
+                                    <div class="group">      
+                                        <input class="gmdInput" type="text" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label class="gmdLabel">Number of Hours</label>
+                                    </div>
+                                    <div class="group">      
+                                        <input class="gmdInput" type="password" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label class="gmdLabel">Enter your password</label>
+                                    </div>
+                                    <button class="approveSubmissionBtn" type="submit">
+                                        Approve
+                                    </button>
+                                </form>
                             </article>
 
                             <article id="declinedArticle" style="display: none;">
                                 <p class="reviewFormTitles">
                                     Declined:
                                 </p>
-                                <div class="group">      
-                                    <input class="gmdInput" type="text" required>
-                                    <span class="highlight"></span>
-                                    <span class="bar"></span>
-                                    <label class="gmdLabel">Brief reason why</label>
-                                </div>
+                                <form action="" method="post">
+                                    <div class="group">      
+                                        <input class="gmdInput" type="text" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label class="gmdLabel">Brief reason why</label>
+                                    </div>
+                                    <div class="group">      
+                                        <input class="gmdInput" type="text" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label class="gmdLabel">Enter your password</label>
+                                    </div>
+                                    <button class="approveSubmissionBtn" type="submit">
+                                        Decline
+                                    </button>
+                                </form>
                             </article>
                         </section>
                     </div>
