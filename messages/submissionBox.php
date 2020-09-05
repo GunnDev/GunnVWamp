@@ -12,17 +12,19 @@
             private $fileName;
             private $fileLink;
             private $submissionID;
+            private $fileID;
             
-            public function __construct($fname, $lname, $fileName, $fileLink){
+            public function __construct($fname, $lname, $fileName, $fileID, $fileLink){
                 $this->fname = $fname;
                 $this->lname = $lname;
                 $this->fileName = $fileName;
                 $this->fileLink = $fileLink;
                 $this->submissionID = $fname . '-' . $lname . '-' . $fileName;
+                $this->fileID = $fileID;
             }
 
             public function printMessage(){
-          echo "<div id='$this->submissionID' onclick='reviewSubmission(this)' class='submissionBoxContainer'>
+          echo "<div data-fileID='$this->fileID' id='$this->submissionID' onclick='reviewSubmission(this)' class='submissionBoxContainer'>
                     <section class='submissionBoxSection'>
                         <article>
                             <p class='showSubmissionInfo'>
