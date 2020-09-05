@@ -25,6 +25,8 @@ Gunn Volunteering
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/81f93d9156.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="../scripts/showaord.js"></script>
         <meta charset="utf-8">
     </head>
 
@@ -113,17 +115,17 @@ Gunn Volunteering
                                 <p class="reviewFormTitles" style="padding-top:5px;">
                                     Choose An Option
                                 </p>
-                                <input class="aodInput" type="radio" name="approveOrReject" value="Approve">
+                                <input onclick="showAOrD()" id="approveSub" class="aodInput" type="radio" name="approveOrReject" value="Approve">
                                     <span class="aodInputText">
                                         Approve Hours
                                     </span> <br>
-                                <input class="aodInput" type="radio" name="approveOrReject" value="Reject">
+                                <input onclick="showAOrD()" id="declineSub" class="aodInput" type="radio" name="approveOrReject" value="Reject">
                                     <span class="aodInputText">
                                         Reject Hours
                                     </span> <br>
                             </article>
 
-                            <article style="display: none;">
+                            <article id="approvedArticle" style="display: none;">
                                 <p class="reviewFormTitles">
                                     Approved:
                                 </p>
@@ -135,7 +137,7 @@ Gunn Volunteering
                                 </div>
                             </article>
 
-                            <article style="display: none;">
+                            <article id="declinedArticle" style="display: none;">
                                 <p class="reviewFormTitles">
                                     Declined:
                                 </p>
