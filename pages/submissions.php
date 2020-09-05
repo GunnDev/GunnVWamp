@@ -135,6 +135,12 @@ Gunn Volunteering
                                     <span class="bar"></span>
                                     <label class="gmdLabel">Number of Hours</label>
                                 </div>
+                                <div class="group">      
+                                    <input class="gmdInput" type="password" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="gmdLabel">Enter your password</label>
+                                </div>
                                 <button class="approveSubmissionBtn" type="submit">
                                     Approve
                                 </button>
