@@ -826,6 +826,7 @@ p.reviewFormTitles {
 input.aodInput {
     padding: none;
     margin-top: 18px;
+    cursor: pointer;
 }
 
 span.aodInputText {
