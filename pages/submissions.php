@@ -131,7 +131,7 @@ Gunn Volunteering
                                 </p>
                                 <form action="../backend/approveSubmission.php" method="post">
                                     <div class="group">      
-                                        <input name="numHoursApprove" onkeypress="validate(event)" class="gmdInput" type="text" required>
+                                        <input name="numHoursApprove" onkeypress="validate(event)" class="gmdInput" type="text" autocomplete="off" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label class="gmdLabel">Number of Hours</label>

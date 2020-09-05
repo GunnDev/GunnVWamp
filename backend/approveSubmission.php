@@ -13,7 +13,7 @@
     $getEntrystmt->bind_param("s", $fileID);
     $getEntrystmt->execute();
     $getEntrystmt->store_result();
-    $getEntrystmt->bind_result($subid, $nameOfFile, $id_of_file, $approved, $declined, $usersID);
+    $getEntrystmt->bind_result($subid, $nameOfFile, $id_of_file, $approved, $declined, $reviewed, $usersID);
 
     // For Verifying Password
     $getEntrystmt = $mysqli->prepare("SELECT studentpass FROM users WHERE studentid = 1");
@@ -25,8 +25,9 @@
         $getEntrystmt->fetch();
 
         if (password_verify($adminPass, $apass)){
-            $stmt = $mysqli->prepare("UPDATE submissions SET approved = ? WHERE id_of_file = ?");
-            $stmt->bind_param("is", $numHours, $fileID);
+            $stmt = $mysqli->prepare("UPDATE submissions SET approved = ?, reviewed = ? WHERE id_of_file = ?");
+            $reviewedFile = 1;
+            $stmt->bind_param("iis", $numHours, $reviewedFile, $fileID);
 
             $stmt->execute();
             $stmt->close();
