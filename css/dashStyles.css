@@ -421,7 +421,7 @@ input.dashTextInput {
     transition: 0.2s;
 }
 
-input[type="password"] {
+input.passwordRepl {
     width: 100%;
     border: 2px solid #aaa;
     border-radius: 8px;
@@ -436,7 +436,7 @@ input[type="password"] {
     padding-left: 35px;
 }
 
-.inputWithIcon input[type="password"] {
+.inputWithIcon input.passwordRepl {
     padding-left: 35px;
 }
 
@@ -457,7 +457,7 @@ input[type="password"] {
     color: #03a5fc;
 }
 
-.inputWithIcon input[type="password"]:focus+i {
+.inputWithIcon input.passwordRepl:focus+i {
     color: #03a5fc;
 }
 
@@ -873,7 +873,7 @@ label.gmdLabel {
 inputgmdInput:focus~label, input.gmdInput:valid~label {
     top: -12px;
     font-size: 14px;
-    color: #5264AE;
+    color: #1a73e8;
 }
 
 /* BOTTOM BARS ================================= */

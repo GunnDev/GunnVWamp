@@ -129,7 +129,7 @@ Gunn Volunteering
                                     </article>
                                     <article>
                                         <div class="inputWithIcon">
-                                            <input name="passToDeleteAll" type="password" placeholder="Password" required>
+                                            <input class="passwordRepl" name="passToDeleteAll" type="password" placeholder="Password" required>
                                             <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
                                         </div>
                                     </article>
@@ -188,7 +188,7 @@ Gunn Volunteering
                                     </article>
                                     <article>
                                         <div class="inputWithIcon">
-                                            <input name="enterPassToDelete" type="password" placeholder="Password" required>
+                                            <input class="passwordRepl" name="enterPassToDelete" type="password" placeholder="Password" required>
                                             <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
                                         </div>
                                     </article>
