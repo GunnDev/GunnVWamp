@@ -385,6 +385,18 @@ Gunn Volunteering
                 <h1 class="hoursTitle">
                     Declined Hours
                 </h1>
+                <?php
+                    include "../backend/db_connect.php";
+
+                    $approvedSubmissionsStmt = "SELECT * FROM submissions WHERE reviewed = 1 AND approved = -1 AND users_id = " . $_SESSION['user_id'];
+                    $approvedSubmissions = $mysqli->query($approvedSubmissionsStmt) or die (mysqli_error($mysqli));
+                    $approvedSubmissionsList = $approvedSubmissions->fetch_all(MYSQLI_ASSOC);
+
+                    for($i = 0; $i < count($approvedSubmissionsList); $i++){
+                        $file = new pendingFile($approvedSubmissionsList[$i]['name_of_file'], $approvedSubmissionsList[$i]['id_of_file']);
+                        $file->showPendingFile();
+                    }
+                ?>
             </article>
         </section>
     </body>
