@@ -4,9 +4,9 @@
     include "db_connect.php";
 
     // Login using prepare to prevent injection attacks
-    $numHours = $_POST['numHoursApprove'];
-    $adminPass = $_POST['passwordApprove'];
-    $fileID = $_POST['fileIDApprove'];
+    $reason = $_POST['declineReason'];
+    $adminPass = $_POST['passwordDecline'];
+    $fileID = $_POST['fileIDDecline'];
 
     // Get Submisison Entry
     $getEntrystmt= $mysqli->prepare("SELECT * FROM submissions WHERE id_of_file = ?");
@@ -25,19 +25,19 @@
         $getEntrystmt->fetch();
 
         if (password_verify($adminPass, $apass)){
-            $stmt = $mysqli->prepare("UPDATE submissions SET approved = ?, reviewed = ? WHERE id_of_file = ?");
+            $stmt = $mysqli->prepare("UPDATE submissions SET reviewed = ?, declined = ? WHERE id_of_file = ?");
             $reviewedFile = 1;
-            $stmt->bind_param("iis", $numHours, $reviewedFile, $fileID);
+            $stmt->bind_param("iss", $reviewedFile, $reason, $fileID);
 
             $stmt->execute();
             $stmt->close();
 
             header("Location: ../pages/submissions.php");
         } else {
-            header("Location: ../pages/submissions.php?approval=pass");
+            header("Location: ../pages/submissions.php?decline=pass");
         }
     } else {
-        header("Location: ../pages/submissions.php?approval=failed");
+        header("Location: ../pages/submissions.php?decline=failed");
     }
     
 ?>

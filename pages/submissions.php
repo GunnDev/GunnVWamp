@@ -153,20 +153,20 @@ Gunn Volunteering
                                 <p class="reviewFormTitles">
                                     Declined:
                                 </p>
-                                <form action="" method="post">
+                                <form action="../backend/declineSubmission.php" method="post">
                                     <div class="group">      
-                                        <input class="gmdInput" type="text" required>
+                                        <input name="declineReason" class="gmdInput" type="text" autocomplete="off" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label class="gmdLabel">Brief reason why</label>
                                     </div>
                                     <div class="group">      
-                                        <input class="gmdInput" type="text" required>
+                                        <input name="passwordDecline" class="gmdInput" type="password" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label class="gmdLabel">Enter your password</label>
                                     </div>
-                                    <input type="hidden" id="fileForReviewInfoDecline" name="ffri" value="">
+                                    <input name="fileIDDecline" type="hidden" id="fileForReviewInfoDecline" value="">
                                     <button class="approveSubmissionBtn" type="submit">
                                         Decline
                                     </button>
