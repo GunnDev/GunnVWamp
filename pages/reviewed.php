@@ -68,6 +68,29 @@ Gunn Volunteering
                     </ul>
                 </nav>
             </header>
+
+            <section class="reviewed-admin-dash-section">
+                <article>
+                    <p class="submissionReviewTitle">
+                        Reviewed Submissions:
+                    </p>
+                </article>
+
+                <article>
+                    <?php
+                        include "../backend/db_connect.php";
+                        include "../messages/submissionBox.php";
+
+                        $getAllSubmissions = "SELECT * FROM submissions WHERE reviewed = 1";
+                        $submissions = $mysqli->query($getAllSubmissions) or die (mysqli_error($mysqli));
+                        $allSubmissions = $submissions->fetch_all(MYSQLI_ASSOC);
+
+                        for($i = 0; $i < count($allSubmissions); $i++){
+                            // Show reviewed
+                        }
+                    ?>
+                </article>
+            </section>
         </div>
 
     </body>
