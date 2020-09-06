@@ -102,8 +102,10 @@ Gunn Volunteering
                             $fullName = $studentNameArr->fetch_all(MYSQLI_ASSOC);
                             $fileLink = 'https://drive.google.com/open?id=' . $allSubmissions[$i]['id_of_file'];
 
-                            $submissionBox = new submissionBox($fullName[0]['firstname'], $fullName[0]['lastname'],  $allSubmissions[$i]['name_of_file'], $allSubmissions[$i]['id_of_file'], $fileLink);
-                            $submissionBox->printMessage();
+                            if($allSubmissions[$i]['reviewed'] == 0){
+                                $submissionBox = new submissionBox($fullName[0]['firstname'], $fullName[0]['lastname'],  $allSubmissions[$i]['name_of_file'], $allSubmissions[$i]['id_of_file'], $fileLink);
+                                $submissionBox->printMessage();
+                            }
                         }
                     ?>
                 </article>
