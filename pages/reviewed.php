@@ -77,18 +77,31 @@ Gunn Volunteering
                 </article>
 
                 <article>
+                    <!-- Keep Empty -->
+                </article>
+
+                <article>
                     <?php
                         include "../backend/db_connect.php";
-                        include "../messages/submissionBox.php";
+                        include "../messages/reviewBox.php";
 
                         $getAllSubmissions = "SELECT * FROM submissions WHERE reviewed = 1";
                         $submissions = $mysqli->query($getAllSubmissions) or die (mysqli_error($mysqli));
                         $allSubmissions = $submissions->fetch_all(MYSQLI_ASSOC);
 
                         for($i = 0; $i < count($allSubmissions); $i++){
-                            // Show reviewed
+                            $studentName = "SELECT firstname, lastname FROM users WHERE userid = " . $allSubmissions[$i]['users_id'];
+                            $studentNameArr = $mysqli->query($studentName) or die (mysqli_error($mysqli));
+                            $fullName = $studentNameArr->fetch_all(MYSQLI_ASSOC);
+
+                            $reviewBox = new reviewBox($fullName[0]['firstname'], $fullName[0]['lastname'],  $allSubmissions[$i]['name_of_file']);
+                            $reviewBox->printMessage();
                         }
                     ?>
+                </article>
+
+                <article>
+                    
                 </article>
             </section>
         </div>

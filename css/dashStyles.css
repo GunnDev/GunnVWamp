@@ -714,7 +714,7 @@ section.reviewed-admin-dash-section {
     width: 100%;
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
 }
 
