@@ -29,7 +29,7 @@
                         </article>
                         <article>
                             <div class='linkBtnDiv'>
-                                <i class='fas fa-ellipsis-v fa-lg centeredIcon' style='color:#1a73e8'></i>
+                                <i class='fas fa-pencil-alt fa-lg centeredIcon' style='color:#1a73e8'></i>
                             </div>
                         </article>
                     </section>
