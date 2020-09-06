@@ -709,13 +709,12 @@ section.students-admin-dash-section {
 }
 
 section.reviewed-admin-dash-section {
-    margin: 25px auto;
-    padding: 0 25px;
-    width: 100%;
+    margin: 30px 30px;
+    padding: 0;
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
+    grid-gap: 10px;
 }
 
 section.adminDashSection article {
