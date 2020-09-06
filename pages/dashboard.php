@@ -292,7 +292,7 @@ Gunn Volunteering
                                         }
 
                                         if (strpos($fullUrl, "upload=max") == true){
-                                            $fileErrorMessage = new fileError('Max submissions: Wait fo approval.');
+                                            $fileErrorMessage = new fileError('Max submissions: Wait for approval.');
                                             $fileErrorMessage->printMessage();
                                         }
 
