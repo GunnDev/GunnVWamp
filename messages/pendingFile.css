@@ -8,7 +8,7 @@ div.pendingFileContainer {
 }
 
 div.pendingFileContainer:hover {
-    background-color:#e2e0e0;
+    background-color:#e6e6e6;
     cursor: pointer;
 }
 
@@ -36,7 +36,7 @@ button.deleteFile {
     height: 50px;
     float: right;
     text-align: center;
-    background-color:#e2e0e0;
+    background-color:#e6e6e6;
     color: #cb0001;
     border: none;
     outline: none;
