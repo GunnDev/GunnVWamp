@@ -290,10 +290,16 @@ progress.progressBarStyles::-webkit-progress-bar {
     border: 1px solid #dedcdc;
     border-radius: 50px;
 }
+
 progress.progressBarStyles::-webkit-progress-value {
     background-color: #1a73e8;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+}
+
+progress.progressBarGte100::-webkit-progress-value {
+    background-color: green;
+    border-radius: 50px;
 }
 
 span.completedHrsStatement {
@@ -301,6 +307,10 @@ span.completedHrsStatement {
     font-weight: 450;
     display: flex;
     justify-content: center;
+}
+
+span.completedHrsStatement span {
+    color: #1a73e8;
 }
 
 div.addHoursContainer {

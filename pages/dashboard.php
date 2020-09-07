@@ -30,6 +30,17 @@ Gunn Volunteering
         <script src="../scripts/sideNav.js"></script>
         <script src="../scripts/addHourModal.js"></script>
         <script src="../scripts/uploadFile.js"></script>
+        <script>
+            window.addEventListener('load', (event) => {
+                var progBar = document.getElementById("pBar");
+                var text = document.getElementById("nhrsDisplay");
+
+                if (progBar.value >= 100) {
+                    text.style.color = "#2e944a";
+                    progBar.classList.toggle('progressBarGte100')
+                }
+            });
+        </script>
     </head>
 
     <body>
@@ -111,7 +122,7 @@ Gunn Volunteering
                           echo '<div class="progressBarDiv">
                                     <progress id="pBar" class="progressBarStyles" value=' . $totalHours . ' max="100"></progress>
                                     <br>
-                                    <span class="completedHrsStatement">You have completed ' . $totalHours . '/100 hours.</span>
+                                    <span class="completedHrsStatement">You have completed&nbsp;<span id="nhrsDisplay">' . $totalHours . '/100 </span>&nbsp;hours.</span>
                                 </div>';
                             ?>
                         </div>
