@@ -96,7 +96,20 @@ Gunn Volunteering
                             Progress
                         </h1>
                         <div class="userProgress">
-
+                            <?php
+                                include "../backend/db_connect.php";
+            
+                                $totalHoursQuery = "SELECT approved FROM submissions WHERE approved != -1 AND users_id = " . $_SESSION['user_id'];
+                                $totalHoursQueryResult = $mysqli->query($totalHoursQuery) or die (mysqli_error($mysqli));
+                                $totalHoursList = $totalHoursQueryResult->fetch_all(MYSQLI_ASSOC);
+            
+                                for($i = 0; $i < count($totalHoursList); $i++){
+                              echo '<div class="progressBarDiv">
+                                        <progress class="progressBarStyles" value=' . $totalHoursList[$i]['approved'] . ' max="100"></progress>
+                                        You have completed ' . $totalHoursList[$i]['approved'] . '/100 hours.
+                                    </div>';
+                                }
+                            ?>
                         </div>
                     </article>
                 </section>

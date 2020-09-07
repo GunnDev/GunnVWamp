@@ -274,6 +274,19 @@ div.userProgress {
     height: 100%;
 }
 
+div.progressBarDiv {
+    margin: 0;
+    padding-left: 20px;
+}
+
+progress.progressBarStyles {
+    width: 400px;
+	height: 20px;
+    margin: 0;
+    padding-left: 11px;
+    display: block;
+}
+
 div.addHoursContainer {
     width: 100%;
     height: 100%;
