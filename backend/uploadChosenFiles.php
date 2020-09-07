@@ -19,8 +19,12 @@ Author: Mihir Rao
     $folderName = $_SESSION['student_fname'] . $_SESSION['student_lname'] . '_' . $_SESSION['student_id'];
 
     # If the user has already submitted max number of files
-    $filesList = $googleDriveUtils->getFilesForUser($folderName);
-    if (count($filesList) == 4) {
+    # $filesList = $googleDriveUtils->getFilesForUser($folderName);
+    $getNumSubmissions = "SELECT * FROM submissions WHERE users_id = " . $_SESSION['user_id'];
+    $numSubmissionsResult = $mysqli->query($getNumSubmissions) or die (mysqli_error($mysqli));
+    $numSubmissionsList = $numSubmissionsResult->fetch_all(MYSQLI_ASSOC);
+
+    if (count($numSubmissionsList) >= 4) {
         header("Location: ../pages/dashboard.php?upload=max");
         exit();
     }
@@ -94,7 +98,7 @@ Author: Mihir Rao
                     $createdFileID = $googleDriveUtils->uploadFiles($fileDestination, $fileName, $folderName);
                     unlink($fileDestination);
 
-                    if (strlen($fileNameWithoutExtension) > 12) {
+                    if (strlen($fileNameWithoutExtension) > 30) {
                         $fileName = substr($fileName, 0, 13) . '...' . $fileLoweredExt;
                     }
 
