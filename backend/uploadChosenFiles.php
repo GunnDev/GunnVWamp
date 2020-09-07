@@ -98,10 +98,6 @@ Author: Mihir Rao
                     $createdFileID = $googleDriveUtils->uploadFiles($fileDestination, $fileName, $folderName);
                     unlink($fileDestination);
 
-                    if (strlen($fileNameWithoutExtension) > 30) {
-                        $fileName = substr($fileName, 0, 13) . '...' . $fileLoweredExt;
-                    }
-
                     # Add to submissions table
                     $approved = -1;
                     $declined = '';
