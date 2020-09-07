@@ -102,13 +102,17 @@ Gunn Volunteering
                                 $totalHoursQuery = "SELECT approved FROM submissions WHERE approved != -1 AND users_id = " . $_SESSION['user_id'];
                                 $totalHoursQueryResult = $mysqli->query($totalHoursQuery) or die (mysqli_error($mysqli));
                                 $totalHoursList = $totalHoursQueryResult->fetch_all(MYSQLI_ASSOC);
-            
+
+                                $totalHours = 0;
                                 for($i = 0; $i < count($totalHoursList); $i++){
-                              echo '<div class="progressBarDiv">
-                                        <progress class="progressBarStyles" value=' . $totalHoursList[$i]['approved'] . ' max="100"></progress>
-                                        You have completed ' . $totalHoursList[$i]['approved'] . '/100 hours.
-                                    </div>';
+                                    $totalHours = $totalHours + $totalHoursList[$i]['approved'];
                                 }
+
+                          echo '<div class="progressBarDiv">
+                                    <progress class="progressBarStyles" value=' . $totalHours . ' max="100"></progress>
+                                    <br>
+                                    You have completed ' . $totalHours . '/100 hours.
+                                </div>';
                             ?>
                         </div>
                     </article>

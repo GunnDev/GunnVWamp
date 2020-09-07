@@ -279,12 +279,21 @@ div.progressBarDiv {
     padding-left: 20px;
 }
 
-progress.progressBarStyles {
-    width: 400px;
-	height: 20px;
+progress {
+    border-radius: 50px; 
+    width: 450px;
+    height: 20px;
     margin: 0;
-    padding-left: 11px;
-    display: block;
+}
+progress::-webkit-progress-bar {
+    background-color: white;
+    border: 1px solid #dedcdc;
+    border-radius: 50px;
+}
+progress::-webkit-progress-value {
+    background-color: #1a73e8;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
 div.addHoursContainer {
