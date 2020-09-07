@@ -9,8 +9,6 @@
             private $fileName;
 
             public function __construct($fName){
-                $this->fullFileName = $fName;
-                        
                 $fileAspects = explode('.', $fName);
                 $fileNameWithoutExtension = $fileAspects[0];
                 $fileExtension = $fileAspects[1];
