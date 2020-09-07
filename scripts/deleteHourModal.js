@@ -3,7 +3,7 @@ function deleteHour(btnID) {
 
     if(file) {
         var fileName = file.getAttribute("data-ffname");
-        if (fileName.length > 15){
+        if (fileName.length > 23){
             fileName = fileName.substring(0, 23) + '...';
         }
 
