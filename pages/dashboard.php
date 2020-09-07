@@ -109,9 +109,9 @@ Gunn Volunteering
                                 }
 
                           echo '<div class="progressBarDiv">
-                                    <progress class="progressBarStyles" value=' . $totalHours . ' max="100"></progress>
+                                    <progress id="pBar" class="progressBarStyles" value=' . $totalHours . ' max="100"></progress>
                                     <br>
-                                    You have completed ' . $totalHours . '/100 hours.
+                                    <span class="completedHrsStatement">You have completed ' . $totalHours . '/100 hours.</span>
                                 </div>';
                             ?>
                         </div>
