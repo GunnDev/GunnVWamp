@@ -423,11 +423,18 @@ Gunn Volunteering
                     $approvedSubmissionsList = $approvedSubmissions->fetch_all(MYSQLI_ASSOC);
 
                     for($i = 0; $i < count($approvedSubmissionsList); $i++){
-                        $file = new declinedFile($approvedSubmissionsList[$i]['name_of_file']);
+                        $file = new declinedFile($approvedSubmissionsList[$i]['name_of_file'], $approvedSubmissionsList[$i]['id_of_file']);
                         $file->showFile();
                     }
                 ?>
             </article>
+
+            <div id="showDeclineMessage" class="showMessageModal">
+                <div class="showMessageContent">
+                    <p>hi</p>
+                </div>
+            </div>
+
         </section>
     </body>
 
