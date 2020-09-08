@@ -157,7 +157,7 @@ Gunn Volunteering
                                 </p>
                                 <form action="../backend/declineSubmission.php" method="post">
                                     <div class="group">      
-                                        <input name="declineReason" class="gmdInput" type="text" autocomplete="off" maxlength="50" required>
+                                        <input name="declineReason" class="gmdInput" type="text" autocomplete="off" onkeypress="validateTwo(event)" maxlength="50" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label class="gmdLabel">Brief Reason</label>

@@ -315,7 +315,7 @@ Gunn Volunteering
                                         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
                                         if (strpos($fullUrl, "upload=filename") == true){
-                                            $fileErrorMessage = new fileError('Please make the file name shorter!');
+                                            $fileErrorMessage = new fileError('Please make the file name shorter.');
                                             $fileErrorMessage->printMessage();
                                         }
 
@@ -423,7 +423,7 @@ Gunn Volunteering
                     $approvedSubmissionsList = $approvedSubmissions->fetch_all(MYSQLI_ASSOC);
 
                     for($i = 0; $i < count($approvedSubmissionsList); $i++){
-                        $file = new declinedFile($approvedSubmissionsList[$i]['name_of_file'], $approvedSubmissionsList[$i]['id_of_file']);
+                        $file = new declinedFile($approvedSubmissionsList[$i]['name_of_file'], $approvedSubmissionsList[$i]['declined']);
                         $file->showFile();
                     }
                 ?>
@@ -431,7 +431,9 @@ Gunn Volunteering
 
             <div id="showDeclineMessage" class="showMessageModal">
                 <div class="showMessageContent">
-                    <p>hi</p>
+                    <p id="pToShowReason" class="reasonStyles">
+                        hi
+                    </p>
                 </div>
             </div>
 

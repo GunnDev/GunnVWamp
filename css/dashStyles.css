@@ -1027,4 +1027,13 @@ div.showMessageContent {
     border: none;
     width: 400px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+p.reasonStyles {
+    margin: 0;
+    padding: 10px;
+    font-weight: 430;
+    font-size: 18px;
 }

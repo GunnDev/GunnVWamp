@@ -8,10 +8,10 @@
     <?php
         class declinedFile {
             private $fileName;
-            private $fileID;
+            private $reason;
 
-            public function __construct($fName, $fileID){
-                $this->fileID = $fileID;
+            public function __construct($fName, $reason){
+                $this->reason = $reason;
 
                 $fileAspects = explode('.', $fName);
                 $fileNameWithoutExtension = $fileAspects[0];
@@ -30,7 +30,7 @@
                     <p class="declinedFileName">';
                         echo $this->fileName;
               echo "</p>
-                    <button onclick='showReason(this)' id='" . $this->fileID . "' class='viewReason' title='Reason for declination'>
+                    <button onclick='showReason(this.id)' id='$this->reason' class='viewReason' title='Reason for declination'>
                         <i class='fas fa-quote-left fa-sm'></i>
                     </button>
                 </div>";

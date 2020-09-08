@@ -1,8 +1,7 @@
-function showReason(ele) {
-    var quoteID = ele.id;
-
+function showReason(reason) {
     // Get the modal
     var modal = document.getElementById("showDeclineMessage");
+    var textBox = document.getElementById("pToShowReason");
 
     // Show the modal
     modal.style.display = "block";
@@ -13,4 +12,6 @@ function showReason(ele) {
             modal.style.display = "none";
         }
     }
+
+    textBox.innerHTML = "\"" + reason + "\"";
 }
