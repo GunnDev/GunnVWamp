@@ -13,5 +13,5 @@ function showReason(reason) {
         }
     }
 
-    textBox.innerHTML = "\"" + reason + "\"";
+    textBox.innerHTML = "<span style='color: #1a73e8;'>The reviewer said:</span> " + "\"" + reason + "\"";
 }
