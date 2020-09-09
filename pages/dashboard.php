@@ -142,9 +142,21 @@ Gunn Volunteering
                         <i class="fas fa-plus"></i>
                     </button>
 
-                    <button title="Delete All Submissions" onclick="deleteAllFiles()" class="deleteAll">
-                        <i class="fas fa-trash"></i>
-                    </button>
+                    <?php
+                        $numFilesStmt = "SELECT * FROM submissions WHERE reviewed = 0 AND users_id = " . $_SESSION['user_id'];
+                        $numFiles = $mysqli->query($numFilesStmt) or die (mysqli_error($mysqli));
+                        $numFilesList = $numFiles->fetch_all(MYSQLI_ASSOC);
+
+                        if (count($numFilesList) > 0) {
+                            echo '<button title="Delete All Submissions" onclick="deleteAllFiles()" class="deleteAll">
+                                    <i class="fas fa-trash"></i>
+                                </button>';
+                        } else {
+                            echo '<button title="Delete All Submissions" class="deleteAll-Blocked">
+                                    <i class="fas fa-trash"></i>
+                                </button>';
+                        }
+                    ?>
 
                     <div id="dafm" class="deleteAllFilesModal">
                         <div class="deleteAllFilesContent">
