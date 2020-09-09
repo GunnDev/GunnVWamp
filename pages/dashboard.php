@@ -52,10 +52,10 @@ Gunn Volunteering
                     My Account
                 </button>
                 <button class="btnRipple">
-                    Other Stuff
+                    Option 2
                 </button>
                 <button class="btnRipple">
-                    Some More
+                    Option 3
                 </button>
 
                 <!-- Button ripple effect -->
@@ -332,7 +332,7 @@ Gunn Volunteering
                                         }
 
                                         if (strpos($fullUrl, "upload=max") == true){
-                                            $fileErrorMessage = new fileError('Max submissions: Wait for approval.');
+                                            $fileErrorMessage = new fileError('Max submissions reached.');
                                             $fileErrorMessage->printMessage();
                                         }
 
