@@ -14,7 +14,7 @@
     <meta charset="utf-8">
 
     <head>
-        <title>Register</title>
+        <title>Gunn Volunteering | Register</title>
     </head>
 
     <body OnLoad="document.registerForm.fname.focus();">

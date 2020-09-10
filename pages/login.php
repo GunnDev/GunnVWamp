@@ -15,7 +15,7 @@
     <meta charset="utf-8">
 
     <head>
-        <title>Login</title>
+        <title>Gunn Volunteering | Login</title>
     </head>
 
     <body OnLoad="document.loginForm.student_id.focus();">

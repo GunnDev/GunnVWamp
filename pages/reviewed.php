@@ -26,6 +26,8 @@ Gunn Volunteering
         <script src="https://kit.fontawesome.com/81f93d9156.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta charset="utf-8">
+
+        <title>Gunn Volunteering | Reviewed Submissions</title>
     </head>
 
     <body>

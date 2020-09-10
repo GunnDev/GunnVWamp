@@ -28,6 +28,8 @@ Gunn Volunteering
 
         <script src="../scripts/showaord.js"></script>
         <meta charset="utf-8">
+
+        <title>Gunn Volunteering | Submissions</title>
     </head>
 
     <body>

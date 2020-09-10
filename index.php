@@ -6,7 +6,7 @@
     ?>
 
     <head>
-        <title>Gunn Volunteering</title>
+        <title>Gunn Volunteering | Home</title>
 
         <!-- Links, Cool stuff, and Page Specs -->
         <link rel="stylesheet" href="css/styles.css">

@@ -40,6 +40,8 @@ Gunn Volunteering
             });
         </script>
         <meta charset="utf-8">
+
+        <title>Gunn Volunteering | Students</title>
     </head>
 
     <body>

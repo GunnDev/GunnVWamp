@@ -41,6 +41,8 @@ Gunn Volunteering
                 }
             });
         </script>
+
+        <title>Gunn Volunteering | Student Dashboard</title>
     </head>
 
     <body>
@@ -152,7 +154,7 @@ Gunn Volunteering
                                     <i class="fas fa-trash"></i>
                                 </button>';
                         } else {
-                            echo '<button title="Delete All Submissions" class="deleteAll-Blocked">
+                            echo '<button title="No Files To Delete" class="deleteAll-Blocked">
                                     <i class="fas fa-trash"></i>
                                 </button>';
                         }
