@@ -79,10 +79,6 @@ Gunn Volunteering
                 </article>
 
                 <article>
-                    <!-- Keep Empty -->
-                </article>
-
-                <article>
                     <?php
                         include "../backend/db_connect.php";
                         include "../messages/reviewBox.php";
@@ -100,10 +96,6 @@ Gunn Volunteering
                             $reviewBox->printMessage();
                         }
                     ?>
-                </article>
-
-                <article>
-                    
                 </article>
             </section>
         </div>
