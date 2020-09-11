@@ -321,7 +321,6 @@ Gunn Volunteering
 
                                 <article>
                                     <!-- Display results of file upload -->
-
                                     <?php
                                         include '../messages/fileSuccess.php';
                                         include '../messages/fileError.php';
@@ -385,21 +384,6 @@ Gunn Volunteering
                         $file = new pendingFile($pendingSubmissionsList[$i]['name_of_file'], $pendingSubmissionsList[$i]['id_of_file']);
                         $file->showPendingFile();
                     }
-
-                    // GETS FILES USING GOOGLE DRIVE API
-                    // ------------------------------------------------------------
-                    //
-                    // include '../messages/pendingFile.php';
-
-                    // $googleDriveUtils = unserialize($_SESSION['driveAPI']);
-                    // $folderName = $_SESSION['student_fname'] . $_SESSION['student_lname'] . '_' . $_SESSION['student_id'];
-                    // $listOfFiles = $googleDriveUtils->getFilesForUser($folderName);
-                    
-                    // for ($i = 0; $i < count($listOfFiles); $i++) {
-                    //     // Create the object and show the file
-                    //     $file = new pendingFile(array_keys($listOfFiles)[$i], array_values($listOfFiles)[$i]);
-                    //     $file->showPendingFile();
-                    // }
                 ?>
             </article>
 
