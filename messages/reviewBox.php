@@ -30,8 +30,8 @@
                       echo "</p>
                         </article>
                         <article>
-                            <div class='linkBtnDiv'>
-                                <i class='fas fa-pencil-alt fa-lg centeredIcon' style='color:#1a73e8'></i>
+                            <div onclick='reviseFile(" . "\"" . $this->fileID . "\"" . ")' class='linkBtnDiv'>
+                                <i class='fas fa-pencil-alt fa-lg centeredIcon' style='color:#1a73e8' title='Edit Submission'></i>
                             </div>
                         </article>
                     </section>
