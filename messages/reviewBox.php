@@ -9,11 +9,13 @@
             private $fname;
             private $lname;
             private $fileName;
+            private $fileID;
 
-            public function __construct($fname, $lname, $fileName){
+            public function __construct($fname, $lname, $fileName, $fileID){
                 $this->fname = $fname;
                 $this->lname = $lname;
                 $this->fileName = $fileName;
+                $this->fileID = $fileID;
             }
 
             public function printMessage(){

@@ -92,7 +92,7 @@ Gunn Volunteering
                             $studentNameArr = $mysqli->query($studentName) or die (mysqli_error($mysqli));
                             $fullName = $studentNameArr->fetch_all(MYSQLI_ASSOC);
 
-                            $reviewBox = new reviewBox($fullName[0]['firstname'], $fullName[0]['lastname'],  $allSubmissions[$i]['name_of_file']);
+                            $reviewBox = new reviewBox($fullName[0]['firstname'], $fullName[0]['lastname'],  $allSubmissions[$i]['name_of_file'], $allSubmissions[$i]['id_of_file']);
                             $reviewBox->printMessage();
                         }
                     ?>
