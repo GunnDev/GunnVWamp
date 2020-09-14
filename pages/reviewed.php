@@ -109,22 +109,12 @@ Gunn Volunteering
                         </article>
 
                         <article>
-                            <form action="#" method="post">
-                                <section class="confirmFileRevisionSection">
-                                        <article>
-                                            <button type="button" class="editSubmissionBtnL">
-                                                Cancel
-                                            </button>
-                                        </article>
+                            <form id="revForm" action="../backend/reviseFile.php" method="post">
+                                <button type="submit" class="editSubmissionBtnR">
+                                    Confirm
+                                </button>
 
-                                        <article>
-                                            <button type="submit" class="editSubmissionBtnR">
-                                                Confirm
-                                            </button>
-                                        </article>
-
-                                        <input type="hidden" id="fileIDReviseInput" name="firi" value="">
-                                </section>
+                                <input type="hidden" id="fileIDReviseInput" name="firi" value="">
                             </form>
                         </article>
                     </section>

@@ -1094,40 +1094,6 @@ section.mainRevisionConfirmationSection {
     grid-gap: 5px;
 }
 
-section.confirmFileRevisionSection {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: grid;
-    grid-auto-rows: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0px;
-}
-
-button.editSubmissionBtnL {
-    width: 100%;
-    background-color:#1a73e8;
-    cursor: pointer;
-    display: inline-block;
-    padding: 0.6em 1.4em;
-    outline: none;
-    margin: 0.3em 0.3em 0.3em 0;
-    border: 2px solid #3060da;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-weight: 500;
-    color:white;
-    text-align: center;
-    transition: all 0.2s;
-}
-
-button.editSubmissionBtnL:hover {
-    color:white;
-    background-color: #3060da;
-}
-
 button.editSubmissionBtnR {
     width: 100%;
     background-color:#1a73e8;
@@ -1137,8 +1103,7 @@ button.editSubmissionBtnR {
     outline: none;
     margin: 0.3em 0.3em 0.3em 0;
     border: 2px solid #3060da;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-radius: 8px;
     box-sizing: border-box;
     text-decoration: none;
     font-weight: 500;
