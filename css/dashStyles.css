@@ -1112,7 +1112,7 @@ button.editSubmissionBtnL {
     padding: 0.6em 1.4em;
     outline: none;
     margin: 0.3em 0.3em 0.3em 0;
-    border: 2px solid #2252cc;
+    border: 2px solid #3060da;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     box-sizing: border-box;
@@ -1125,7 +1125,7 @@ button.editSubmissionBtnL {
 
 button.editSubmissionBtnL:hover {
     color:white;
-    background-color: #2252cc;
+    background-color: #3060da;
 }
 
 button.editSubmissionBtnR {
@@ -1136,7 +1136,7 @@ button.editSubmissionBtnR {
     padding: 0.6em 1.4em;
     outline: none;
     margin: 0.3em 0.3em 0.3em 0;
-    border: 2px solid #2252cc;
+    border: 2px solid #3060da;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     box-sizing: border-box;
@@ -1149,5 +1149,5 @@ button.editSubmissionBtnR {
 
 button.editSubmissionBtnR:hover {
     color:white;
-    background-color: #2252cc;
+    background-color: #3060da;
 }
