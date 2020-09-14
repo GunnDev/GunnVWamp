@@ -1078,8 +1078,41 @@ div.reviewConfirmModal {
 div.reviewConfirmModalContent {
     background-color: #fefefe;
     margin: 18% auto;
-    padding: 20px;
+    padding: 10px;
     border: none;
     width: 400px;
     border-radius: 10px;
+}
+
+div.reviewConfirmModalContent section {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+button.editSubmissionBtn {
+    width: 100%;
+    background-color:#1a73e8;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.6em 1.4em;
+    outline: none;
+    margin: 0.3em 0.3em 0.3em 0;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 500;
+    color:white;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+button.editSubmissionBtn:hover {
+    color:#FFFFFF;
+    background-color:#0c5dc7;
 }

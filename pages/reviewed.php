@@ -101,7 +101,17 @@ Gunn Volunteering
 
             <div id="rcm" class="reviewConfirmModal">
                 <div class="reviewConfirmModalContent">
-                    show message here
+                    <section>
+                        <article style="text-align: center; font-weight: 430;">
+                            This file will move back into the submissions tab for editing.
+                        </article>
+
+                        <article>
+                            <button class="editSubmissionBtn">
+                                Confirm
+                            </button>
+                        </article>
+                    </section>
                 </div>
             </div>
         </div>
