@@ -109,19 +109,23 @@ Gunn Volunteering
                         </article>
 
                         <article>
-                            <section class="confirmFileRevisionSection">
-                                <article>
-                                    <button type="button" class="editSubmissionBtnL">
-                                        Cancel
-                                    </button>
-                                </article>
+                            <form action="#" method="post">
+                                <section class="confirmFileRevisionSection">
+                                        <article>
+                                            <button type="button" class="editSubmissionBtnL">
+                                                Cancel
+                                            </button>
+                                        </article>
 
-                                <article>
-                                    <button type="submit" class="editSubmissionBtnR">
-                                        Confirm
-                                    </button>
-                                </article>
-                            </section>
+                                        <article>
+                                            <button type="submit" class="editSubmissionBtnR">
+                                                Confirm
+                                            </button>
+                                        </article>
+
+                                        <input type="hidden" id="fileIDReviseInput" name="firi" value="">
+                                </section>
+                            </form>
                         </article>
                     </section>
                 </div>

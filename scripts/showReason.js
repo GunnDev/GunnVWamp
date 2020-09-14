@@ -28,4 +28,6 @@ function editSubmission(fileID) {
             modal.style.display = "none";
         }
     }
+
+    document.getElementById("fileIDReviseInput").value = fileID;
 }
