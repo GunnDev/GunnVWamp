@@ -101,15 +101,27 @@ Gunn Volunteering
 
             <div id="rcm" class="reviewConfirmModal">
                 <div class="reviewConfirmModalContent">
-                    <section>
+                    <section class="mainRevisionConfirmationSection">
                         <article style="text-align: center; font-weight: 430;">
-                            This file will move back into the submissions tab for editing.
+                            <p style="margin:0;padding-bottom:10px;">
+                                This file will move back into the submissions tab for editing.
+                            </p>
                         </article>
 
                         <article>
-                            <button class="editSubmissionBtn">
-                                Confirm
-                            </button>
+                            <section class="confirmFileRevisionSection">
+                                <article>
+                                    <button type="button" class="editSubmissionBtnL">
+                                        Cancel
+                                    </button>
+                                </article>
+
+                                <article>
+                                    <button type="submit" class="editSubmissionBtnR">
+                                        Confirm
+                                    </button>
+                                </article>
+                            </section>
                         </article>
                     </section>
                 </div>

@@ -1084,35 +1084,70 @@ div.reviewConfirmModalContent {
     border-radius: 10px;
 }
 
-div.reviewConfirmModalContent section {
+section.mainRevisionConfirmationSection {
     margin: 0;
     padding: 0;
     width: 100%;
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
-    grid-gap: 20px;
+    grid-gap: 5px;
 }
 
-button.editSubmissionBtn {
+section.confirmFileRevisionSection {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    background-color:#1a73e8;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+}
+
+button.editSubmissionBtnL {
+    width: 100%;
+    background-color:white;
     cursor: pointer;
     display: inline-block;
     padding: 0.6em 1.4em;
     outline: none;
     margin: 0.3em 0.3em 0.3em 0;
-    border: none;
-    border-radius: 8px;
+    border: 1px solid #1a73e8;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
     box-sizing: border-box;
     text-decoration: none;
     font-weight: 500;
-    color:white;
+    color:#1a73e8;
     text-align: center;
     transition: all 0.2s;
 }
 
-button.editSubmissionBtn:hover {
-    color:#FFFFFF;
-    background-color:#0c5dc7;
+button.editSubmissionBtnL:hover {
+    color:white;
+    background-color: #1a73e8;
+}
+
+button.editSubmissionBtnR {
+    width: 100%;
+    background-color:white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.6em 1.4em;
+    outline: none;
+    margin: 0.3em 0.3em 0.3em 0;
+    border: 1px solid #1a73e8;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 500;
+    color:#1a73e8;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+button.editSubmissionBtnR:hover {
+    color:white;
+    background-color: #1a73e8;
 }
