@@ -76,7 +76,20 @@ Gunn Volunteering
             <section class="submissions-admin-dash-section">
                 <article>
                     <p class="submissionReviewTitle">
-                        Submissions:
+                        Submissions: 
+                        <?php
+                            include "../backend/db_connect.php";
+                            include "../messages/submissionBox.php";
+
+                            $pendingSubmissionsStmt = "SELECT * FROM submissions WHERE reviewed = 0";
+                            $pendingSubmissions = $mysqli->query($pendingSubmissionsStmt) or die (mysqli_error($mysqli));
+                            $pendingSubmissionsList = $pendingSubmissions->fetch_all(MYSQLI_ASSOC);
+                        ?>
+                        <span>
+                            <?php
+                                echo count($pendingSubmissionsList);
+                            ?>
+                        </span>
                     </p>
                 </article>
                     
@@ -91,9 +104,6 @@ Gunn Volunteering
 
                 <article style="max-height: 500px; overflow-y: scroll">
                     <?php
-                        include "../backend/db_connect.php";
-                        include "../messages/submissionBox.php";
-
                         $getAllSubmissions = "SELECT * FROM submissions";
                         $submissions = $mysqli->query($getAllSubmissions) or die (mysqli_error($mysqli));
                         $allSubmissions = $submissions->fetch_all(MYSQLI_ASSOC);
