@@ -25,9 +25,10 @@
         $getEntrystmt->fetch();
 
         if (password_verify($adminPass, $apass)){
-            $stmt = $mysqli->prepare("UPDATE submissions SET reviewed = ?, declined = ? WHERE id_of_file = ?");
+            $stmt = $mysqli->prepare("UPDATE submissions SET approved = ?, reviewed = ?, declined = ? WHERE id_of_file = ?");
             $reviewedFile = 1;
-            $stmt->bind_param("iss", $reviewedFile, $reason, $fileID);
+            $approvedField = -1;
+            $stmt->bind_param("iiss", $approvedField, $reviewedFile, $reason, $fileID);
 
             $stmt->execute();
             $stmt->close();
