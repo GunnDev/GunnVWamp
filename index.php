@@ -22,7 +22,7 @@
     <body>
         <header id="topNav" class="siteNavHeader">
             <a href="index.php" class="logo">
-                <h1 class="navMainTitle">Gunn VBook</h1>
+                <h1 class="navMainTitle">Gunn Volunteering</h1>
             </a>
             <nav class="navbarItems">
                 <ul class="navbarLinks">
@@ -45,11 +45,11 @@
             <article></article>
             <article>
                 <h1 class="catchphrase">
-                    It's Time to Ditch Papers.
+                    Wherever and Whenever.
                 </h1>
                 <div class="miniCatchphrase">
                     <h1 class="miniCatchphraseSpecs">
-                        Join VBook - The easiest way for staff and students to streamline the volunteer hours process at Gunn.
+                        Gunn Volunteering - The easiest way for staff and students to streamline the volunteer hours process at Gunn.
                     </h1>
                 </div>
                 <div class="getStartedBtnContainer">
