@@ -45,7 +45,7 @@
             <article></article>
             <article>
                 <h1 class="catchphrase">
-                    Wherever and Whenever.
+                    Wherever, Whenever.
                 </h1>
                 <div class="miniCatchphrase">
                     <h1 class="miniCatchphraseSpecs">
