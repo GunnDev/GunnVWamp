@@ -20,7 +20,7 @@
     <body OnLoad="document.registerForm.fname.focus();">
         <header id="topNav" class="siteNavHeader">
             <a href="../index.php" class="logo">
-                <h1 class="navMainTitle">Gunn VBook</h1>
+                <h1 class="navMainTitle">Gunn Volunteering</h1>
             </a>
             <nav class="navbarItems">
                 <ul class="navbarLinks">
