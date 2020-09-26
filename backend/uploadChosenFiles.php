@@ -69,10 +69,13 @@ Author: Mihir Rao
                     move_uploaded_file($fileTmpName, $fileDestination);
 
                     // Check if the file name exists already
-                    $listOfFiles = $googleDriveUtils->getFilesForUser($folderName);
+                    $usersSubmissionsQuery = "SELECT * FROM submissions WHERE users_id = " . $_SESSION['user_id'];
+                    $usersSubmissions = $mysqli->query($usersSubmissionsQuery) or die (mysqli_error($mysqli));
+                    $usersSubmissions = $usersSubmissions->fetch_all(MYSQLI_ASSOC);
+
                     $fileNameOccurances = 0;
 
-                    $fileNames = array_keys($listOfFiles);
+                    $fileNames = array_keys($usersSubmissions['name_of_file']);
                     $fileAspects = explode('.', $fileName);
                     $fileNameWithoutExtension = $fileAspects[0];
                     $fileExtension = $fileAspects[1];
