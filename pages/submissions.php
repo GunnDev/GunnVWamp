@@ -87,7 +87,7 @@ Gunn Volunteering
                         ?>
                         <span>
                             <?php
-                                echo count($pendingSubmissionsList);
+                                echo "<span style='color:#1a73e8; font-weight:500'>" .  count($pendingSubmissionsList) . "</span>";
                             ?>
                         </span>
                     </p>
