@@ -91,18 +91,20 @@ Gunn Volunteering
                     <div class="searchForStudentsDiv">
                         <form action="#">
                             <section class="searchForm">
-                                <article>
-                                    <input id="searchStudentsField" type='text' class="searchBox" placeholder='Search Students'>
-                                </article>
+                                <form action="../backend/searchStudents.php" method="post">
+                                    <article>
+                                        <input id="searchStudentsField" type='text' class="searchBox" placeholder='Search Students'>
+                                    </article>
 
-                                <article>
-                                    <button type="submit" class="searchBtn">
-                                        Search
-                                        <span>
-                                            <i class="fas fa-search fa-sm"></i>
-                                        </span>
-                                    </button>
-                                </article>
+                                    <article>
+                                        <button type="submit" class="searchBtn">
+                                            Search
+                                            <span>
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </span>
+                                        </button>
+                                    </article>
+                                </form>
                             </section>
                         </form>
                     </div>
