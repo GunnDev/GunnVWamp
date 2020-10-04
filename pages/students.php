@@ -89,7 +89,6 @@ Gunn Volunteering
             <section class="students-admin-dash-section">
                 <article>
                     <div class="searchForStudentsDiv">
-                        <!-- form to search for students -->
                         <form action="#">
                             <section class="searchForm">
                                 <form action="../backend/searchStudents.php" method="post">
