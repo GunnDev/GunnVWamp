@@ -4,6 +4,15 @@
 Author: Mihir Rao
 Gunn Volunteering
 
+ _____                     _   _       _             _                 _             
+|  __ \                   | | | |     | |           | |               (_)            
+| |  \/_   _ _ __  _ __   | | | | ___ | |_   _ _ __ | |_ ___  ___ _ __ _ _ __   __ _ 
+| | __| | | | '_ \| '_ \  | | | |/ _ \| | | | | '_ \| __/ _ \/ _ \ '__| | '_ \ / _` |
+| |_\ \ |_| | | | | | | | \ \_/ / (_) | | |_| | | | | ||  __/  __/ |  | | | | | (_| |
+ \____/\__,_|_| |_|_| |_|  \___/ \___/|_|\__,_|_| |_|\__\___|\___|_|  |_|_| |_|\__, |
+                                                                                __/ |
+                                                                               |___/ 
+
 -->
 
 <html>
@@ -124,7 +133,7 @@ Gunn Volunteering
                           echo '<div class="progressBarDiv">
                                     <progress id="pBar" class="progressBarStyles" value=' . $totalHours . ' max="100"></progress>
                                     <br>
-                                    <span class="completedHrsStatement">You have completed&nbsp;<span id="nhrsDisplay">' . $totalHours . '/100 </span>&nbsp;hours.</span>
+                                    <span class="completedHrsStatement">You have completed&nbsp;<span id="nhrsDisplay">' . $totalHours . '/100 </span>&nbsp;hours!</span>
                                 </div>';
                             ?>
                         </div>
