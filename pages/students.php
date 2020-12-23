@@ -29,12 +29,38 @@ Gunn Volunteering
         
         <script>
             $(document).ready(function(){
-                $("#searchStudentsField").focus(function() {
+                $("#lastnamefield").focus(function() {
                     $(this).attr("origPlaceholder", $(this).attr("placeholder"));
-                    $(this).attr("placeholder", "Ex. FirstLast or 950 number.");
+                    $(this).attr("placeholder", "Ex. \"Skywalker\"");
                 });
 
-                $("#searchStudentsField").blur(function() {
+                $("#lastnamefield").blur(function() {
+                    if ($(this).attr("origPlaceholder")) {
+                    $(this).attr("placeholder", $(this).attr("origPlaceholder"));
+                    }
+                });
+            });
+
+            $(document).ready(function(){
+                $("#firstnamefield").focus(function() {
+                    $(this).attr("origPlaceholder", $(this).attr("placeholder"));
+                    $(this).attr("placeholder", "Ex. \"Luke\"");
+                });
+
+                $("#firstnamefield").blur(function() {
+                    if ($(this).attr("origPlaceholder")) {
+                    $(this).attr("placeholder", $(this).attr("origPlaceholder"));
+                    }
+                });
+            });
+
+            $(document).ready(function(){
+                $("#idfield").focus(function() {
+                    $(this).attr("origPlaceholder", $(this).attr("placeholder"));
+                    $(this).attr("placeholder", "Ex. \"950_____\"");
+                });
+
+                $("#idfield").blur(function() {
                     if ($(this).attr("origPlaceholder")) {
                     $(this).attr("placeholder", $(this).attr("origPlaceholder"));
                     }
@@ -89,22 +115,28 @@ Gunn Volunteering
             <section class="students-admin-dash-section">
                 <article>
                     <div class="searchForStudentsDiv">
-                        <form action="#">
+                        <form action="../backend/searchStudents.php" method="post">
                             <section class="searchForm">
-                                <form action="../backend/searchStudents.php" method="post">
-                                    <article>
-                                        <input id="searchStudentsField" type='text' class="searchBox" placeholder='Search Students'>
-                                    </article>
+                                <article>
+                                    <input name="lastNameToSearch" id="lastnamefield" type='text' class="searchBox" style="margin-left: 20px" placeholder='Last Name'>
+                                </article>
 
-                                    <article>
-                                        <button type="submit" class="searchBtn">
-                                            Search
-                                            <span>
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </span>
-                                        </button>
-                                    </article>
-                                </form>
+                                <article>
+                                    <input name="firstNameToSearch" id="firstnamefield" type='text' class="searchBox" placeholder='First Name'>
+                                </article>
+
+                                <article>
+                                    <input name="studentIDToSearch" id="idfield" type='text' class="searchBox" placeholder='Student ID'>
+                                </article>
+
+                                <article>
+                                    <button type="submit" class="searchBtn">
+                                        Search &nbsp;
+                                        <span>
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </span>
+                                    </button>
+                                </article>
                             </section>
                         </form>
                     </div>

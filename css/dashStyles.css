@@ -790,7 +790,7 @@ section.searchForm {
     padding: 0;
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
 }
 
@@ -803,7 +803,7 @@ input.searchBox {
     width: 100%;
     padding: 10px;
     padding-left: 15px;
-    margin: 20px 5px 20px 20px;
+    margin: 20px 5px 20px 10px;
     border: 1px solid gray;
     border-radius: 5px;
     outline: none;
