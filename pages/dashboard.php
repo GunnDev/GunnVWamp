@@ -102,7 +102,13 @@ Gunn Volunteering
                         <div class="nameAndGradYear">
                             <h1 class="nameTitle">
                                 <?php
-                                    echo $_SESSION['student_fname'] . ' ' . $_SESSION['student_lname'];
+                                    $temp = $_SESSION['student_fname'] . ' ' . $_SESSION['student_lname'];
+
+                                    if(strlen($temp) > 23) {
+                                        $temp = substr($temp, 0, 20) . '...';
+                                    }
+
+                                    echo $temp;
                                 ?>
                             </h1>
                             <h1 class="gradYearDisplay">

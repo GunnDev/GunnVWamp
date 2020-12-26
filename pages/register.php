@@ -93,7 +93,7 @@
 
                             // Registration Success!
                             if (strpos($fullUrl, "register=success") == true){
-                                $successM = new successMessage('Registration Success! Signing In...');
+                                $successM = new successMessage('Registration Success! Redirecting...');
                                 $successM->printMessage();
                                 // Need to login user and direct them to dashboard.
                                 header("refresh:2; url=dashboard.php");
