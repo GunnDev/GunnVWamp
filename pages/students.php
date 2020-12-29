@@ -27,6 +27,8 @@ Gunn Volunteering
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta charset="utf-8">
         
+        <script src="../scripts/expandedSearchMenu.js"></script>
+
         <script>
             $(document).ready(function(){
                 $("#lastnamefield").focus(function() {
@@ -130,6 +132,12 @@ Gunn Volunteering
                                 </article>
 
                                 <article>
+                                    <div class="expandedSearchDiv" onclick="expandedSearchMenu()">
+                                        <i class="fas fa-ellipsis-v fa-lg centeredExpanded" style="color:#1a73e8"></i>
+                                    </div>
+                                </article>
+
+                                <article>
                                     <button type="submit" class="searchBtn">
                                         Search &nbsp;
                                         <span>
@@ -138,6 +146,41 @@ Gunn Volunteering
                                     </button>
                                 </article>
                             </section>
+
+                            <div id="expandedSearchModal" class="expandedSearchModalOuter">
+                                <div class="expandedSearchModalContent">
+                                    <section class="expandedSearchSection">
+                                        <article>
+                                            <p class="advancedSearchTitle">
+                                                Advanced Search:
+                                            </p>
+                                        </article>
+                                        
+                                        <article>
+                                            <section class="expandedSearchSection2">
+                                                <article>
+                                                    a
+                                                </article>
+                                                
+                                                <article>
+                                                    b
+                                                </article>
+
+                                                <article>
+                                                    c
+                                                </article>
+                                            </section>
+                                        </article>
+
+                                        <article style="justify-content:center; display:flex;">
+                                            <button id="saveAdvancedSearchBtn" type="button" class="saveAdvancedSearchBtn">
+                                                Save
+                                            </button>
+                                        </article>
+                                    </section>
+                                </div>
+                            </div>
+
                         </form>
                     </div>
                 </article>
