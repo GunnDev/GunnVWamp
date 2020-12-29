@@ -158,16 +158,25 @@ Gunn Volunteering
                                         
                                         <article>
                                             <section class="expandedSearchSection2">
-                                                <article>
-                                                    a
+                                                <article style="display:flex; justify-content:center;">
+                                                    <div style="width: 50%;">
+                                                        <input type="checkbox" id="grade1" name="grade1" value="9">
+                                                        <label for="grade1"> Grade 9</label><br>
+                                                        <input type="checkbox" id="grade2" name="grade2" value="10">
+                                                        <label for="grade2"> Grade 10</label><br>
+                                                        <input type="checkbox" id="grade3" name="grade3" value="11">
+                                                        <label for="grade3"> Grade 11</label><br>
+                                                        <input type="checkbox" id="grade4" name="grade4" value="12">
+                                                        <label for="grade4"> Grade 12</label><br>
+                                                    </div>
                                                 </article>
                                                 
                                                 <article>
-                                                    b
+                                                    <input name="b" type='text' placeholder='b'>
                                                 </article>
 
                                                 <article>
-                                                    c
+                                                    <input name="c" type='text' placeholder='c'>
                                                 </article>
                                             </section>
                                         </article>
