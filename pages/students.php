@@ -28,6 +28,7 @@ Gunn Volunteering
         <meta charset="utf-8">
         
         <script src="../scripts/expandedSearchMenu.js"></script>
+        <script src="../scripts/uncheckSort.js"></script>
 
         <script>
             $(document).ready(function(){
@@ -161,18 +162,27 @@ Gunn Volunteering
                                                 <article style="display:flex; justify-content:center;">
                                                     <div style="width: 50%;">
                                                         <input type="checkbox" id="grade1" name="grade1" value="9">
-                                                        <label for="grade1"> Grade 9</label><br>
+                                                        <label class="labelTxtStyle" for="grade1"> Grade 9</label><br>
                                                         <input type="checkbox" id="grade2" name="grade2" value="10">
-                                                        <label for="grade2"> Grade 10</label><br>
+                                                        <label class="labelTxtStyle" for="grade2"> Grade 10</label><br>
                                                         <input type="checkbox" id="grade3" name="grade3" value="11">
-                                                        <label for="grade3"> Grade 11</label><br>
+                                                        <label class="labelTxtStyle" for="grade3"> Grade 11</label><br>
                                                         <input type="checkbox" id="grade4" name="grade4" value="12">
-                                                        <label for="grade4"> Grade 12</label><br>
+                                                        <label class="labelTxtStyle" for="grade4"> Grade 12</label><br>
                                                     </div>
                                                 </article>
                                                 
-                                                <article>
-                                                    <input name="b" type='text' placeholder='b'>
+                                                <article style="display:flex; justify-content:center;">
+                                                    <div style="width: 80%;">
+                                                        <input type="radio" id="alphabeticalF" name="alphabetical" value="alphabeticalF">
+                                                        <label class="labelTxtStyle" for="alphabeticalF"> Sort Alphabetically(First)</label><br>
+                                                        <input type="radio" id="alphabeticalL" name="alphabetical" value="alphabeticalL">
+                                                        <label class="labelTxtStyle" for="alphabeticalL"> Sort Alphabetically(Last)</label><br>
+
+                                                        <button class="uncheckSortBtn" type="button" onclick="uncheckSortSelection()">
+                                                            Uncheck
+                                                        </button>
+                                                    </div>
                                                 </article>
 
                                                 <article>

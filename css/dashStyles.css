@@ -848,7 +848,7 @@ div.expandedSearchModalContent {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 70%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
     border-radius: 15px;
 }
 
@@ -864,13 +864,13 @@ section.expandedSearchSection {
     display: grid;
     grid-auto-rows: minmax(2px, auto);
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: 25px;
 }
 
 p.advancedSearchTitle {
     margin: 0;
     padding: 0;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     color:#1a73e8;
     font-weight: 500;
     font-size: 15px;
@@ -912,6 +912,12 @@ section.expandedSearchSection2 {
     grid-gap: 5px;
 }
 
+label.labelTxtStyle {
+    color: gray;
+    font-weight: 500;
+    font-size: 13px;
+}
+
 button.searchBtn {
     width: 100%;
     padding: 10px;
@@ -927,6 +933,27 @@ button.searchBtn {
 }
 
 button.searchBtn:hover {
+    cursor: pointer;
+    background-color: #0c5ec9;
+    transition: 0.2s;
+}
+
+button.uncheckSortBtn {
+    width: 50%;
+    padding: 5px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 25%;
+    border: none;
+    background-color: #1a73e8;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+button.uncheckSortBtn:hover {
     cursor: pointer;
     background-color: #0c5ec9;
     transition: 0.2s;
