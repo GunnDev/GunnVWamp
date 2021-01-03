@@ -880,7 +880,7 @@ button.saveAdvancedSearchBtn {
     width: 100%;
     padding: 10px;
     padding-left: 15px;
-    margin: 20px 20px 10px 5px;
+    margin: 20px 0px 0px 0px;
     border: none;
     background-color: #1a73e8;
     border-radius: 5px;
@@ -950,7 +950,7 @@ button.uncheckSortBtn {
     width: 100%;
     padding: 10px;
     padding-left: 15px;
-    margin: 20px 20px 10px 5px;
+    margin: 20px 0px 0px 0px;
     border: none;
     background-color: #1a73e8;
     border-radius: 5px;
