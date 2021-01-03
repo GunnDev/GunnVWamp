@@ -155,6 +155,9 @@ Gunn Volunteering
                                             <p class="advancedSearchTitle">
                                                 Advanced Search:
                                             </p>
+                                            <p class="subAdvancedSearchTitle">
+                                                Any selections made here will disregard First, Last, and StudentID Fields.
+                                            </p>
                                         </article>
                                         
                                         <article>
@@ -192,7 +195,7 @@ Gunn Volunteering
                                             <section class="expandedSearchSection3">
                                                 <article>
                                                     <button class="uncheckSortBtn" type="button" onclick="uncheckSortSelection()">
-                                                        Uncheck All
+                                                        Remove Selections
                                                     </button>
                                                 </article>
 

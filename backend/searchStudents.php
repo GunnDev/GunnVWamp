@@ -8,12 +8,12 @@
     $studentid = $_POST['studentIDToSearch'];
 
     // Advanced
-    $g1 = $_POST['grade1'];
-    $g2 = $_POST['grade2'];
-    $g3 = $_POST['grade3'];
-    $g4 = $_POST['grade4'];
+    $g1 = isset($_POST['grade1']) ? $_POST['grade1'] : false;
+    $g2 = isset($_POST['grade2']) ? $_POST['grade2'] : false;
+    $g3 = isset($_POST['grade3']) ? $_POST['grade3'] : false;
+    $g4 = isset($_POST['grade4']) ? $_POST['grade4'] : false;
 
-    $sortType = $_POST['alphabetical'];
+    $sortType = isset($_POST['alphabetical']) ? $_POST['alphabetical'] : false;
 
     echo $lname;
     echo $fname;
