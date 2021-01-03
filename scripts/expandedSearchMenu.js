@@ -19,3 +19,7 @@ function expandedSearchMenu() {
         }
     }
 }
+
+function removeSearch() {
+    window.location.href = "http://localhost/GunnVWamp/pages/students.php"; 
+}

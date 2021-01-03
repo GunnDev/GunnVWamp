@@ -790,7 +790,7 @@ section.searchForm {
     padding: 0;
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: 6fr 6fr 6fr 1fr 6fr;
+    grid-template-columns: 6fr 6fr 6fr 1fr 6fr 1fr;
     grid-gap: 10px;
 }
 
@@ -939,7 +939,7 @@ button.searchBtn {
     width: 100%;
     padding: 10px;
     padding-left: 15px;
-    margin: 20px 20px 20px 5px;
+    margin: 20px 5px 20px 5px;
     border: none;
     background-color: #1a73e8;
     border-radius: 5px;
@@ -953,6 +953,29 @@ button.searchBtn:hover {
     cursor: pointer;
     background-color: #0c5ec9;
     transition: 0.2s;
+}
+
+div.trashExpandedSearchDiv {
+    margin: auto;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+i.trashCenteredExpanded {
+    color: #cb0001;
+    padding: 0;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+i.trashCenteredExpanded:hover {
+    color: #ad0001;
+    cursor: pointer;
 }
 
 button.uncheckSortBtn {

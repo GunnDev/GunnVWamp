@@ -146,6 +146,12 @@ Gunn Volunteering
                                         </span>
                                     </button>
                                 </article>
+
+                                <article>
+                                    <div id="trashDiv" class="trashExpandedSearchDiv">
+                                        <i id="trashIcon" onclick="removeSearch()" class="fas fa-trash fa-lg trashCenteredExpanded"></i>
+                                    </div>
+                                </article>
                             </section>
 
                             <div id="expandedSearchModal" class="expandedSearchModalOuter">
