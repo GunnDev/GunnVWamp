@@ -173,28 +173,35 @@ Gunn Volunteering
                                                 </article>
                                                 
                                                 <article style="display:flex; justify-content:center;">
-                                                    <div style="width: 80%;">
+                                                    <div style="width: 100%;">
                                                         <input type="radio" id="alphabeticalF" name="alphabetical" value="alphabeticalF">
                                                         <label class="labelTxtStyle" for="alphabeticalF"> Sort Alphabetically(First)</label><br>
-                                                        <input type="radio" id="alphabeticalL" name="alphabetical" value="alphabeticalL">
-                                                        <label class="labelTxtStyle" for="alphabeticalL"> Sort Alphabetically(Last)</label><br>
-
-                                                        <button class="uncheckSortBtn" type="button" onclick="uncheckSortSelection()">
-                                                            Uncheck
-                                                        </button>
                                                     </div>
                                                 </article>
 
-                                                <article>
-                                                    <input name="c" type='text' placeholder='c'>
+                                                <article style="display:flex; justify-content:center;">
+                                                    <div style="width: 100%;">
+                                                        <input type="radio" id="alphabeticalL" name="alphabetical" value="alphabeticalL">
+                                                        <label class="labelTxtStyle" for="alphabeticalL"> Sort Alphabetically(Last)</label><br>
+                                                    </div>
                                                 </article>
                                             </section>
                                         </article>
 
                                         <article style="justify-content:center; display:flex;">
-                                            <button id="saveAdvancedSearchBtn" type="button" class="saveAdvancedSearchBtn">
-                                                Save
-                                            </button>
+                                            <section class="expandedSearchSection3">
+                                                <article>
+                                                    <button class="uncheckSortBtn" type="button" onclick="uncheckSortSelection()">
+                                                        Uncheck All
+                                                    </button>
+                                                </article>
+
+                                                <article>
+                                                    <button class="saveAdvancedSearchBtn" type="button" id="saveAdvancedSearchBtn">
+                                                        Save
+                                                    </button>
+                                                </article>
+                                            </section>
                                         </article>
                                     </section>
                                 </div>
