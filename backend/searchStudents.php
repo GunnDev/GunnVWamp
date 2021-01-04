@@ -49,6 +49,12 @@
         $isAdvanced = true;
     }
 
+    // If all false, show all users.
+    if (!$g1 && !$g2 && !$g3 && !$g4) {
+        $urlStr = $urlStr . "&g1=1&g2=1&g3=1&g4=1";
+        $isAdvanced = true;
+    }
+
     // If the user is using advanced searching
     if($isAdvanced) {
         $urlStr = $urlStr . "&adv=t";

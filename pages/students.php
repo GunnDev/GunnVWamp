@@ -84,7 +84,7 @@ Gunn Volunteering
                     <!-- Blank -->
                 </div>
             </div>
-            <a href="#" style="background-color: #dedede; color: #1a73e8;">
+            <a href="?&g1=1&g2=1&g3=1&g4=1&adv=t" style="background-color: #dedede; color: #1a73e8;">
                 <i class="fas fa-users fa-lg"></i>
                 &nbsp;
                 Students
@@ -227,9 +227,37 @@ Gunn Volunteering
                         // The URL that has the sorting info.
                         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-                        $getAllUsers = "SELECT studentid, firstname, lastname FROM users WHERE studentid != 1";
+                        $getAllUsers = "SELECT studentid, firstname, lastname, gradyear FROM users WHERE studentid != 1";
                         $resultGetAll = $mysqli->query($getAllUsers) or die (mysqli_error($mysqli));
                         $allUsers = $resultGetAll->fetch_all(MYSQLI_ASSOC);
+
+                        // Grade Sorting -------------------------------
+
+                        // Using array to store indeces to remove so that array size doesn't change during loop
+                        $studentsToRemove = array();
+                        
+                        for($i = 0; $i < count($allUsers); $i++){
+                            $grade = 4 - ($allUsers[$i]['gradyear'] - date("Y"));
+                            if(strpos($fullUrl, "g1=1") == false && $grade == 1) {
+                                array_push($studentsToRemove, $i);
+                            }
+                            if(strpos($fullUrl, "g2=1") == false && $grade == 2) {
+                                array_push($studentsToRemove, $i);
+                            }
+                            if(strpos($fullUrl, "g3=1") == false && $grade == 3) {
+                                array_push($studentsToRemove, $i);
+                            }
+                            if(strpos($fullUrl, "g4=1") == false && $grade == 4) {
+                                array_push($studentsToRemove, $i);
+                            }
+                        }
+
+                        for($k = 0; $k < count($studentsToRemove); $k++) {
+                            unset($allUsers[$studentsToRemove[$k]]);
+                        }
+
+                        // Re-index after deleting array elements(students);
+                        $allUsers = array_values($allUsers);
 
                         // If sorting by first name.
                         if (strpos($fullUrl, "st=F") == true) {
@@ -242,8 +270,8 @@ Gunn Volunteering
                         }
 
                         // Display names
-                        for($i = 0; $i < count($allUsers); $i++){
-                            $newStudentBox = new studentBox($allUsers[$i]['firstname'], $allUsers[$i]['lastname'],  $allUsers[$i]['studentid']);
+                        for($j = 0; $j < count($allUsers); $j++){
+                            $newStudentBox = new studentBox($allUsers[$j]['firstname'], $allUsers[$j]['lastname'],  $allUsers[$j]['studentid']);
                             $newStudentBox->printMessage();
                         }
 
