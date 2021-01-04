@@ -224,13 +224,49 @@ Gunn Volunteering
                         include "../backend/db_connect.php";
                         include "../messages/studentBox.php";
 
+                        // The URL that has the sorting info.
+                        $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
                         $getAllUsers = "SELECT studentid, firstname, lastname FROM users WHERE studentid != 1";
                         $resultGetAll = $mysqli->query($getAllUsers) or die (mysqli_error($mysqli));
                         $allUsers = $resultGetAll->fetch_all(MYSQLI_ASSOC);
 
+                        // If sorting by first name.
+                        if (strpos($fullUrl, "st=F") == true) {
+                            usort($allUsers, "sortAlphaFirstCmp");
+                        }
+
+                        // If sorting by last name.
+                        if (strpos($fullUrl, "st=L") == true) {
+                            usort($allUsers, "sortAlphaLastCmp");
+                        }
+
+                        // Display names
                         for($i = 0; $i < count($allUsers); $i++){
                             $newStudentBox = new studentBox($allUsers[$i]['firstname'], $allUsers[$i]['lastname'],  $allUsers[$i]['studentid']);
                             $newStudentBox->printMessage();
+                        }
+
+                        // Functions -------------------------------
+
+                        function sortAlphaFirstCmp($a, $b){
+                            $key = 'firstname';
+                            if($a[$key] < $b[$key]){
+                                return -1;
+                            } else if($a[$key] > $b[$key]){
+                                return 1;
+                            }
+                            return 0;
+                        }
+
+                        function sortAlphaLastCmp($a, $b){
+                            $key = 'lastname';
+                            if($a[$key] < $b[$key]){
+                                return -1;
+                            } else if($a[$key] > $b[$key]){
+                                return 1;
+                            }
+                            return 0;
                         }
                     ?>
                 </article>
