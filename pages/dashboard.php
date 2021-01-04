@@ -23,7 +23,7 @@ Gunn Volunteering
             header("Location: login.php");
         } else {
             if ($_SESSION['student_id'] == 1){
-                header("Location: students.php");
+                header("Location: students.php?&g1=1&g2=1&g3=1&g4=1&adv=t");
             }
         }
     ?>

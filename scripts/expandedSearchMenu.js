@@ -21,5 +21,5 @@ function expandedSearchMenu() {
 }
 
 function removeSearch() {
-    window.location.href = "http://localhost/GunnVWamp/pages/students.php"; 
+    window.location.href = "http://localhost/GunnVWamp/pages/students.php?&g1=1&g2=1&g3=1&g4=1&adv=t"; 
 }

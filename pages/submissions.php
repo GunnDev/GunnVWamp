@@ -42,7 +42,7 @@ Gunn Volunteering
                     <!-- Blank -->
                 </div>
             </div>
-            <a href="students.php">
+            <a href="students.php?&g1=1&g2=1&g3=1&g4=1&adv=t">
                 <i class="fas fa-users fa-lg"></i>
                 &nbsp;
                 Students
