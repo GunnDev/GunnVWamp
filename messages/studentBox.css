@@ -12,14 +12,19 @@ div.studentBoxContainer:hover {
     cursor: pointer;
 }
 
-p.showStudentName {
-    margin: 0;
+section.showStudentInfo {
+    margin: 0px 10px;
     padding: 0;
-    padding-left: 10px;
-    width: 60%;
-    float: left;
-    line-height: 48px;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 3fr 2fr 2fr 2fr;
+    grid-gap: 10px;
+}
+
+p.verticalCentered {
+    margin: 0;
+    margin-top: 14px;
     font-size: 14px;
     font-weight: 500;
-    color:gray;
+    color: grey;
 }

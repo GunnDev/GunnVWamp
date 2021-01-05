@@ -227,7 +227,7 @@ Gunn Volunteering
                         // The URL that has the sorting info.
                         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-                        $getAllUsers = "SELECT studentid, firstname, lastname, gradyear FROM users WHERE studentid != 1";
+                        $getAllUsers = "SELECT studentid, firstname, lastname, gradyear, num_hours FROM users WHERE studentid != 1";
                         $resultGetAll = $mysqli->query($getAllUsers) or die (mysqli_error($mysqli));
                         $allUsers = $resultGetAll->fetch_all(MYSQLI_ASSOC);
 
@@ -271,7 +271,7 @@ Gunn Volunteering
 
                         // Display names
                         for($j = 0; $j < count($allUsers); $j++){
-                            $newStudentBox = new studentBox($allUsers[$j]['firstname'], $allUsers[$j]['lastname'],  $allUsers[$j]['studentid']);
+                            $newStudentBox = new studentBox($allUsers[$j]['firstname'], $allUsers[$j]['lastname'],  $allUsers[$j]['studentid'], $allUsers[$j]['gradyear'], $allUsers[$j]['num_hours']);
                             $newStudentBox->printMessage();
                         }
 

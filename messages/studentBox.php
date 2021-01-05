@@ -9,18 +9,41 @@
             private $fname;
             private $lname;
             private $studentid;
+            private $gradyear;
+            private $completedHours;
             
-            public function __construct($fname, $lname, $studentid){
+            public function __construct($fname, $lname, $studentid, $gradyear, $completedHours){
                 $this->fname = $fname;
                 $this->lname = $lname;
                 $this->studentid = $studentid;
+                $this->gradyear = $gradyear;
+                $this->completedHours = $completedHours;
             }
 
             public function printMessage(){
           echo '<div class="studentBoxContainer">
-                    <p class="showStudentName">';
-                        echo $this->fname . ' ' . $this->lname . ' - ' .  $this->studentid;
-              echo "</p>
+                    <section class="showStudentInfo">
+                        <article>
+                            <p class="verticalCentered">';
+                            echo 'Name: ' . '<span style="color:#1a73e8;">' . $this->fname . ' ' . $this->lname . '</span>';
+                      echo '</p>
+                        </article>
+                        <article>
+                            <p class="verticalCentered">';
+                                echo 'ID: ' . '<span style="color:#1a73e8;">' . $this->studentid . '</span>';
+                      echo '</p>
+                        </article>
+                        <article>
+                            <p class="verticalCentered">';
+                                echo 'Grad: ' . '<span style="color:#1a73e8;">' . $this->gradyear . '</span>';
+                      echo '</p>
+                        </article>
+                        <article>
+                            <p class="verticalCentered">';
+                                echo 'Completed Hours: ' . '<span style="color:#1a73e8;">' . $this->completedHours . '</span>';
+                      echo "</p>
+                        </article>
+                    </section>
                 </div>";
             }
         }
