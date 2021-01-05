@@ -33,7 +33,7 @@
         $urlStr = $urlStr . "&g1=1";
         $isAdvanced = true;
     }
-    
+
     if ($g2) {
         $urlStr = $urlStr . "&g2=1";
         $isAdvanced = true;
@@ -52,12 +52,32 @@
     // If all false, show all users.
     if (!$g1 && !$g2 && !$g3 && !$g4) {
         $urlStr = $urlStr . "&g1=1&g2=1&g3=1&g4=1";
-        $isAdvanced = true;
     }
 
-    // If the user is using advanced searching
+    // ---------------------- Name Search ----------------------
+
+    if($fname || $lname || $studentid) {
+        $isAdvanced = false;
+        $urlStr = "?";
+    }
+
+    if($fname) {
+        $urlStr = $urlStr . "fname=" . $fname;
+    }
+
+    if($lname) {
+        $urlStr = $urlStr . "lname=" . $lname;
+    }
+
+    if($studentid) {
+        $urlStr = $urlStr . "studid=" . $studentid;
+    }
+
+    // Set adv variable based on input
     if($isAdvanced) {
         $urlStr = $urlStr . "&adv=t";
+    } else {
+        $urlStr = $urlStr . "&adv=f";
     }
 
     header("Location: ../pages/students.php" . $urlStr);
