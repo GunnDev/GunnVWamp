@@ -236,37 +236,48 @@ Gunn Volunteering
                         // Using array to store indeces to remove so that array size doesn't change during loop
                         $studentsToRemove = array();
                         
-                        for($i = 0; $i < count($allUsers); $i++){
-                            $grade = 4 - ($allUsers[$i]['gradyear'] - date("Y"));
-                            if(strpos($fullUrl, "g1=1") == false && $grade == 1) {
-                                array_push($studentsToRemove, $i);
+                        if (strpos($fullUrl, "adv=t") == true) {
+                            for($i = 0; $i < count($allUsers); $i++){
+                                $grade = 4 - ($allUsers[$i]['gradyear'] - date("Y"));
+    
+                                if(strpos($fullUrl, "g1=1") == false && $grade == 1) {
+                                    array_push($studentsToRemove, $i);
+                                }
+                                if(strpos($fullUrl, "g2=1") == false && $grade == 2) {
+                                    array_push($studentsToRemove, $i);
+                                }
+                                if(strpos($fullUrl, "g3=1") == false && $grade == 3) {
+                                    array_push($studentsToRemove, $i);
+                                }
+                                if(strpos($fullUrl, "g4=1") == false && $grade == 4) {
+                                    array_push($studentsToRemove, $i);
+                                }
                             }
-                            if(strpos($fullUrl, "g2=1") == false && $grade == 2) {
-                                array_push($studentsToRemove, $i);
+    
+                            for($k = 0; $k < count($studentsToRemove); $k++) {
+                                unset($allUsers[$studentsToRemove[$k]]);
                             }
-                            if(strpos($fullUrl, "g3=1") == false && $grade == 3) {
-                                array_push($studentsToRemove, $i);
+    
+                            // Re-index after deleting array elements(students);
+                            $allUsers = array_values($allUsers);
+    
+                            // If sorting by first name.
+                            if (strpos($fullUrl, "st=F") == true) {
+                                usort($allUsers, "sortAlphaFirstCmp");
                             }
-                            if(strpos($fullUrl, "g4=1") == false && $grade == 4) {
-                                array_push($studentsToRemove, $i);
+    
+                            // If sorting by last name.
+                            if (strpos($fullUrl, "st=L") == true) {
+                                usort($allUsers, "sortAlphaLastCmp");
                             }
-                        }
+                        } else if (strpos($fullUrl, "adv=f") == true) {
+                            $fname = isset($_GET['fname']) ? $_GET['fname'] : "";
+                            $lname = isset($_GET['lname']) ? $_GET['lname'] : "";
+                            $studid = isset($_GET['studid']) ? $_GET['studid'] : "";
 
-                        for($k = 0; $k < count($studentsToRemove); $k++) {
-                            unset($allUsers[$studentsToRemove[$k]]);
-                        }
-
-                        // Re-index after deleting array elements(students);
-                        $allUsers = array_values($allUsers);
-
-                        // If sorting by first name.
-                        if (strpos($fullUrl, "st=F") == true) {
-                            usort($allUsers, "sortAlphaFirstCmp");
-                        }
-
-                        // If sorting by last name.
-                        if (strpos($fullUrl, "st=L") == true) {
-                            usort($allUsers, "sortAlphaLastCmp");
+                            // echo $fname;
+                            // echo $lname;
+                            // echo $studid;
                         }
 
                         // Display names
