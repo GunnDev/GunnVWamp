@@ -49,11 +49,6 @@
         $isAdvanced = true;
     }
 
-    // If all false, show all users.
-    if (!$g1 && !$g2 && !$g3 && !$g4) {
-        $urlStr = $urlStr . "&g1=1&g2=1&g3=1&g4=1";
-    }
-
     // ---------------------- Name Search ----------------------
 
     if($fname || $lname || $studentid) {
@@ -66,11 +61,11 @@
     }
 
     if($lname) {
-        $urlStr = $urlStr . "lname=" . $lname;
+        $urlStr = $urlStr . "&lname=" . $lname;
     }
 
     if($studentid) {
-        $urlStr = $urlStr . "studid=" . $studentid;
+        $urlStr = $urlStr . "&studid=" . $studentid;
     }
 
     // Set adv variable based on input
