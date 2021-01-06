@@ -58,8 +58,6 @@ window.onload = function() {
         document.getElementById('grade4').checked = false;
     }
 
-    console.log(sT);
-
     if(sT == "F") {
         document.getElementById('alphabeticalF').checked = true;
     } else if (sT == "L") {
