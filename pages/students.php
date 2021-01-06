@@ -271,13 +271,25 @@ Gunn Volunteering
                                 usort($allUsers, "sortAlphaLastCmp");
                             }
                         } else if (strpos($fullUrl, "adv=f") == true) {
-                            $fname = isset($_GET['fname']) ? $_GET['fname'] : "";
-                            $lname = isset($_GET['lname']) ? $_GET['lname'] : "";
-                            $studid = isset($_GET['studid']) ? $_GET['studid'] : "";
+                            $fname = isset($_GET['fname']) ? $_GET['fname'] : null;
+                            $lname = isset($_GET['lname']) ? $_GET['lname'] : null;
+                            $studid = isset($_GET['studid']) ? $_GET['studid'] : null;
 
-                            // echo $fname;
-                            // echo $lname;
-                            // echo $studid;
+                            for($i = 0; $i < count($allUsers); $i++){
+                                if($fname != null && strcmp($allUsers[$i]['firstname'], $fname) != 0) {
+                                    array_push($studentsToRemove, $i);
+                                }
+                                if($lname != null && strcmp($allUsers[$i]['lastname'], $lname) != 0) {
+                                    array_push($studentsToRemove, $i);
+                                }
+                                if($studid != null && strcmp($allUsers[$i]['studentid'], $studid) != 0) {
+                                    array_push($studentsToRemove, $i);
+                                }
+                            }
+
+                            for($k = 0; $k < count($studentsToRemove); $k++) {
+                                unset($allUsers[$studentsToRemove[$k]]);
+                            }
                         }
 
                         // Display names
