@@ -30,20 +30,26 @@
             $_SESSION['student_numhours'] = $numhours;
 
             $utils = new GoogleDriveUtils();
-            $_SESSION['driveAPI'] = serialize($utils);
+            try {
+                $_SESSION['driveAPI'] = serialize($utils);
+            } catch (\Exception $e) {
+                $_SESSION = [];
+                session_destroy();
+                header("Location: ../pages/login.php?login=failure");
+            }
             
             header("Location: ../pages/dashboard.php");
             
             exit;
         } else {
-            header("Location: ../pages/login.php?login=failure");
             $_SESSION = [];
             session_destroy();
+            header("Location: ../pages/login.php?login=failure");
         }
     } else {
-        header("Location: ../pages/login.php?login=failure");
         $_SESSION = [];
         session_destroy();
+        header("Location: ../pages/login.php?login=failure");
     }
     header("Location: ../pages/login.php?login=failure");
 ?>
