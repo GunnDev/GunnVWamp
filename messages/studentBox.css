@@ -17,7 +17,7 @@ section.showStudentInfo {
     padding: 0;
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: 3fr 2fr 2fr 2fr;
+    grid-template-columns: 5fr 3fr 3fr 3fr 1fr;
     grid-gap: 10px;
 }
 
@@ -27,4 +27,19 @@ p.verticalCentered {
     font-size: 14px;
     font-weight: 500;
     color: grey;
+}
+
+div.studentBoxContainer:hover button.adminDeleteTrashCentered {
+    display: block;
+}
+
+button.adminDeleteTrashCentered {
+    display: none;
+    color: #cb0001;
+    outline: none;
+    border: none;
+    margin: 13px 0px 0px 42px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 16px;
 }

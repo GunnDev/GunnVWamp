@@ -43,6 +43,11 @@
                                 echo 'Completed Hours: ' . '<span style="color:#1a73e8;">' . $this->completedHours . '</span>';
                       echo "</p>
                         </article>
+                        <article>
+                            <button class='adminDeleteTrashCentered'>
+                                <i class='fas fa-trash fa-lg'></i>
+                            </button>
+                        </article>
                     </section>
                 </div>";
             }
