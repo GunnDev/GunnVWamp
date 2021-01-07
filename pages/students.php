@@ -337,28 +337,30 @@ Gunn Volunteering
                             </p>
                         </article>
 
-                        <article style="display:flex; justify-content:center;">
-                            <div class="inputWithIcon" style="width:100%">
-                                <input class="passwordRepl" type="password" placeholder="Password" required>
-                                <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
-                            </div>
-                        </article>
+                        <form action="../backend/deleteStudent.php" method="post">
+                            <article style="display:flex; justify-content:center;">
+                                <div class="inputWithIcon" style="width:100%">
+                                    <input id="deleteUserPassField" name="pass" class="passwordRepl" type="password" placeholder="Password" required>
+                                    <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                                </div>
+                            </article>
 
-                        <article>
-                            <section class="deleteUserSection2">
-                                <article>
-                                    <button type="button" class="deleteUserBtns">
-                                        Cancel
-                                    </button>
-                                </article>
+                            <article>
+                                <section class="deleteUserSection2">
+                                    <article>
+                                        <button id="cancelDeletionOfUser" type="button" class="deleteUserBtns">
+                                            Cancel
+                                        </button>
+                                    </article>
 
-                                <article>
-                                    <button type="submit" class="deleteUserBtns">
-                                        Delete
-                                    </button>
-                                </article>
-                            </section>
-                        </article>
+                                    <article>
+                                        <button type="submit" class="deleteUserBtns">
+                                            Delete
+                                        </button>
+                                    </article>
+                                </section>
+                            </article>
+                        </form>
                     </section>
                 </div>
             </div>
