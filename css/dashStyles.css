@@ -905,6 +905,81 @@ button.saveAdvancedSearchBtn:hover {
     transition: 0.2s;
 }
 
+div.deleteUserModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+div.deleteUserModal-content {
+    background-color: #fefefe;
+    margin: 17% auto; /* 15% from the top and centered */
+    padding: 15px;
+    border: 1px solid #888;
+    width: 400px; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+section.deleteUserSection {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: minmax(2px, auto);
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+}
+
+section.deleteUserSection2 {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: minmax(2px, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+p.deleteUserHeading {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: gray;
+    display: flex;
+    justify-content: center;
+}
+
+p.deleteUserHeading span {
+    color: #1a73e8;
+}
+
+button.deleteUserBtns {
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.6em 1.4em;
+    outline: none;
+    border: 2px solid #64b5e3;
+    margin: 0.2em 0.3em 0.3em 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 500;
+    color: #64b5e3;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+button.deleteUserBtns:hover {
+    color: #FFFFFF;
+    background-color: #03a5fc;
+    border-color: #03a5fc;
+}
+
 section.expandedSearchSection1 {
     width: 100%;
     display: grid;

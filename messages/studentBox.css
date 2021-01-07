@@ -38,8 +38,13 @@ button.adminDeleteTrashCentered {
     color: #cb0001;
     outline: none;
     border: none;
-    margin: 13px 0px 0px 42px;
+    margin: 13px 0px 0px 44px;
     cursor: pointer;
     background-color: transparent;
     font-size: 16px;
+}
+
+button.adminDeleteTrashCentered:hover {
+    color:#ad0001;
+    transition: 0.3s;
 }

@@ -44,7 +44,7 @@
                       echo "</p>
                         </article>
                         <article>
-                            <button class='adminDeleteTrashCentered'>
+                            <button id='$this->studentid' title='Delete Student' class='adminDeleteTrashCentered' onclick='deleteUser(this.id)'>
                                 <i class='fas fa-trash fa-lg'></i>
                             </button>
                         </article>

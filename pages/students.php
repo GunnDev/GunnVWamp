@@ -29,6 +29,7 @@ Gunn Volunteering
         
         <script src="../scripts/expandedSearchMenu.js"></script>
         <script src="../scripts/uncheckSort.js"></script>
+        <script src="../scripts/deleteUser.js"></script>
 
         <script>
             $(document).ready(function(){
@@ -322,6 +323,45 @@ Gunn Volunteering
                     ?>
                 </article>
             </section>
+
+            <div id="dum" class="deleteUserModal">
+                <div class="deleteUserModal-content">
+                    <section class="deleteUserSection">
+                        <article>
+                            <p class="deleteUserHeading">
+                                Delete Student With ID:&nbsp;
+                                <span id="usersIDToDelete">
+                                    some id
+                                </span>
+                                ?
+                            </p>
+                        </article>
+
+                        <article style="display:flex; justify-content:center;">
+                            <div class="inputWithIcon" style="width:100%">
+                                <input class="passwordRepl" type="password" placeholder="Password" required>
+                                <i class="fas fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                            </div>
+                        </article>
+
+                        <article>
+                            <section class="deleteUserSection2">
+                                <article>
+                                    <button type="button" class="deleteUserBtns">
+                                        Cancel
+                                    </button>
+                                </article>
+
+                                <article>
+                                    <button type="submit" class="deleteUserBtns">
+                                        Delete
+                                    </button>
+                                </article>
+                            </section>
+                        </article>
+                    </section>
+                </div>
+            </div>
         </div>
 
     </body>
