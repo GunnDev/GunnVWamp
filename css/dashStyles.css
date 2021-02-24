@@ -873,7 +873,9 @@ p.advancedSearchTitle {
     padding-bottom: 5px;
     color:#1a73e8;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 p.subAdvancedSearchTitle {
@@ -882,7 +884,9 @@ p.subAdvancedSearchTitle {
     padding-bottom: 5px;
     color: gray;
     font-weight: 500;
-    font-size: 10px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
 }
 
 button.saveAdvancedSearchBtn {

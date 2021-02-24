@@ -163,7 +163,7 @@ Gunn Volunteering
                                                 Advanced Search:
                                             </p>
                                             <p class="subAdvancedSearchTitle">
-                                                Any selections made here will disregard First, Last, and StudentID Fields.
+                                                (Any selections made here will disregard First, Last, and StudentID Fields.)
                                             </p>
                                         </article>
                                         
